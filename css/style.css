@@ -79,3 +79,17 @@ img {
 .button:hover {
   background: #0090aa;
 }
+/* 大きな背景画像
+ーーーーーーーー*/
+.big-bg {
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+#home {
+  background-image: url(../images/main-bg.jpg);
+  min-height: 100vh;
+}
+#home .page-title {
+  text-transform: none;
+}

@@ -117,3 +117,18 @@ footer p {
 #news .page-title {
   text-align: center;
 }
+/* 記事部分
+ーーーーーーーー*/
+article {
+  width: 74%;
+}
+/* サイドバー
+ーーーーーーーー*/
+aside {
+  width: 22%;
+}
+.news-contents {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}

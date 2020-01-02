@@ -87,7 +87,8 @@ img {
   background-repeat: no-repeat;
 }
 #home {
-  background-image: url(../images/main-bg.jpg);
+  background-image: url(../images/main-bg.jpg),linear-gradient(#c9ffbf,#ffafbd);
+  background-blend-mode: luminosity;
   min-height: 100vh;
 }
 #home .page-title {

@@ -19,7 +19,7 @@ img {
 }
 
 /* ヘッダー　
-ーーーーーーーーーーーーーー */
+ーーーーーーーー*/
 .logo {
   width: 210px;
   margin-top: 14px;
@@ -49,16 +49,6 @@ img {
   margin: 0 auto;
   padding: 0 4%;
 }
-/* Home
-ーーーーーーーーーーーーーー */
-.home-content{
-  text-align: center;
-  margin-top: 10%;
-}
-.home-content p {
-  font-size: 1.125rem;
-  margin: 10px 0 42px;
-}
 /* 見出し 
 ーーーーーーーー*/
 .page-title{
@@ -86,6 +76,29 @@ img {
   background-position: center top;
   background-repeat: no-repeat;
 }
+
+/* フッター
+ーーーーーーーーーーーーーーーー */
+footer {
+  background: #432;
+  text-align: center;
+  padding: 26px 0;
+  margin-top: 50px;
+}
+footer p {
+  color: #fff;
+  font-size: 0.875rem;
+}
+/* Home
+ーーーーーーーーーーーーーーーー */
+.home-content{
+  text-align: center;
+  margin-top: 10%;
+}
+.home-content p {
+  font-size: 1.125rem;
+  margin: 10px 0 42px;
+}
 #home {
   background-image: url(../images/main-bg.jpg),linear-gradient(#c9ffbf,#ffafbd);
   background-blend-mode: luminosity;
@@ -93,4 +106,14 @@ img {
 }
 #home .page-title {
   text-transform: none;
+}
+/* News
+ーーーーーーーーーーーーーーーー */
+#news{
+  background-image: url(../images/news-bg.jpg);
+  height: 270px;
+  margin-bottom: 40px;
+}
+#news .page-title {
+  text-align: center;
 }

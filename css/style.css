@@ -257,4 +257,7 @@ aside p {
   .post-cat {
     margin-left: 80px;
   }
+  article {
+    width: 60px;
+  }
 }

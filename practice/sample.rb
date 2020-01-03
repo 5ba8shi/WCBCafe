@@ -9,7 +9,6 @@ class TodosController < ApplicationController
     respond_to do |format|
       format.html { redirect_to :root }
       format.json { render json: @todo}
-    redirect_to :root
   end
 
   private

@@ -5,7 +5,10 @@ class TodosController < ApplicationController
   end
 
   def create
-    Todo.create(todo_params)
+    @todo = Todo.create(todo_params)
+    respond_to do |format|
+      format.html { redirect_to :root }
+      format.json { render json: @todo}
     redirect_to :root
   end
 
@@ -14,3 +17,7 @@ class TodosController < ApplicationController
     params.require(:todo).permit(:content)
   end
 end
+
+
+{user_name: "testさん", cereated_at: "2019-09"}
+

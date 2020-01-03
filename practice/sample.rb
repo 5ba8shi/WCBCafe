@@ -20,4 +20,8 @@ end
 
 {user_name: "testさん", cereated_at: "2019-09"}
 
-def 
+def create
+  @post = Post.create(post_params)
+end
+
+json.text @post.text

@@ -11,5 +11,12 @@ $(function(){
       processData: false,
       contentType: false
     })
+    .done(function(post){
+      console.log(post.text);
+
+    })
+    .fail(function(){
+
+    })
   })
 })

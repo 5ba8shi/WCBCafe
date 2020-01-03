@@ -1,4 +1,8 @@
 $(function() {
+  function buildHTML(todo) {
+    let html = $('<li class="todo">').append(todo.content);
+    return html;
+  }
   $('.js-form').on('submit', function(e){
     e.preventDefault();
     let todo = $('.js-form__text-field').val();
@@ -13,7 +17,7 @@ $(function() {
       dataType: 'json'
     })
     .done(function(data) {
-      let html = $('<li class="todo">').append(data.content);
+      let html = buildHTML(data);
       $('.todos').append(html);
       $('.js-form__text-field').val('');
     })

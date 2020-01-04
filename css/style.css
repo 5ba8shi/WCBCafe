@@ -244,6 +244,14 @@ aside p {
   width: 100%;
   object-fit: cover;
 }
+/* Contact
+ーーーーーーーーーーーーーーーー */
+#contact {
+  background-image: url(../images/contact-bg.jpg);
+  min-height: 100vh;
+}
+
+
 /*ーーーーーーーーーーーーーーーーーーーーー 
 　　　　　　　　　モバイル版
 ーーーーーーーーーーーーーーーーーーーーーー*/

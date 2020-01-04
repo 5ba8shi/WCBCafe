@@ -242,6 +242,7 @@ aside p {
 .big-box img{
   height: 94%;
   width: 100%;
+  object-fit: cover;
 }
 /*ーーーーーーーーーーーーーーーーーーーーー 
 　　　　　　　　　モバイル版
@@ -306,5 +307,12 @@ aside p {
   /* Menu */
   .menu-content{
     margin-top: 20%;
+  }
+  .big-box {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .big-box img {
+    height: 100%;
   }
 }

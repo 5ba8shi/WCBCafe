@@ -355,4 +355,15 @@ input[type="submit"]{
   .big-box img {
     height: 100%;
   }
+  /* Contact */
+  #contact .page-title {
+    margin-top: 40px;
+  }
+
+  /* フォーム */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    max-width: 100%;
+  }
 }

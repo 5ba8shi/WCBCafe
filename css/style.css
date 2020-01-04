@@ -283,7 +283,20 @@ input[type="submit"]{
   cursor: pointer;
   line-height: 1;
 }
-
+/* 店舗情報・地図 */
+#location {
+  padding: 4% 0;
+}
+#location .wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+.location-info {
+  width: 22%;
+}
+.location-info p{
+  
+}
 /*ーーーーーーーーーーーーーーーーーーーーー 
 　　　　　　　　　モバイル版
 ーーーーーーーーーーーーーーーーーーーーーー*/

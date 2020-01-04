@@ -295,7 +295,10 @@ input[type="submit"]{
   width: 22%;
 }
 .location-info p{
-  
+  padding: 12px 10px;  
+}
+.location-map {
+  width: 74%;
 }
 /*ーーーーーーーーーーーーーーーーーーーーー 
 　　　　　　　　　モバイル版

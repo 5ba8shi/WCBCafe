@@ -211,7 +211,7 @@ aside p {
   }
 }
 
-/* News
+/* menu
 ーーーーーーーーーーーーーーーー */
 #menu {
   background-image: url(../images/menu-bg.jpg);
@@ -228,7 +228,13 @@ aside p {
   font-size:1.125rem;
   margin: 10px 0 0;
 }
-
+.grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 6%;
+  margin-bottom: 50px;
+}
 /*ーーーーーーーーーーーーーーーーーーーーー 
 　　　　　　　　　モバイル版
 ーーーーーーーーーーーーーーーーーーーーーー*/

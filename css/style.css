@@ -120,7 +120,8 @@ footer p {
 /* 記事部分
 ーーーーーーーー*/
 article {
-  width: 74%;
+  width: 60%;
+  order: 2;
 }
 .post-info {
   position: relative;
@@ -162,10 +163,12 @@ article img {
 article p {
   margin-bottom: 1rem;
 }
+
 /* サイドバー
 ーーーーーーーー*/
 aside {
   width: 22%;
+  order: 3;
 }
 .news-contents {
   display: flex;
@@ -195,6 +198,17 @@ aside p {
 }
 .sub-menu a:hover {
   color: #0bd;
+}
+/* 縦広告
+ーーーーーーーー*/
+.ad {
+  order: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .none{
+    display: none;
+  }
 }
 
 /*ーーーーーーーーーーーーーーーーーーーーー 
@@ -251,13 +265,10 @@ aside p {
   }
   .post-cat {
     font-size: 0.875rem;
-  margin-top: 10px;
+    margin-top: 10px;
   }
   .post-title,
   .post-cat {
     margin-left: 80px;
-  }
-  article {
-    width: 60px;
   }
 }

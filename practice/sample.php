@@ -50,8 +50,8 @@ $x %= 10;
 ?>
 
 <?php
-  $x += 1;    $x++;
-  $x -= 1;    $x--;
+  $x += 1;  =  $x++;
+  $x -= 1;  =  $x--;
 ?>
 
 <?php
@@ -59,4 +59,14 @@ $x %= 10;
   $y = 3;
   echo ++$x;
   echo $y++;
+?>
+
+<?php
+  $lesson ='PHP';
+  echo $lesson.'入門';
+?>
+
+<?php
+  $level ='入門';
+  echo $lesson.$level;
 ?>

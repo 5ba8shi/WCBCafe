@@ -9,4 +9,10 @@
 
 <?php echo 'Hello, PHP!!'; ?>
 
-echo 5 % 2;
+<?php
+echo 5 + 2;
+?>
+
+<?php
+  echo '5 + 2'; 
+?>

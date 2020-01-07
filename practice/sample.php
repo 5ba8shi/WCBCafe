@@ -30,14 +30,21 @@ echo 5 + 2;
  echo $area;
 ?>
 
-<? $num = 3;
+<?php $num = 3;
 echo $num;
 $num = 5;
 echo $num;
 ?>
 
-<?
+<?php
 $x = 1;
 $x = $x + 10;
 echo $x;
+?>
+
+<?php
+$x += 10;
+$x -= 10;
+$x *= 10;
+$x %= 10;
 ?>

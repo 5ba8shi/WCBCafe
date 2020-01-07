@@ -69,4 +69,18 @@ $x %= 10;
 <?php
   $level ='入門';
   echo $lesson.$level;
+?>  
+
+<?php
+  $lesson = 'PHP';
+  $level = '入門';
+  echo $lesson.$level;
 ?>
+
+<?php
+  $name = 'にんじゃ';
+  $name .= 'わんこ';
+  echo $name;
+?>
+
+

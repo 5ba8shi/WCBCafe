@@ -16,3 +16,16 @@ echo 5 + 2;
 <?php
   echo '5 + 2'; 
 ?>
+
+<?php
+  $name = 'Bob';
+
+  echo$name;
+?>
+
+<?php
+ $length = 7;
+ $area = $length * $length;
+ 
+ echo $area;
+?>

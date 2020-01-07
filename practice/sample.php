@@ -35,3 +35,9 @@ echo $num;
 $num = 5;
 echo $num;
 ?>
+
+<?
+$x = 1;
+$x = $x + 10;
+echo $x;
+?>

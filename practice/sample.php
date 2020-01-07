@@ -29,3 +29,9 @@ echo 5 + 2;
  
  echo $area;
 ?>
+
+<? $num = 3;
+echo $num;
+$num = 5;
+echo $num;
+?>

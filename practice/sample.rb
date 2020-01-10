@@ -25,3 +25,11 @@ def create
 end
 
 json.text @post.text
+
+
+listen 3000
+
+listen "#{app_path}/tmp/sockets/unicorn.sock"
+
+cd /var/www/chat-space
+git pull origin master

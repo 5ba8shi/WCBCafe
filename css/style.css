@@ -87,7 +87,8 @@ img {
 }
 
 #home {
-  background-image: url(../images/main-bg.jpg);
+  background-image: url(../images/main-bg.jpg),radial-gradient(#0bd,rgb(26, 221, 0));
+  background-blend-mode: luminosity;
   min-height: 100vh;
 }
 

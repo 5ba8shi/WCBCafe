@@ -29,3 +29,7 @@ server {
 
   error_page 500 502 503 504 /500.html;
 }
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end

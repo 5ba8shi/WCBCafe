@@ -113,4 +113,23 @@ upstream app_server {
   server unix:/var/www/<アプリケーション名/shared/tmp/sockets/unicorn.sock;
 }
 
-ser
+server {
+  listen 80;
+  server_name <Elastic IP>;
+
+  root /var/www/app/current/public;
+
+  location ^~ /assets/ {
+    gzip_static on;
+    expires max;
+    add_header Cache-Control public;
+    root  /var/www/<アプリ>/current/public;
+  }
+  try_files $uri/index.html $uri @unicorn;
+
+  location @unicorn {
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+
+  error_page 500 502 503 504
+}

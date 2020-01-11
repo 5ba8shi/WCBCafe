@@ -224,3 +224,15 @@ if(!($x == 30)){
     'gender' => 'male'
   );
 ?>
+
+<?php
+ $user = array(
+  'name' => 'わんこ',
+  'age'  =>  14
+ );
+ echo $user['name'];
+?>
+
+<?php
+$user['level'] = 'beginner';
+?>

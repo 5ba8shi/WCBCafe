@@ -198,3 +198,21 @@ if(!($x == 30)){
       break;
   }
 ?>
+
+<?php
+  $names = array('John','Kate', 'Bob');
+
+  echo $names[0];
+
+  echo $names[1];
+  ?>
+
+<?php
+  $names = array('John','Kate','Bob');
+  $names[] ='Mary';
+  echo $names[3];
+  
+  $names[1] = 'jane';
+
+  echo $names[1];
+?>

@@ -211,8 +211,16 @@ if(!($x == 30)){
   $names = array('John','Kate','Bob');
   $names[] ='Mary';
   echo $names[3];
-  
+
   $names[1] = 'jane';
 
   echo $names[1];
+?>
+
+<?php
+  $user = array(
+    'name'   => 'わんこ',
+    'age'    =>  14,
+    'gender' => 'male'
+  );
 ?>

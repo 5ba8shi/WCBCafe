@@ -108,6 +108,12 @@ img {
   text-align: center;
 }
 
+.news-contents {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
 /* フッター
 -------------------------- */
 footer {

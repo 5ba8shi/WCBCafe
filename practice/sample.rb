@@ -107,3 +107,10 @@ namespace :deploy do
     invoke 'unicorn:restart'
   end
 end
+
+upstream app_server {
+
+  server unix:/var/www/<アプリケーション名/shared/tmp/sockets/unicorn.sock;
+}
+
+ser

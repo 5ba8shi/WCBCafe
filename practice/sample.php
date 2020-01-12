@@ -316,3 +316,13 @@ foreach ($data as $value) {
 }
 
 ?>
+
+<?php
+foreach($data as $value) {
+  echo $value;
+}
+
+foreach ($data as $key => $price) {
+  echo $price;
+}
+?>

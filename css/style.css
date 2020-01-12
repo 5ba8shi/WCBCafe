@@ -250,5 +250,19 @@ aside {
     #news .page-title {
       margin-top: 30px;
     }
-    
+    aside {
+      margin-top: 60px;
+    }
+    .post-info {
+      margin-bottom: 30px;
+    }
+    .post-date {
+      width: 70px;
+      height: 70px;
+      font-size: 1rem;
+    }
+    .post-date span {
+      font-size: 0.875rem;
+      padding-top: 2px;
+    }
 }

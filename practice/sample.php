@@ -299,3 +299,20 @@ for ($i = 1; $i <= 10; $i++){
   }
 }
 ?>
+
+<?php
+for($i=1; $i <= 10; $i++){
+  if($i % 3 == 0) {
+    continue;
+  }
+  echo $i;
+}
+?>
+<?php
+$data = array('東京','大阪','京都');
+
+foreach ($data as $value) {
+  echo $value;
+}
+
+?>

@@ -326,3 +326,15 @@ foreach ($data as $key => $price) {
   echo $price;
 }
 ?>
+
+<?
+$colors = array(
+  'Apple' => 'Red',
+  'Banana' => 'Yellow',
+  'Grape' => 'Purple'
+);
+
+foreach($colors as $key => $value) {
+  echo $key.':'.$value;
+}
+?>

@@ -372,3 +372,11 @@ echo rand(1,4);
   printCircleArea(5);
 ?>
 
+<?php
+  function hello(){
+    echo 'Hello, World!';
+  }
+
+  hello();
+
+?>

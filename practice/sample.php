@@ -354,3 +354,21 @@ echo conunt($data);
 
 echo rand(1,4);
 ?>
+
+<?php
+  $radius1 = 3;
+  echo $radius1*$radius1*3;
+
+  $radius2 = 5;
+  echo $radius2*$radius2*3;
+?>
+
+<?php
+  function printCircleArea($radius){
+    echo $radius * $radius * 3;
+  }
+
+  printCircleArea(3);
+  printCircleArea(5);
+?>
+

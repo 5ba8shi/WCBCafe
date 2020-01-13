@@ -338,3 +338,12 @@ foreach($colors as $key => $value) {
   echo $key.':'.$value;
 }
 ?>
+
+<?php
+  echo strlen('Progate');
+?>
+
+<?php
+  $language = 'PHP';
+  echo strlen($language);
+?>

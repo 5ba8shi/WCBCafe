@@ -347,3 +347,10 @@ foreach($colors as $key => $value) {
   $language = 'PHP';
   echo strlen($language);
 ?>
+
+<?php
+$data = array('東京', '大阪', '京都');
+echo conunt($data);
+
+echo rand(1,4);
+?>

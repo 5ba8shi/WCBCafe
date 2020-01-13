@@ -315,4 +315,11 @@ aside {
     .post-cat {
       margin-left: 80px;
     }
+    .big-box {
+      grid-column: auto;
+      grid-row: auto;
+    }
+    .big-box img {
+      height: 100%;
+    }
 }

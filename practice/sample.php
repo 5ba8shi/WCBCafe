@@ -388,3 +388,15 @@ echo rand(1,4);
   $radius2 = 5;
   echo $radius2 * $radius * 3;
 ?>
+
+<?php
+  function printCircleArea($radius) {
+    echo $radius * $radius * 3;
+  }
+
+  printCircleArea(3);
+  printCircleArea(5);
+
+?>
+
+function

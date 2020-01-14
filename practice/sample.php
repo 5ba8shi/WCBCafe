@@ -415,3 +415,13 @@ echo rand(1,4);
 ?>
 
 printSum(1,3);
+
+<?php
+function getSum($num1,$num2) {
+  return $num1 + $num2;
+}
+
+$sum = getSum(1,3);
+echo $sum;
+
+?>

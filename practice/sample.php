@@ -380,3 +380,11 @@ echo rand(1,4);
   hello();
 
 ?>
+
+<?php
+  $radius1 = 3;
+  echo $radius1 * $radius1 * 3;
+
+  $radius2 = 5;
+  echo $radius2 * $radius * 3;
+?>

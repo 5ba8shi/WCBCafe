@@ -11,3 +11,18 @@ body {
   line-height: 1.7;
   color: #432;
 }
+
+a{
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Header 
+--------------------------*/
+.logo {
+  max-width: 210px;
+  margin-top: 14px;
+}

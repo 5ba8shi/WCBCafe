@@ -399,4 +399,19 @@ echo rand(1,4);
 
 ?>
 
-function
+<?php
+  function hello() {
+    echo 'Hello, world!';
+  }
+
+  hello();
+?>
+
+<?php
+
+  function printSum($num1,$num2) {
+    echo $num1 + $num2;
+  }
+?>
+
+printSum(1,3);

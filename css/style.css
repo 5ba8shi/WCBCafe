@@ -93,3 +93,10 @@ iframe {
   margin: 0 auto;
   padding: 0 4%;
 }
+
+/* HOME
+------------------------------- */
+.home-content {
+    text-align: center;
+    margin-top: 10%;
+}

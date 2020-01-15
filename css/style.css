@@ -89,6 +89,11 @@ footer {
     margin-top: 50px;
 }
 
+footer p {
+    color: #fff;
+    font-size: 0.875rem;
+}
+
 
 /* HOME
 ------------------------------- */

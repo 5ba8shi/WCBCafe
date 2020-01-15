@@ -115,3 +115,17 @@ footer p {
     margin-bottom: 40px;
 }
 
+/* 記事部分 */
+article {
+    width: 74%;
+}
+
+/* サイドバー */
+aside {
+    width: 22%;
+}
+
+.news-contents {
+    display: flex;
+    justify-content: space-between;
+}

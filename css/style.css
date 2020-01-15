@@ -158,3 +158,8 @@ aside {
     width: 60%;
     margin: 0 auto;
 }
+
+.post-title,
+.post-cat {
+    padding-left: 120px;
+}

@@ -158,6 +158,11 @@ aside {
     width: 60%;
     margin: 0 auto;
 }
+.post-title {
+    font-family: "Yu Mincho", "YuMincho", serif;
+    font-size: 2rem;
+    font-weight: normal;
+}
 
 .post-title,
 .post-cat {

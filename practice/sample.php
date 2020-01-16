@@ -433,4 +433,8 @@ echo $sum;
 ?>
 
 <?php
-<
+<from action="sent.php" method="post">
+  Emailを入力して下さい
+  <input type="text" name="email">
+  </form>
+?>

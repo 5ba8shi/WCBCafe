@@ -473,3 +473,9 @@ echo $sum;
     'email' => 'wanko@prog-8.com'
   )
 ?>
+
+  <select>
+    <option>りんご</option>
+    <option>ばなな</option>
+    <option>みかん</option>
+  </select>

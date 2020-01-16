@@ -479,3 +479,11 @@ echo $sum;
     <option>ばなな</option>
     <option>みかん</option>
   </select>
+
+<form action="sent.php" method="post">
+  <select name="fruit">
+    <option value="apple">りんご</option>
+    <option value="banana">ばなな</option>
+    <option value="orange">みかん</option>
+  </select>
+</form>

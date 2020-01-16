@@ -446,3 +446,14 @@ echo $sum;
 
   </form>
 ?>
+
+<?php
+  <form action="sent.php" method="post">
+    Email
+    <input type="text" name="email" value="">
+
+    <input type="submit" value="送信">
+  </form>
+?>
+
+<? php

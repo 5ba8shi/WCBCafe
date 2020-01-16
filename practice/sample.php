@@ -456,4 +456,20 @@ echo $sum;
   </form>
 ?>
 
-<? php
+<?php
+  <form action="sent.php">
+
+    <input name="name">
+
+    <input name="email">
+  
+  </form>
+
+  echo $_POST['name'];
+  echo $_POST['email'];
+
+  array(
+    'name' => 'にんじゃわんこ'
+    'email' => 'wanko@prog-8.com'
+  )
+?>

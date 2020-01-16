@@ -438,3 +438,11 @@ echo $sum;
   <input type="text" name="email">
   </form>
 ?>
+
+<?php
+  <form action="sent.php" method ="post">
+   内容
+   <textarea name="content"></textarea>
+
+  </form>
+?>

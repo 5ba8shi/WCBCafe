@@ -425,3 +425,12 @@ $sum = getSum(1,3);
 echo $sum;
 
 ?>
+
+<?php
+<form action="url" method="post">
+
+</form>
+?>
+
+<?php
+<

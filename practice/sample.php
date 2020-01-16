@@ -487,3 +487,7 @@ echo $sum;
     <option value="orange">みかん</option>
   </select>
 </form>
+
+<?php
+ echo $_POST['fruit'];
+?>

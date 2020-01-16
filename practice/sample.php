@@ -497,3 +497,13 @@ for ($ = 1; $i < 4; $i++){
   echo"<option value='{$i}'>{$i}</option>";
 }
 ?>
+
+<?php
+for ($ = 1; $i < 4; $i++){
+  echo"<option value='{$i}'>{$i}</option>";
+}
+
+echo "<option value='1'>1</option>";
+
+?>
+

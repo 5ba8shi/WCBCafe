@@ -491,3 +491,9 @@ echo $sum;
 <?php
  echo $_POST['fruit'];
 ?>
+
+<?php
+for ($ = 1; $i < 4; $i++){
+  echo"<option value='{$i}'>{$i}</option>";
+}
+?>

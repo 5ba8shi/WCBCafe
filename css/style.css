@@ -210,3 +210,22 @@ aside p {
 .sub-menu a:hover {
     color: #0bd;
 }
+
+/* ------------------------------- 
+              モバイル
+---------------------------------- */
+@media (max-width: 600px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+
+    /* HEADER */
+    .main-nav {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    .main-nav li {
+        margin: 0 20px;
+    }
+    
+}

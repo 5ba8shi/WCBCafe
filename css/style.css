@@ -237,4 +237,18 @@ aside p {
         flex-direction: column;
         align-items: center;
     }
+    
+    /* NEWS */
+    .news-contents {
+        flex-direction: column;
+    }
+    article,
+    aside {
+        width: 100%;
+    }
+
+    #news .page-title{
+        margin-top: 30px;
+    }
+
 }

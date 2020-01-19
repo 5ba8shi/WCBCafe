@@ -3,3 +3,8 @@
   height: 50px
   border-radius: 100%;
 }
+
+.box{
+  @include circle;
+  background: #fc0;
+}

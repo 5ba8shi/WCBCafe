@@ -17,3 +17,14 @@
   border-radius: 100%;
   background: #fc0;
 }
+
+@mixin circle($size:40px) {
+  width: $size;
+  height: $size;
+  border-radiu: 100%;
+}
+
+.box {
+  @include circle;
+  background: #fc0;
+}

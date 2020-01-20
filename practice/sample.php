@@ -68,3 +68,20 @@ echo "10 - 4";
     echo ++$x;
     echo $y++;
   ?>
+
+<?php
+  $lesson = 'PHP';
+  echo $lesson.'入門';
+
+  $level = '入門';
+  echo $lesson.$level;
+  ?>
+
+  <?php
+  $name = 'にんじゃ';
+  $name .= 'わんこ';
+
+  echo $name;
+  ?>
+
+  

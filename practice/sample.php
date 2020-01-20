@@ -27,3 +27,16 @@ echo "10 - 4";
  $name = 'Bob';
  echo $name;
  ?>
+
+ <?php
+ $length = 7;
+ $area = $length * $length;
+
+ echo $area;
+
+ $area = 7 * 7;
+ 
+ echo $area;
+
+
+ ?>

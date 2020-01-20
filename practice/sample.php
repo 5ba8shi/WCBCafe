@@ -19,3 +19,11 @@ echo "10 - 4";
 ?>
 
 <?php 
+  echo 5+2;
+  echo'5+2';
+?>
+
+<?php
+ $name = 'Bob';
+ echo $name;
+ ?>

@@ -1,0 +1,18 @@
+<h1 class="grid-6"><%= link_to "Mina De Tweet!!", new_user_registration_path, id: "sidebar-btn"%></h1> 
+
+
+<% if user_signed_in? %>
+  <div class="user_nav grid-6">
+    <span><%= current_user.nickname %>
+      <ul class="user__info">
+        <li>
+          <%= link_to "マイページ", "/users/#{current_user.id}" %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        </li>
+      </ul>
+    </span>
+    <%= link_to "つぶやく", new_tweet_path, class: "post", id: "sidebar-btn" %>
+  </div>
+<% else %>
+
+<% end %>

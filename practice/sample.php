@@ -37,6 +37,20 @@ echo "10 - 4";
  $area = 7 * 7;
  
  echo $area;
+ ?>
 
+ <?php
+  $num = 3;
+  echo $num;
 
+  $num = 5;
+
+  echo $num;
+ ?>
+
+<?php
+  $x = 1;
+  $x += 10;
+
+  echo $x;
  ?>

@@ -168,3 +168,32 @@ if(!($x == 30)) {
   echo '$xは30ではない';
 }
 ?>
+
+<?php
+if($coin == 0){
+  echo '表';
+}
+elseif($coin == 1){
+  echo '裏';
+}
+else{
+  echo 'エラー';
+}
+?>
+
+<?php
+switch ($coin){
+  case 0:
+    echo '表';
+    break;
+
+  case 1:
+    echo '裏';
+    break;
+
+  default:
+    echo 'エラー';
+    break;
+
+}
+?>

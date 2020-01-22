@@ -1,46 +1,23 @@
-upstream app_server {
-  # sharedの中を参照するよう変更
-  server unix:/var/www/<アプリケーション名>/shared/tmp/sockets/unicorn.sock;
-}
+clasa User < ApplicationRecord
+ devise :ominiauthable, omniauth_providers: %i[facebook google_oauth2]
+ has_many :sns_credentials, dependent: :destroy
 
-server {
-  listen 80;
-  server_name <Elastic IPを記入>;
+ def self.find_oauth(auth)
+  uid = auth.uid
+  provider = auth.provider
+  snscredential = SnsCredential.where(uid: uid, provider: provider).first
 
-  # currentの中を参照するよう変更
-  root /var/www/<アプリケーション名>/current/public;
+  if snscredential.present?
+    user = User.where(email: auth.info.email).first
 
-  location ^~ /assets/ {
-    gzip_static on;
-    expires max;
-    add_header Cache-Control public;
-    # currentの中を参照するよう変更
-    root   /var/www/<アプリケーション名>/current/public;
-  }
+    unless user.present?
+      user = User.new(
+        nickname: auth.info.name,
+        email: auth.info.email
+      )
+    end
+    sns = snscredential
 
-  try_files $uri/index.html $uri @unicorn;
-
-  location @unicorn {
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header Host $http_host;
-    proxy_redirect off;
-    proxy_pass http://app_server;
-  }
-
-  error_page 500 502 503 504 /500.html;
-}
-
-group :production do
-  gem 'unicorn', '5.4.1'
+    #活用例 info = User.find_oauth(auth)
+          #session
 end
-
-pid "#{app_path}/tmp/pids/unicorn.pid"
-
-listen 3000
-
-stderr_path "#{app_path}/log/unicorn.stderr.log"
-
-stdout_path "#{app_path}/log/unicorn.studout.log"
-
-timeout 60
-

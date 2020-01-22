@@ -225,4 +225,10 @@ switch($coin){
 <?php
 $names = array('john','Kate','Bob');
 
+$names[] = 'Mary';
+echo $names[3];
+
+$names[1] = 'jane';
+echo $names[1];
+
 ?>

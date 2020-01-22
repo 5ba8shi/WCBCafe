@@ -197,3 +197,18 @@ switch ($coin){
 
 }
 ?>
+
+<?php
+switch($coin){
+  case 0:
+    echo '表';
+    break;
+  case 1:
+    echo '裏';
+    break
+  default:
+    echo 'エラー';
+    break;
+}
+
+?>

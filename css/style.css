@@ -124,18 +124,21 @@ footer p {
 
 /* 記事部分 */
 article {
-    width: 74%;
+    width: 60%;
+    order: 2;
 }
 
 /* サイドバー */
 aside {
     width: 22%;
+    order: 3;
 }
 
 .news-contents {
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+    order: 1;
 }
 
 .post-info {
@@ -252,7 +255,7 @@ aside p {
         margin-top: 30px;
     }
     aside {
-        margin-top: 
+        margin-top: 60px;
     }
     .post-info {
         margin-bottom: 30px;
@@ -273,6 +276,7 @@ aside p {
         font-size: 0.875rem;
         margin-top: 10px;
     }
+
     .post-title,
     .post-cat {
         margin-left: 80px;

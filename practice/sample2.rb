@@ -1,23 +1,43 @@
-clasa User < ApplicationRecord
- devise :ominiauthable, omniauth_providers: %i[facebook google_oauth2]
- has_many :sns_credentials, dependent: :destroy
+class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+  def facebook
+    callback_for(:facebook)
+  end
 
- def self.find_oauth(auth)
-  uid = auth.uid
-  provider = auth.provider
-  snscredential = SnsCredential.where(uid: uid, provider: provider).first
+  def google_oauthn
+    callback_for(:google)
+  end
 
-  if snscredential.present?
-    user = User.where(email: auth.info.email).first
+  def callback_for(provider)
+    info = User.find_oauth(request.env["omniauth.auth"])
+    @user = User.where(nickname: info[:user][:nickname]).or(User.where(email: info[:user][:email])).first || info[:user]
 
-    unless user.present?
-      user = User.new(
-        nickname: auth.info.name,
-        email: auth.info.email
-      )
+    if @user.persisted?
+
+      sign_in_and_redirect @user, event: :authentication
+      set_flash_message(:notice, :success, kind: "#{provider}".capitalize) if is_navigational_format?
+    else
+
+      session[:nickname] = info[:user][:nickname]
+      session[:email] = info[:user][:email]
+
+      session[:password_confirmation] = SecureRandom.alphanumeric(30)
+
+
+      if SnsCredential.find_by(uid: info[:sns][:uid], provider: info[:sns][:provider]).nil?
+
+        session[:uid] = info[:sns][:uid]
+        session[:provider] = info[:sns][:provider]
+      end
+
+      redirect_to step1_signups_path
     end
-    sns = snscredential
+  end
 
-    #活用例 info = User.find_oauth(auth)
-          #session
+  def fialure
+    redirect_to root_path
+  end
+end
+
+
+
 end

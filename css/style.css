@@ -217,6 +217,7 @@ aside p {
 @media (max-width: 600px) {
     .page-title {
         font-size: 2.5rem;
+        text-align: center;
     }
 
     /* HEADER */
@@ -250,5 +251,30 @@ aside p {
     #news .page-title{
         margin-top: 30px;
     }
-
+    aside {
+        margin-top: 
+    }
+    .post-info {
+        margin-bottom: 30px;
+    }
+    .post-date {
+        width: 70px;
+        height: 70px;
+        font-size: 1rem;
+    }
+    .post-date span{
+        font-size: 0.875rem;
+        padding-top: 2px;
+    }
+    .post-title {
+        font-size: 1.375rem;
+    }
+    .post-cat {
+        font-size: 0.875rem;
+        margin-top: 10px;
+    }
+    .post-title,
+    .post-cat {
+        margin-left: 80px;
+    }
 }

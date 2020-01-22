@@ -32,3 +32,42 @@ def step1_validates
   skip_phonenumber_validate(@user.errors)
 
   if verify_recaptcha(model: @user)
+
+  end
+
+
+end
+
+
+class SignupController < ApplicationController
+  before_action :authenticate_user!, only: :done
+  
+  def index
+    delete_session
+    redirect_to root_path if user_signed_in?
+  end
+
+  def step1
+
+    @user = if session[:password_confirmation]
+              User.new(
+                nickname: session[:nickname],
+                email: session[:email],
+                password_confirmation: session[:password_confirmation]
+              )
+            else
+              User.new
+            end
+
+  end
+
+
+def step1_validates
+
+  @user = if session[:password_confirmation].present?
+            set_user_when_sns(user_params)
+          else
+            set_user_when_email(user_params)
+          end
+  @user.valid?
+  skip_phnonumber_

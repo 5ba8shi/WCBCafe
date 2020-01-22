@@ -212,3 +212,17 @@ switch($coin){
 }
 
 ?>
+
+<?php
+  $names = array('john','Kate','Bob');
+
+  echo $names[0];
+
+  echo $names[1];
+
+?>
+
+<?php
+$names = array('john','Kate','Bob');
+
+?>

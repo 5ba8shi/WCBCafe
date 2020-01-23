@@ -242,3 +242,30 @@ echo $names[1];
     'gender' => 'male'
   );
 ?>
+
+<?php
+  $user = array(
+    'name' => 'わんこ',
+    'age'  =>  14
+  );
+
+  echo $user['わんこ'];
+
+  $user['level'] = 'beginner';
+?>
+
+echo 1;
+echo 2;
+
+<?php
+for ($i = 1; $i<=100; $i++) {
+  echo $i;
+}
+?>
+
+<?php
+ for ($i = 1; $i <= 100; $i++) {
+   echo $i;
+ }
+?>
+

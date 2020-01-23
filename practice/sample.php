@@ -314,3 +314,15 @@ for ($i = 1; $i <= 10; $i++){
   echo $i;
 }
 ?>
+
+continue  スルーする。
+
+break     if条件に該当すると終了。
+
+<?php
+  $data = array('東京','大阪','京都');
+  foreach($data as $value){
+    echo $value;
+  }
+?>
+

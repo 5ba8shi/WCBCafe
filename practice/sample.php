@@ -232,3 +232,13 @@ $names[1] = 'jane';
 echo $names[1];
 
 ?>
+
+<?php
+  $user = array(
+    'name' => 'わんこ',
+
+    'age' => 14,
+
+    'gender' => 'male'
+  );
+?>

@@ -266,6 +266,16 @@ for ($i = 1; $i<=100; $i++) {
 <?php
  for ($i = 1; $i <= 100; $i++) {
    echo $i;
+   echo $i.'<br>';
  }
 ?>
 
+
+<?php
+$i = 1;
+while($i <= 100) {
+  echo $i;
+  $i++;
+}
+
+?>

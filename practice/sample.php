@@ -283,8 +283,25 @@ while($i <= 100) {
 
 <?php
 $i = 1;
-while($i <= 100){
+while($i <= 100 && $i % 2 == 0){
   echo $i;
 }
 
+?>
+
+<?php
+for($i = 1; $i <= 10; $i++){
+  if($i > 5){
+  break;
+  }
+  echo $i;
+}
+?>
+
+<?php
+for($i = 1; $i <= 10;$i++){
+  if ($i > 5){
+  break;
+  }
+}
 ?>

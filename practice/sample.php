@@ -357,3 +357,12 @@ foreach($data as $value){
   }
 
 ?>
+
+<?php
+ echo strlen('Progage');
+?>
+
+<?php
+ $language = 'PHP';
+ echo strlen($language);
+ ?>

@@ -326,3 +326,20 @@ break     if条件に該当すると終了。
   }
 ?>
 
+<?php
+foreach($data as $value){
+  echo $value;
+}
+?>
+
+<?php
+  $colors = array(
+              'Apple' => 'Red',
+              'Banana' => 'Yellow',
+              'Grape' => 'Purple',
+              );
+  foreach($colors as $key => $value){
+    echo $key.':'.$value;
+  }
+?>
+

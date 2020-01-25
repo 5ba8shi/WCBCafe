@@ -424,3 +424,13 @@ hello();
   echo $sum;
 
 ?>
+
+<form actio="url" method="post">
+
+</form>
+
+<form action="sent.php" method="post">
+  Emailを入力してください。
+  <input type="text" name="email">
+  <textarea name="content"></textara>
+</form>

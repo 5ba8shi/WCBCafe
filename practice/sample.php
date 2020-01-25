@@ -387,3 +387,22 @@ foreach($data as $value){
   $radius2 = 5;
   echo $radius2 * $radius2 * 3;
 ?>
+
+<?php
+function printCircleArea($radius){
+  echo $radius * $radius * 3;
+
+  printCircleArea(3);
+
+  printCircleArea(5);
+}
+?>
+
+<?php
+funtion hello(){
+  echo 'Hello, world'
+}
+
+hello();
+
+?>

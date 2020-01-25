@@ -406,3 +406,21 @@ funtion hello(){
 hello();
 
 ?>
+
+<?php
+  function printSum($num1, $num2){
+    echo $num1 + $num2;
+  }
+
+  printSum(1,3);
+?>
+
+<?php
+  function getSum($num1, $num2){
+    return $num1 + $num2;
+  }
+
+  $sum = getSum(1,3);
+  echo $sum;
+
+?>

@@ -434,3 +434,15 @@ hello();
   <input type="text" name="email">
   <textarea name="content"></textara>
 </form>
+
+<?php
+echo $_POST['name'];
+echo $_POST['email'];
+
+array(
+  'name' => 'にんじゃわんこ',
+
+  email => 'wanko@prog-8.com'
+)
+
+?>

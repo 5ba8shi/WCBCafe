@@ -1,5 +1,5 @@
 $(function(){
-  $('form').on('submit', function(e){
+  $("form").on('submit' function(e){
     let output = '';
     let checkboxes = $(this).find('input[type="checkbox"]');
     checkboxes.each(function(i, checkbox){
@@ -9,6 +9,6 @@ $(function(){
       }
     });
     e.preventDefault();
-    alert('あなたが選んだ果物:\n' + output);
-  })
-})
+    alert('あなたの選んだ果物は:\n' + output);
+  });
+});

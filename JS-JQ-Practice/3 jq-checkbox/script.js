@@ -1,0 +1,14 @@
+$(function(){
+  $('form').on('submit', function(e){
+    let output = '';
+    let checkboxs = $(this).find('input[type="checkbox"]');
+    checkboxes.each(function(i, checkbox) {
+      checkbox = $(checkbox[i]);
+      if (checkbox.prop('checked')) {
+        output += checkbox.attr('value') + '\n';
+      }
+    });
+  });
+  e.preventDefault();
+  alert('あなたが選んだ果物:\n' + output);
+});

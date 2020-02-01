@@ -1,5 +1,5 @@
 $(function(){
-  $("form").on('submit' function(e){
+  $("form").on('submit', function(e){
     let output = '';
     let checkboxes = $(this).find('input[type="checkbox"]');
     checkboxes.each(function(i, checkbox){

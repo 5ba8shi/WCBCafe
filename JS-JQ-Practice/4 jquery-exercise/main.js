@@ -4,13 +4,13 @@ $(function(){
   let list = $("#list");
 
   function appendList(word) {
-    let item = $('<li class="list').append(word);
-    list.apped(item);
+    let item = $('<li class="list">').append(word);
+    list.append(item);
   }
 
   function editElement(element) {
     let result = "^" + element;
-    return result; 
+    return result;
   }
 
   $("#submit").on("click", function(){
@@ -26,8 +26,9 @@ $(function(){
         appendList(fruit);
       }
     });
-  })
 
-
-
-})
+    if($(".list").length === 0) {
+      appendList("一致する果物はありませんでした。");
+    }
+  });
+});

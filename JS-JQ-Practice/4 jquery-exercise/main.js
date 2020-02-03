@@ -19,6 +19,8 @@ $(function(){
     let newInputs = inputs.map(editElement);
     let reg = RegExp(newInputs.join("|"));
 
+    $('.list').remove();
+
 
     $.each(fruits, function(i, fruit){
       if (fruit.match(reg)) {

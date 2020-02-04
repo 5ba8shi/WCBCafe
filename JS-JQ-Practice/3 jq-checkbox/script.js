@@ -7,7 +7,7 @@ $(function(){
       if(checkbox.prop('checked')) {
         output += checkbox.attr('value') + '\n';
       }
-    }):    
+    });    
     e.preventDefault();
     alert('あなたが選んだ果物は:\n' + output);
   });

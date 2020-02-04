@@ -5,6 +5,7 @@ $(function(){
 
   function appendList(word) {
     let item = $('<li class="list">').append(word);
+    list.append(item);
   }
   
   function editElement(element){
@@ -12,12 +13,13 @@ $(function(){
     return result;
   }
 
-
   $("#submit").on("click", function(){
     let input = $("#keyword").val();
     let inputs = input.split(" ");
     let newInputs = inputs.map(editElement);
     let reg = RegExp(newInputs.join("|"));
+
+    $(".list").remove();
 
     $.each(fruits, function(i, fruit) {
       if (fruit.match(reg)) {
@@ -25,5 +27,8 @@ $(function(){
       }
     });
 
+    if ($(".list").length === 0) {
+      appendList("一致する果物はありませんでした");
+    }
   });
 });

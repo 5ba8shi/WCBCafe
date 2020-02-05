@@ -8,7 +8,7 @@ $(function(){
 
     const index = tabs.index(this);
 
-    $(".content").removeClass("show").eq(index).addClass("show");
+    $(".content").removeClass("show").eq(this).addClass("show");
   }
   tabs.click(tabSwitch);
 });

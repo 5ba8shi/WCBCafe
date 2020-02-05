@@ -4,16 +4,14 @@ $(function(){
   let list = $("#list");
 
   function appendList(word) {
-    let item = $('<li class="list">').append(word);
+    let item = $('<li class = "list">').append(word);
     list.append(item);
   }
 
-  function editElement(element) {
+  function editElement(element){
     let result = "^" + element;
     return result;
   }
-  
-
   $("#submit").on("click", function(){
     let input = $("#keyword").val();
     let inputs = input.split(" ");
@@ -23,7 +21,7 @@ $(function(){
     $(".list").remove();
 
     $.each(fruits, function(i, fruit){
-      if (fruit.match(reg)) {
+      if(fruit.match(reg)) {
         appendList(fruit);
       }
     });

@@ -13,8 +13,8 @@ $(function(){
     return result;
   }
 
-  $("#submit").on("click", function() {
-    let input = $("keyword").val();
+  $("#submit").on("click", function(){
+    let input = $("#keyword").val();
     let inputs = input.split(" ");
     let newInputs = inputs.map(editElement);
     let reg = RegExp(newInputs.join("|"));
@@ -27,7 +27,7 @@ $(function(){
       }
     });
 
-    if ($(".list").length === 0) {
+    if ($(".list").length === 0){
       appendList("一致する果物はありませんでした");
     }
   });

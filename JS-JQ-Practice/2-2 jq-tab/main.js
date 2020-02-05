@@ -1,8 +1,8 @@
-$(function() {
+$(function(){
   let tabs = $(".menu_item");
 
-  function tabSwitch() {
-    $('.active').removeClass("active");
+  function tabSwitch(){
+    $(".active").removeClass("active");
 
     $(this).addClass("active");
 

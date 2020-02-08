@@ -1,13 +1,21 @@
-$(function(){
-  let tabs =$(".main_item");
+window.addEventListener("load", function(){
+  let tabs = document.getElementsByClassName("menu_item");
+
+  tabsAry = Array.prototype.slice.call(tabs);
+
   function tabSwitch(){
-    $('.active').removeClass("active");
+    document.getElementsByClassName("active")[0].classList.remove("active");
 
-    $(this).addClass("active");
+    this.classList.add("active");
 
-    const index = tabs.index(this);
-    
-    $(".content").removeClass("show").eq(index).addClass("show");
+    document.getElementsByClassName("show")[0].classList.remove("show");
+
+    const index = tabsAry.indexOf(this);
+
+    document.getElementByClassName("content")[index].classList.add("show");
   }
-  tabs.click(tabSwitch);
+
+  tabsAry.forEach(function(value){
+    value.addEventListener("click", tabSwitch);
+  });
 });

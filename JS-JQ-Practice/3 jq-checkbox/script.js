@@ -5,7 +5,7 @@ $(function(){
     checkboxes.each(function(i, checkbox){
       checkbox = $(checkboxes[i]);
       if (checkbox.prop('checked')) {
-        output += checkbox.attr
+        output += checkbox.attr('value') + '\n';
       }
     });
     e.preventDefault();

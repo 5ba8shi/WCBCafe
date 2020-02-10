@@ -14,6 +14,7 @@ window.addEventListener("load", function(){
 
     document.getElementsByClassName("content")[index].classList.add("show");
   }
+
   tabsAry.forEach(function(value){
     value.addEventListener("click", tabSwitch);
   });

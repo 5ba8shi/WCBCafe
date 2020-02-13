@@ -10,7 +10,9 @@ window.addEventListener("load", function(){
 
     document.getElementsByClassName("show")[0].classList.remove("show");
 
-    const ind ex
+    const index = tabsAry.indexOf(this);
+
+    document.getElementsByClassName("content")[index].classList.add("show");
   }
   tabsAry.forEach(function(value){
     value.addEventListener("click", tabSwitch);

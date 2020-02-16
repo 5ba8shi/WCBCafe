@@ -6,7 +6,28 @@ const countText = document.getElementById('js-count')
 const timeText = document.getElementById('js-time')
 
 const setGame = () => {
-  tap Count = 0
+  tapCount = 0
   time = 10000
-  count
+  countText.innerText = tapCount
+  timeText.innerHTML = time / 1000
 }
+setGame()
+
+startBtn.addEventListener('click', () =>{
+  setGame()
+  isPlaying = true
+  tapBtn.disabled = false
+  startBtn.style.display = 'none'
+
+  const timer = setInterval( ()=> {
+    time -= 10
+    timeText.innerHTML = (time / 1000) .toFixed(2)
+
+    if(time === 0) {
+      clearInterval(timer)
+      isPlaying = false
+      startBtn.style.display = 'inline-block'
+      startBtn.innerText = 'もう一回'
+    }
+  }, 10)
+})

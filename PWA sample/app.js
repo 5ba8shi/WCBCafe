@@ -13,6 +13,12 @@ const setGame = () => {
 }
 setGame()
 
+tapBtn.addEventListener('click',() =>{
+  if (!isPlaying) return false
+  tapCount++
+  countText.innerText = tapCount
+})
+
 startBtn.addEventListener('click', () =>{
   setGame()
   isPlaying = true

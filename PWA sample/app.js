@@ -11,4 +11,29 @@ const setGame =() => {
   countText.innerText = tapCount
   timeText.innerHTML = time/1000
 }
-set Game() 
+setGame() 
+
+tapBtn.addEventListener('click', () =>{
+  if (!isPlaying) return false
+  tapCount++
+  countText.innerText = tapCount
+})
+
+startBtn.addEventListener('click', () => {
+  setGame()
+  isPlaying = true
+  tapBtn.disabled = false
+  startBtn.style.display = 'none'
+
+  const timer  = setInterval( () =>{
+    time -= 10
+    timeText.innerHTML = (time / 1000).toFixed(2)
+
+    if (time === 0){
+      clearInterval(timer)
+      isPlaying = false
+      startBtn.style.display = 'inline-block'
+      startBtn.innerText = 'もう一回'
+    }
+  }, 10)
+})

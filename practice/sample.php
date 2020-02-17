@@ -437,6 +437,24 @@ hello();
 
 ?>
 
+<?php
+function square($length){
+ return $length ** 2;
+}
+
+$side_length = 5;
+
+echo "１辺が{$side_length}センチの正方形は{square($length)}㎡です";
+
+?>
+
+<?php
+function($side_length){
+ return $length ** 2;
+}
+?>
+
+
 <form actio="url" method="post">
 
 </form>

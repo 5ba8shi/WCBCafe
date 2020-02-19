@@ -1,39 +1,32 @@
-let isPlaying = false
-let tapCount, time = 0
-const tapBtn = document.getElementById('js-tapBtn')
-const startBtn =document.getElementById('js-startBtn')
-const countText = document.getElementById('js-count')
-const timeText = document.getElementById('js-time')
+$(function(){
+  let search_list = $(".contens.row");
 
-const setGame =() => {
-  tapCount = 0
-  time = 10000
-  countText.innerText = tapCount
-  timeText.innerHTML = time/1000
-}
-setGame() 
+  function appendTweet(tweet) {
+    let current_user = tweet.user_sign_in && tweet.user_sign_in.id == tweet.user_id ?
+                '<li>
+                  <a href="/tweets/${tweet.id}/edit" data-method="get" >編集</a>'
+  }
 
-tapBtn.addEventListener('click', () =>{
-  if (!isPlaying) return false
-  tapCount++
-  countText.innerText = tapCount
-})
+  $(".search-input").on("keyup", function(){
+    let input = $(".search-input").val();
+    $.ajax({
+      type: 'GET',
+      url: '/tweets/search',
+      data: { keyword: input },
+      dataType: 'json'
+    })
+    .done(function(tweets){
+      serarch_list.empty();
+      if (tweets.length !== 0) {
+        tweets.forEach(function(tweet){
+          appendTweet(tweet);
+        });
+      }
+      else{
+        appendErrToHTML("一致するツイートがありません。")
+      }
+    })
+    })
+  })
 
-startBtn.addEventListener('click', () => {
-  setGame()
-  isPlaying = true
-  tapBtn.disabled = false
-  startBtn.style.display = 'none'
-
-  const timer  = setInterval( () =>{
-    time -= 10
-    timeText.innerHTML = (time / 1000).toFixed(2)
-
-    if (time === 0){
-      clearInterval(timer)
-      isPlaying = false
-      startBtn.style.display = 'inline-block'
-      startBtn.innerText = 'もう一回'
-    }
-  }, 10)
-})
+});

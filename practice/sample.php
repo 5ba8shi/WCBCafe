@@ -603,3 +603,19 @@ EOF;
 @while (条件)
 繰り返す処理
 @endwhile
+
+$loop->index
+
+$loop->date_interval_create_from_date_string
+
+$loop->remaining
+
+$loop->count
+
+$loop->first
+
+$loop->libxml_get_last_error
+
+$loop->depth
+
+$loop->parent

@@ -545,3 +545,61 @@ EOF;
     return $html;    
 });
 });
+
+@if(lala)
+
+@endif
+
+
+
+@if(lala)
+
+@else
+
+@endif
+
+@if (条件)
+
+@elseif(条件)
+
+@else
+
+@endif
+
+@unless (jyo ==0)
+
+@endunless
+
+@unless(jyo == 0)
+
+@else
+
+@endunless
+
+@empty (変数)
+
+@else
+
+@endempty
+
+@isset(henn)
+
+@endisset
+
+@for(;;)
+
+@endfor
+
+@foreach($rere as $re)
+
+@endforeach
+
+@forelse ($配列 as $変数)
+
+@empty
+
+@endforelse
+
+@while (条件)
+繰り返す処理
+@endwhile

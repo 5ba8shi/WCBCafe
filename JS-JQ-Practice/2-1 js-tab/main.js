@@ -3,7 +3,7 @@ window.addEventListener("load", function(){
 
   tabsAry = Array.prototype.slice.call(tabs);
 
-  function tabSwitch(){
+  function tabSwitch(){ 
     document.getElementsByClassName("active")[0].classList.remove("active");
 
     this.classList.add("active");
@@ -15,6 +15,6 @@ window.addEventListener("load", function(){
     document.getElementsByClassName("content")[index].classList.add("show");
   }
   tabsAry.forEach(function(value){
-    value.addEventListener("click", tabSwitch);    
+    value.addEventListener("click", tabSwitch);
   });
 });

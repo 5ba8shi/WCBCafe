@@ -415,3 +415,15 @@ output(chat[0], 'other');
 setTimeout( ()=> {
   output(chat[1], 'other');
 }, 2000);
+
+function sayHello(){
+  console.log('hello');
+}
+
+function sayName(name){
+  console.log(name);
+}
+
+let myName = 'yamada';
+sayHello();
+sayName(myName);

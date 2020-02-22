@@ -427,3 +427,22 @@ function sayName(name){
 let myName = 'yamada';
 sayHello();
 sayName(myName);
+
+
+function sayHello(){
+  console.log('hello');
+}
+
+function sayName(name){
+  console.log(name);
+}
+
+let myName = 'yamada';
+sayHello();
+sayName(myName);
+
+num = 1;
+for (let i = 0; i < 10; i += 1) {
+  console.log(num + '回目の出力')
+  num += 1
+} 

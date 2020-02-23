@@ -441,8 +441,30 @@ let myName = 'yamada';
 sayHello();
 sayName(myName);
 
-num = 1;
-for (let i = 0; i < 10; i += 1) {
-  console.log(num + '回目の出力')
-  num += 1
-} 
+window.alert('こんにちは');
+
+console.log('こんにちは');
+
+let name = 'yamada';
+
+console.log (name + 'さんこんばんは');
+
+
+const name ='koba';
+
+console.log(name + 'さんこんばんは')
+
+let num = 60;
+
+if (num % 15 == 0){
+  console.log(num + 'は３と５の倍数です');
+} else if (num % 3 == 0) {
+  console.log(num + 'は3の倍数です');
+} else if (num % 5 == 0) {
+  console.log(num + 'は５の倍数です。');
+} else {
+  console.log(num + 'は３の倍数でも、５のバイイ数でもありません')
+}
+
+let list = ['Ruby', 'Ruby on Rails', 'javascript', 'html', 'css'];
+console.log(list);

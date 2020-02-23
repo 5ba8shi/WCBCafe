@@ -467,4 +467,5 @@ if (num % 15 == 0){
 }
 
 let list = ['Ruby', 'Ruby on Rails', 'javascript', 'html', 'css'];
-console.log(list);
+console.log(list.length);
+

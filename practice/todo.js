@@ -473,3 +473,14 @@ console.log(list.length);
 let list = ['red', 'blue'];
 list.push('black');
 console.log(list);
+
+
+let list = ['red', 'blue'];
+list.pop();
+console.log(list);
+
+let list = ['yel', 'dd'];
+list.shift();
+console.log(list);
+
+let obj = {};

@@ -469,3 +469,7 @@ if (num % 15 == 0){
 let list = ['Ruby', 'Ruby on Rails', 'javascript', 'html', 'css'];
 console.log(list.length);
 
+
+let list = ['red', 'blue'];
+list.push('black');
+console.log(list);

@@ -619,3 +619,24 @@ $loop->libxml_get_last_error
 $loop->depth
 
 $loop->parent
+
+@foreach ($users as $user)
+  @if ($loop->first)
+    これは最初の繰り返し
+  @endif
+
+  @if ($loop->last)
+    これは最後の繰り返し
+  @endif
+
+  <p>これは{{ $user->id }} ユーザーです。</p>
+@endforeach
+
+
+@foreach($user as $user)
+  @foreach($user->posts as $post)
+    @if ($loop->parent->first)
+      これは親のループの最初の繰り返しだ
+    @endif
+  @endforeach
+@endforeach

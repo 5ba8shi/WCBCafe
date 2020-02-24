@@ -681,3 +681,18 @@ html:5
 @push('script')
   <script src="/example.js"></script>
 @endpush
+
+@push('script')
+  ここは２番め
+@endpush
+
+@prepend('scripts')
+  ここは最初
+@
+
+@inject('metrics', 'APP\Services\MetricsService')
+
+<div>
+  Monthly Revenue: {{ $metrics->monthlyRevenue() }}.
+</div>
+

@@ -498,3 +498,21 @@ function printHello() {
 }
 
 btn.addEventListener("click", printHello)
+
+window.addEventListener("load", function(){
+  let btn = document.querySelector("button");
+  function printHello(){
+    console.log("Hello world");
+  }
+
+  btn.addEventListener("click", printHello);
+});
+
+window.addEventListener("load", function(){
+  let btn = document.querySelector("button");
+  function printHello(){
+    console.log("Hello world");
+  }
+
+  btn.addEventListener("click", printHello);
+});

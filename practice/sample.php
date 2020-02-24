@@ -701,3 +701,11 @@ html:5
 Route::get('blade', function(){
   return view('child');
 });
+
+<div class="alert alert-danger">
+  {{ $slot }}
+</div>
+
+@component('alert')
+  <strong>Whoops!</strong> Something went wrong!
+@endcomponent

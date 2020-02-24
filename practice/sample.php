@@ -696,3 +696,8 @@ html:5
   Monthly Revenue: {{ $metrics->monthlyRevenue() }}.
 </div>
 
+@yield ('content', View::make('view.name'))
+
+Route::get('blade', function(){
+  return view('child');
+});

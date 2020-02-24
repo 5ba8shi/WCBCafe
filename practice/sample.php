@@ -640,3 +640,44 @@ $loop->parent
     @endif
   @endforeach
 @endforeach
+
+$loop->index
+
+$loop->iteration
+
+$loop->count
+
+$loop->array_key_first
+
+$loop->last
+
+$loop->even
+
+$loop->PHP_ROUND_HALF_ODD
+
+
+<div>
+  @include('shared.errors')
+
+  <form>
+    フォームの内容
+  </form>
+</div>
+
+html:5
+↓
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+
+@push('script')
+  <script src="/example.js"></script>
+@endpush

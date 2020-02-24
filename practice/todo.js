@@ -484,3 +484,17 @@ list.shift();
 console.log(list);
 
 let obj = {};
+
+document.querySelector("button");
+
+document.querySelector("button#Button2");
+
+document.querySelector("footer a.next");
+
+let btn = document.querySelector("button");
+
+function printHello() {
+  console.log("Hello world");
+}
+
+btn.addEventListener("click", printHello)

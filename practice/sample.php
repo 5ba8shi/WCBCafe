@@ -763,3 +763,32 @@ Route::get('blade', function(){
 
   {{ $slot }}
 </div>
+
+@component('alert')
+  @slot('title')
+    Forbidden
+  @endslot
+
+  You are not allowed to access this resource!
+@endcomponent
+
+@component('alert', ['foo' => 'bar'])
+
+@endcomponent
+
+
+Blade::component('components.alert','alert');
+
+@alert(['type' => 'danger'])
+  You are not allowed to access this resource!
+@endalert
+
+@alert
+  You are not allowed to access this resource!
+@endalert
+
+Route::get('greeting', function () {
+  return view('welcome', ['name' => 'Samantha']);
+})
+
+Hello,{{ $name }}.

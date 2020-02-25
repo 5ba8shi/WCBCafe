@@ -725,4 +725,36 @@ Route::get('blade', function(){
   <body>
 </html>
 
-@
+@extends('layouts.app')
+
+@section('title', 'Page Title')
+
+@section('sidebar')
+  @@parent
+
+  <p>ここはメインのサイドバーに追加される</p>
+@endsection
+
+@section('content')
+  <p>ここが文章のコンテツ</p>
+@endsection
+
+@yield('content', View::make('view.name'))
+
+Route::get('blade', function(){
+  return view('child');
+})
+
+<div class="alert alert-danger">
+  {{ $slot }}
+</div>
+
+@component('alert')
+  <strong>Whoops!</strong> Something went wrong!
+@endcomponent
+
+@componentFirst(['custom.alert', 'alert'])
+  <strong>Whooops!</strong> Something went wrong!
+@endcomponent
+
+

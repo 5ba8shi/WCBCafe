@@ -709,3 +709,20 @@ Route::get('blade', function(){
 @component('alert')
   <strong>Whoops!</strong> Something went wrong!
 @endcomponent
+
+<html>
+  <head>
+    <title>アプリ名 - @yield('title')</title>
+  </head>
+  <body>
+    @section('sidebar')
+      ここがメインのサイドバー
+    @show
+
+    <div class="cotainer">
+      @yield('content')
+    </div>
+  <body>
+</html>
+
+@

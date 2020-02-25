@@ -524,3 +524,9 @@ window.addEventListener("load", function(){
     console.log("Hello world");
   });
 });
+
+document.getElementById();
+
+document.getElementsByClassName
+
+document.querySelector("セレクタ名");

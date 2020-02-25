@@ -792,3 +792,16 @@ Route::get('greeting', function () {
 })
 
 Hello,{{ $name }}.
+
+The current UNIX timestamp is {{ time() }}.
+
+Hello, {!! $name !!}.
+
+<script>
+ let app = <?php echo json_encode($array); ?>;
+</script>
+
+<script>
+  let app = @json($array);
+  let app = @json($array, JSON_PRETTY_PRINT);
+</script>

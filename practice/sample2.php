@@ -58,3 +58,44 @@
 @prepend('scripts')
  ここは最初
 @endprepend
+
+
+<?php echo ($var)->format('m/d/Y H:i'); ?>
+
+@componentFirst(['custom.alert', 'alert'])
+  <strong>Whoops! </strong> Something went wrong!
+@endcomponent
+
+
+<div class="alert alert-danger">
+  <div class="alert-title">{{ $title }}</div>
+
+  {{ $slot }}
+</div>
+
+
+@component('alert')
+  @slot('title')
+    Forbidden
+  @endslot
+
+  You
+
+@alert(['type' => 'danger'])
+  You are not allowed to access this resource!
+@endalert
+
+
+Route::get('greeting', function(){
+  return view('welcome', ['name' => 'Samantha']);
+});
+
+Hello, {{ $name }}.
+
+
+Hello, {{!! $name !!}}.
+
+
+<script>
+  var app = <?php echo json_encode($array); ?>;
+</script>

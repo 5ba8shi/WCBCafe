@@ -119,3 +119,34 @@ Hello, {{!! $name !!}}.
 @else
   レコードがない！
 @endif
+
+
+@unless (Auth::check())
+  あなたはログインしていません
+@endunless
+
+@isset($records)
+
+@endisset
+
+@empty($records)
+
+@endempty
+
+
+@auth
+
+@endauth
+
+@guest
+
+@endguest
+
+@auth('admin')
+
+@endauth
+
+@guest('admin')
+
+@endguest
+

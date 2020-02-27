@@ -99,3 +99,23 @@ Hello, {{!! $name !!}}.
 <script>
   var app = <?php echo json_encode($array); ?>;
 </script>
+
+<script>
+  let app = @json($array);
+
+  let app = @json($array, JSON_PRETTY_PRINT);
+</script>
+
+@verbatim
+  <div class="container">
+    Hello, {{ name }}.
+  </div>
+@endverbatim
+
+@if (count($records) === 1)
+  1レコードある！
+@elseif (count($records) > 1)
+  複数レコードある!
+@else
+  レコードがない！
+@endif

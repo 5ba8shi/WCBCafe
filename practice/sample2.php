@@ -150,3 +150,35 @@ Hello, {{!! $name !!}}.
 
 @endguest
 
+@switch($i)
+  @case(1)
+    最初のケース
+    @break
+
+  @case(2)
+    ２番めのケース
+    @break
+
+  @default
+    デフォルトのケース
+@endswitch
+
+
+
+@for ($i = 0; $i < 10; $i++)
+  現在の値は : {{ $i }}
+@endfor
+
+@forearch ($users as $user)
+  <p>これは {{ $user->id }} ユーザーです。</p>
+@endforeach
+
+@forelse ($users as $user)
+  <li>{{ $user->name }}</li>
+@empty
+  <p>ユーザーなし</p>
+@endforelse
+
+@while (true)
+  <p>無限ループ中</p>
+@endwhile

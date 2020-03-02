@@ -182,3 +182,67 @@ Hello, {{!! $name !!}}.
 @while (true)
   <p>無限ループ中</p>
 @endwhile
+
+@switch($i)
+  @case(1)
+    最初のケース
+    @break
+  @case(2)
+    2番目のケース
+    @break
+  
+  @default
+    デフォルトのケース
+@endswitch
+
+
+@for ($i = 0; $i < 10; $i ++)
+  現在の値は: {{ $i }}
+@endfor
+
+@foreach ($user as $user)
+  <p>これは{{ $user->id }}ユーザーです。</p>
+@endforeach
+
+@forelse ($users as $user)
+  <li>{{ $user->name }}</li>
+@empty
+  <p>ユーザーなし</p>
+@endforelse
+
+
+@while(true)
+  <p>無限ループ中</p>
+@endwhile
+
+@foreach($user as $user)
+  @if($user->type == 1)
+    @continue
+  @endif
+
+  @foreach($user as $user)
+    @if ($user->type == 1)
+      @continue
+    @endif
+
+    <li>{{ $user->name }}</li>
+
+    @if ($user->number == 5)
+      @break
+    @endif
+  @endforeach
+
+
+  foreach ($user as $user)
+
+  @foreach($user as $user)
+    @if ($loop->first)
+      これは最初の繰り返し
+    @endif
+
+    @if($loop->last)
+      これは最後の繰り返し
+    @endif
+
+    <p>これは{{ $user->id }}ユーザーです。</p>]
+  @endforearch

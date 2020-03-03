@@ -134,7 +134,10 @@ body {
   padding: 0;
   margin: 0;
   font-family: Verdana, sans-serif;
-  background: gray;
+  background-image:url(../img/hajimen.png);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 .nav-bar {
   height: 30px;
@@ -143,15 +146,20 @@ body {
 }
 .container {
   padding: 0;
-  margin: 0 auto;
-  width: 600px;
-  background: #dce0e0;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  background: orange;
+  box-shadow: 0 0 10px yellow;
+  border-radius: 10px;
 }
 ul.menu {
   list-style: none;
   padding: 0;
   margin: 0;
   font-size: 0;
+  text-align: center;
 }
 ul.menu li {
   display: inline-block;
@@ -159,17 +167,19 @@ ul.menu li {
 ul.menu li .menu_item {
   display: inline-block;
   font-size: 14px;
-  width: 186px;
+  width: 146px;
   height: 20px;
   line-height: 20px;
   text-align: center;
   text-decoration: none;
   padding: 7px;
-  color: #333;
+  color: black;
 }
 ul.menu li .active {
-  background: #353d3e;
-  color: #fff;
+  background: #cafaff;
+  color: black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 ul.menu li :not(.active):hover {
   opacity: 0.5;
@@ -180,11 +190,13 @@ ul.contents li {
   font-size: 14px;
   padding: 7px 10px;
   line-height: 1.4;
-  background: #353d3e;
-  color: #fff;
-  min-height: 150px;
+  background: #cafaff;
+  color: black;
+  min-height: 500px;
   display: none;
 }
 ul.contents li.show {
   display: block;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }

@@ -26,4 +26,4 @@ window.addEventListener("load", function() {
   tabsAry.forEach(function(value) {
     value.addEventListener("click", tabSwitch);
   });
-})
+}); 

@@ -531,11 +531,12 @@ document.getElementsByClassName
 
 document.querySelector("セレクタ名");
 
+
 window.addEventListener("load", function(){
-  let tabs = document.getElementsByClassName("menu_item")
+  let tabs = document.getElementsByClassName("menu_item");
 
   tabsAry = Array.prototype.slice.call(tabs);
-
+  
   function tabSwitch(){
     document.getElementsByClassName("active")[0].classList.remove("active");
 
@@ -546,8 +547,9 @@ window.addEventListener("load", function(){
     const index = tabsAry.indexOf(this);
 
     document.getElementsByClassName("content")[index].classList.add("show");
+
   }
   tabsAry.forEach(function(value){
     value.addEventListener("click", tabSwitch);
-  });
+  })
 });

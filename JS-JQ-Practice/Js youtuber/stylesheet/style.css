@@ -192,11 +192,25 @@ ul.contents li {
   line-height: 1.4;
   background: #cafaff;
   color: black;
-  min-height: 500px;
+  height: 500px;
+  max-height: 500px;
   display: none;
 }
 ul.contents li.show {
   display: block;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  overflow: scroll;
+}
+
+
+/* 画像の設定 */
+.grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 6%;
+  margin-bottom: 50px;
+}
+div.item img{
+  /* 画像の大きさ調整 */
+  width: 300px;
 }

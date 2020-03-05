@@ -532,4 +532,3 @@ document.getElementsByClassName
 document.querySelector("セレクタ名");
 
 
-window

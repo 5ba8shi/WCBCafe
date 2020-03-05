@@ -246,3 +246,24 @@ Hello, {{!! $name !!}}.
 
     <p>これは{{ $user->id }}ユーザーです。</p>]
   @endforearch
+
+  @if (count($records) === 1)
+
+  @elseif (count($records) > 1 )
+
+  @else
+   
+  @endif
+
+  @unless (Auth::check())
+    あなたはログインしていません。
+  @endunless
+
+
+  @isset($records)
+
+  @endisset
+
+  @empty($records)
+
+  @endempty

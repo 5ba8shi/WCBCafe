@@ -267,3 +267,12 @@ Hello, {{!! $name !!}}.
   @empty($records)
 
   @endempty
+
+
+@for($i = 0; $i < 10 $i++)
+  現在の値は：{{ $i }}
+@endfor
+
+@for($i = 0; $i < 10 $i++)
+  現在の値は：{{ $i }}
+@endfor

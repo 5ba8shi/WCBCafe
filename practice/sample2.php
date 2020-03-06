@@ -324,3 +324,76 @@ Hello, {{!! $name !!}}.
   @endforeach
 @endforeach
 
+
+<div>
+  @inculde('shard.errors')
+
+  <form>
+
+  </form>
+</div>
+
+@include('view.name',['some' => 'data'])
+
+@includeIf('view.name', ['some '=>'data'])
+
+@includeWhen($boolean, 'view.name', ['some' => 'data'])
+
+@includeFirst(['custom.admin', 'admin'], ['some'=>'data'])
+
+includeFirst(['custom.admin', 'admin'], ['some' => 'data'])
+
+@input(['type' => 'email'])
+
+@each('view.name')
+
+<head>
+  <!-- v-->
+  @stream('scripts')
+</head>
+
+@push('scripts')
+  ここは2番目
+@endpush
+
+@prepend('scripts')
+  ここは最初
+@endprepend
+
+@inject('metrics', 'App\Services\MetricsService')
+
+<div>
+  Monthly Revenue: {{ $metrics->monthlyRevenue() }}
+</div>
+
+@push('script')
+  ここは2番目
+@endpush
+
+@prepnend('scriputs')
+  ここは最初
+@endprepend
+
+@foreach($users as $user)
+  @if ($loop->first)
+    これは最初の繰り返し
+  @endif
+
+  @if ($loop->last)
+    これは最後の繰り返し
+  @endif
+
+  <p>これは {{ $user->id }} ユーザーです。</p>
+@endforeach
+
+@foreach($user as $user)
+  @foreach($user->posts as $post)
+    @if ($loop->parent->first)
+      これは親のループの最初の繰り返しだ
+    @endif
+  @endforeach
+@endforeach
+
+@foreach($users as $user)
+  @if ($loop->first)
+    これは最初の繰り返し

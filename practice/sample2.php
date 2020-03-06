@@ -314,3 +314,13 @@ Hello, {{!! $name !!}}.
 
   <p>これは{{ $user->id }} ユーザーです。</p>
 @endforeach
+
+
+@foreach($user as $user)
+  @foreach($user->posts as $post)
+    @if ($loop->parent->first)
+      これは親の
+    @endif
+  @endforeach
+@endforeach
+

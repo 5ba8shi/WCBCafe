@@ -397,3 +397,42 @@ includeFirst(['custom.admin', 'admin'], ['some' => 'data'])
 @foreach($users as $user)
   @if ($loop->first)
     これは最初の繰り返し
+  @endif
+
+  @if($loop->last)
+
+  @endif
+
+  <p>これは{{ $user->id }} ユーザーです。</p>
+@endforeach
+
+@foreach($user as $user)
+  @if ($user->type == 1)
+      @continue
+  @endif
+
+  <li>{{ $user->name }}</li>
+  
+  @if ($user->number == 5)
+    @break
+  @endif
+@endforeach
+
+@foreach($user as $user)
+  @if ($user->type == 1)
+    @continue
+  @endif
+
+  <li>{{ $user->name }}</li>
+
+  @if ($user->number == 5)
+    @break
+  @endif
+@endforeach
+
+
+@foreach($user as $user)
+  @continue($user->type == 1)
+  <li>{{ $user->name }}</li>
+  @break($user->number == 5)
+@endforeach

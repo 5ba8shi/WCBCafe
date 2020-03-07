@@ -436,3 +436,22 @@ includeFirst(['custom.admin', 'admin'], ['some' => 'data'])
   <li>{{ $user->name }}</li>
   @break($user->number == 5)
 @endforeach
+
+@foreach($users as $user)
+  @foreach($user->posts as $post)
+    @if ($loop->parent->first)
+      これは親のルー府の最初の繰り返しだ
+    @endif
+  @endforeach
+@endforeach
+
+
+$loop->index
+
+$loop->remaining
+
+$loop->depth
+
+@php
+//
+@endphp

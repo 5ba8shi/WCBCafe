@@ -489,3 +489,23 @@ $loop->depth
   @endif
 @endforeach
 
+
+@foreach ($users as $user)
+  @continue($user->type == 1)
+
+  <li>{{ $user->name }}</li>
+
+  @break($user->number == 5)
+@endforeach
+
+@foreach ($user as $user)
+  @if ($loop->first)
+    これは最初の繰り返し
+  @endif
+
+  @if ($loop->last)
+    これは最後の繰り返し
+  @endif
+
+  <p>これは{{ $user->id }} ユーザーです。</p>
+@endforeach

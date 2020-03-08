@@ -454,4 +454,38 @@ $loop->depth
 
 @php
 //
-@endphp
+@endph
+
+
+<div>
+  @include('shared.errors')
+
+  <form>
+    <!==
+  </form>
+</div>
+
+@foreach($user as $user)
+  @if($user->type == 1)
+    @continue
+  @endif
+
+  <li>{{ $user->name }}</li>
+
+  @if ($user->number == 5)
+    @break
+  @endif
+@endforeach
+
+@foreach($user as $user)
+  @if ($user->type == 1)
+    @continue
+  @endif
+
+  <li>{{ $user->name }}</li>
+
+  @if ($user->number == 5)
+    @break
+  @endif
+@endforeach
+

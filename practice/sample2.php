@@ -609,3 +609,5 @@ $loop->first
     @endif
   @endforeach
 @endforeach
+
+@include('view.name', ['some' => 'data'])

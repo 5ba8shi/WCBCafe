@@ -599,3 +599,13 @@ $loop->first
   @endif
 
   <p>これは {{ $user->id }} ユーザーです。</p>
+@endforeach
+
+
+@foreach($user as $user)
+  @foreach($user->posts as $post)
+    @if($loop->parent->first)
+      これは親のループの最初の繰り返しだ
+    @endif
+  @endforeach
+@endforeach

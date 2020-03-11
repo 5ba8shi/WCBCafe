@@ -666,5 +666,7 @@ window.addEventListener("load", function(){
 
   btn4.addEventListener("click", function(){
     obj.classList.remove("blue");
-  })
+  });
+
+
 });

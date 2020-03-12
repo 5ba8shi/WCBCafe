@@ -640,3 +640,31 @@ window.addEventListener("load", function(){
   });
 });
 
+window.addEventListener("load", function(){
+  let btn = document.querySelector("button#Button");
+
+  btn.addEventListener("click", function(){
+    console.log('Hello World');
+  });
+
+  let btn2 = document.querySelector("button#Button2");
+  let changText = document.querySelector("p");
+
+  btn2.addEventListener("click", function(){
+    changeText.innerHTML = '変更されました';
+  });
+
+  let btn3 = document.querySelector("#Button3");
+
+  btn3.addEventListener("click", function(){
+    changeText.classList.add("red");
+  });
+
+  let btn4 = document.querySelector("#Button4");
+
+  let obj = document.querySelector("div");
+
+  btn4.addEventListener("click", function(){
+    obj.classList.remove("blue");
+  });
+});

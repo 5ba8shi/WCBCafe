@@ -689,3 +689,4 @@ window.addEventListener("load", function(){
     value.addEventListener("click", tabSwitch);
   });
 });
+

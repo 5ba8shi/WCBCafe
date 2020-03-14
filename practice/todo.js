@@ -697,7 +697,7 @@ window.addEventListener("load", function(){
   tabsAry = Array.prototype.slice.call(tabs);
 
   function tabSwitch(){
-    document.getElementsByClassName("active")[0].classList.remove("active");
+    document.getElementsByClassName("active").classList.remove("active");
 
     this.classList.add("active");
 
@@ -705,10 +705,9 @@ window.addEventListener("load", function(){
 
     const index = tabsAry.indexOf(this);
 
-    document.getElementsByClassName("content")[index].classList.add("show")
+    document.getElementsByClassName("content")[index].classList.add("show");
   }
-
-  tabsAry.forEach(function(value){
+  tabsAry.forEach(value)(function(){
     value.addEventListener("click", tabSwitch);
   });
 });

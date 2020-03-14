@@ -611,3 +611,58 @@ $loop->first
 @endforeach
 
 @include('view.name', ['some' => 'data'])
+
+@extends('layouts.app')
+
+@section('title', 'Page Title')
+
+@section('sidebar')
+  @@parent
+
+  <p>ここはメインのサイドバーに追加される</p>
+@endsection
+
+@section('content')
+  <p>ここが本文のコンテンツ</p>
+@endsection
+
+@yield('content', View::make('view.name'))
+
+Route::get('blade', function(){
+  return view('child');
+});
+
+
+<div class="alert alert-danger">
+  {{ $slot }}
+</div>
+
+
+@component('alert')
+  <strong>Whoops!</strong>Something went wrong!
+@endcomponent
+
+
+@componentFirst(['custom.alert', 'alert'])
+  <strong>Whoops!</strong> Something Went Wrong!
+@endcomponent
+
+
+<div class="alert alert-danger">
+  <div class="alert-title">{{ $title }}</div>
+  {{ $slot }}
+</div>
+
+@component('alert')
+  @slot('title')
+    Forbidden
+  @endslot
+
+  You are not allowed to access this resource!
+@endcomponent
+
+
+@component('alert',['foo' => 'bar'])
+
+@endcomponent
+

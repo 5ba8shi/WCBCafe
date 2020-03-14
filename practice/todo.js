@@ -705,7 +705,7 @@ window.addEventListener("load", function(){
 
     const index = tabsAry.indexOf(this);
 
-    document.getElementsByClassName("content")[index].classList.add("show");
+    document.getElementsByClassName("content")[index].classList.add("show")
   }
 
   tabsAry.forEach(function(value){

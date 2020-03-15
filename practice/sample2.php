@@ -666,3 +666,13 @@ Route::get('blade', function(){
 
 @endcomponent
 
+@switch($i)
+  @case(1)
+    最初のケース
+    @break
+
+  @case(2)
+    ２番めのケース
+    @break
+  
+  @default

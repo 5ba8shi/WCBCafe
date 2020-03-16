@@ -731,3 +731,58 @@ window.addEventListener("load", function(){
     value.addEventListener("click", tabSwitch);
   });
 });
+
+
+window.addEventListener("load", function(){
+  let tabs = document.getElementsByClassName("menu_item");
+
+  tabsAry = Array.prototype.slice.call(tabs);
+
+  function tabSwitch(){
+    document.getElementsByClassName("active")[0].classList.remove("active");
+
+    this.classList.add("active");
+
+    document.getElementsByClassName("show")[0].classList.remove("show");
+
+    const index = indexOf(this);
+
+    document.getElementsByClassName("content")[index].classList.add("show");
+  }
+
+  tabsAry.forEach(function(value){
+    value.addEventListener("click", tabSwitch);
+  });
+});
+
+let fruits = ['apple', 'apricot', 'avocado', 'blueberry', 'cherry', 'coconut', 'cranberry', 'dragonfruit', 'durian', 'grape', 'grapefruit', 'guava', 'kiwi fruit', 'lemon', 'lime', 'lychee', 'mango', 'melon', 'watermelon', 'miracle fruit', 'orange', 'bloodorange','clementine','mandarine','tangerine','papaya','passionfruit','peach','pear','persimmon','physalis','plum/prune','pineapple','pomegranate','raspberry','rambutan','star fruit','strawberry'];
+
+$(function(){
+  let list = $("#list");
+
+  function appendList(word){
+    let item = $('<li class="list">').append(word);
+    list.append(item);
+  }
+  function editElement(element){
+    let result = "^" + element;
+    return result;
+  }
+
+  $('#submit').on("click", function(){
+    let input = $("keyword").val();
+    let inputs = input.split(" ");
+    let newInput = inputs.map(editElement);
+    let reg = RegExp(newInput.join("|"));
+
+    $.each(fruits, function(i, fruit){
+      if(fruit.match(reg)){
+        appendList(fruit);
+      }
+    });
+
+    if ($(".list").length === 0) {
+      appendList("一致する果物はありませんでした。")
+    }
+  });
+});

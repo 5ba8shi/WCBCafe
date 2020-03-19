@@ -806,3 +806,37 @@ while(i <=30) {
   console.log(fizzbuzz(i));
   i += 1;
 }
+
+
+function calc(num1, num2){
+  return num1*num2;
+}
+
+let num1 = 4;
+let num2 = 5;
+
+console.log(calc(num1, num2));
+
+function sayHello(){
+  console.log('hello');
+}
+
+function sayName(name){
+  console.log(name);
+}
+
+let myName = 'yamada';
+sayHello();
+sayName(myName);
+
+function sayHello(){
+  console.log('hello');
+}
+
+function sayName(name){
+  console.log(name);
+}
+
+let myName = 'yamada';
+sayHello();
+sayName(myName);

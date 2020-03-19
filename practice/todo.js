@@ -840,3 +840,31 @@ function sayName(name){
 let myName = 'yamada';
 sayHello();
 sayName(myName);
+
+let hello = function(){
+  console.log('hello');
+}
+
+hello();
+
+let obj = { name: 'yamada', age: 25, address: 'tyokyo' };
+console.log(obj.name);
+
+let obj = { name:'yamada', age: 25, address: 'ky0oto'};
+console.log(obj.name);
+
+let obj = { name:'yamada', age: 25, address: 'tokyo' };
+obj.name = 'tanaka';
+console.log(obj.name);
+
+num = 1;
+for (let i = 0; i < 10; i += 1) {
+  console.log(num + '回目の出力')
+  num += 1
+}
+
+num = 1;
+for (let i = 0; i < 10; i += 1){
+  console.log(num + '回目の出力')
+  num += 1
+}

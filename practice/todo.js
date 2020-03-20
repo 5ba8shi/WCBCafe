@@ -981,3 +981,30 @@ $(function(){
     }
   });
 });
+
+$(function(){
+  let list =$("#list");
+
+
+  function editElement(element){
+    let result = "^" + element;
+    return result;
+  }
+
+  $('#submit').on("click", function(){
+    let input = $("keyword").val();
+    let inputs = input.split(" ");
+    let newInput = inputs.map(editElement);
+    let reg = RegExp(newInput.join("|"));
+
+    $.each(fruits, function(i, fruit){
+      if (fruit.match(reg)){
+        appendList(fruit);
+      }
+    });
+
+    if ($(".list").length === 0) {
+      appendList("一致する果物はありませんでした。")
+    }
+  });
+});

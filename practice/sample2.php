@@ -747,3 +747,29 @@ Route::get('blade', function(){
 
   @break($user->number == 5)
 @endforeach
+
+
+@if (count($records) === 1)
+  1レコードある！
+@elseif (count($records) > 1)
+  複数レコードがある
+@else
+  レコードがない
+@endif
+
+@unless (Auth::check())
+  あなたはログインしていません。
+@endunless
+
+
+@isset($records)
+
+@endisset
+
+@empty($records)
+
+@endempty
+
+@while (true)
+  <p>無限ループ</p>
+@endwhile

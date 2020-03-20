@@ -676,3 +676,74 @@ Route::get('blade', function(){
     @break
   
   @default
+
+
+
+@extends('layouts.app')
+
+@section('title', 'Page Title')
+
+@section('sidebar')
+  @@parent
+
+  <p>ここはメインのサイドバーに追加される</p>
+@endsection
+
+@section('content')
+  <p>ここが本文のコンテンツ</p>
+@endsection
+
+@yield('content', View::make('view.name'))
+
+Route::get('blade', function(){
+  return view('child');
+});
+
+@switch($i)
+  @case(1)
+    最初のケース
+    @break
+  
+  @case(2)
+    2番目のケース
+    @break
+  
+
+  @default 
+    デフォルトのケース
+@endswitch
+
+@for($i = 0; $i < 10; $i++)
+  現在の値は: {{ $i }}
+@endfor
+
+@foreach($users as $user)
+  <p>これは{{ $userr->id }}ユーザーです。</p>
+@endforeach
+
+@forelse($users as $user)
+  <li>{{ $user->name }}</li>
+@empty
+  <p>ユーザーなし</p>
+@endforelse
+
+
+@foreach($users as $user)
+  @if ($user->type == 1)
+    @continue
+  @endif
+
+  <li>{{ $user->name }}</li>
+
+  @if ($user->number == 5)
+    @break
+  @endif
+@endforeach
+
+@foreach ($users as $user)
+  @continue($user->type == 1)
+
+  <li>{{ $user->name }}</li>
+
+  @break($user->number == 5)
+@endforeach

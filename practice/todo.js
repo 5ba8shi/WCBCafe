@@ -868,3 +868,86 @@ for (let i = 0; i < 10; i += 1){
   console.log(num + '回目の出力')
   num += 1
 }
+
+let btn = document.querySelector("button");
+
+function printHello(){
+  console.log("Hello world");
+}
+
+btn.addEventListener("click", printHello);
+
+
+let btn = document.querySelector("button");
+
+function printHello(){
+  console.log("Hello world");
+}
+
+btn.addEventListener("click", printHello);
+
+
+
+window.onload = function(){ 処理 };
+
+function printHelloWithButton() {
+  let btn = document.querySelector("button");
+
+  function printHello() {
+    console.log("Hello world");
+  }
+
+  btn.addEventListener("click", printHello);
+}
+
+window.addEventListener("load", printHelloWithButton);
+
+
+window.addEventListener("load", function(){
+  let btn = document.querySelector("button");
+
+  btn.addEventListener("click", function(){
+    console.log("Hello world");
+  });
+});
+
+document.getElementById('output').textContent = 'コーヒーメーカーの値段は' + total(8000) + '円(税込み)です。';
+
+document.getElementById('output').textContent = 'コーヒーメーカーの値段は${total(8000)}円(税込)です。';
+
+document.getElementById('output').textContent = 'コーヒーメーカーの値段は${total(8000)}円(税込み)です。';
+
+const total = `大人二人:${1800 * 2}円`;
+
+
+window.addEventListener("load", function(){
+  let btn = document.querySelector("button");
+  btn.addEventListener("click", function(){
+    console.log("Hello world");
+  });
+
+  let btn2 = document.querySelector("#Button2");
+  let changeText = document.querySelector("p");
+
+  btn2.addEventListener("click", function(){
+    changeText.innerHTML = '変更されました';
+  });
+});
+
+let btn3 = document.querySelector("#Button3");
+
+btn3.addEventListener("click", function(){
+  changeText.classList.add("red");
+  console.log(changeText.classList);
+});
+
+
+let btn4 = document.querySelector("#Button4");
+
+let obj = document.querySelector("div");
+
+btn4.addEventListener("click", function(){
+  obj.classList.remove("blue");
+});
+
+

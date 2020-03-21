@@ -1039,3 +1039,54 @@ $(function(){
     }
   });
 });
+
+
+
+process.stdin.resume();
+process.stdin.setEncoding('utf8');
+
+var lines = []
+var reader = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+reader.on('line', (line) => {
+  lines.push(line);
+});
+
+reader.on('close', () => {
+  var N = lines[0];
+  for(var i = 0; i < N; i++) {
+    var line = lines[i+1].split(" ");
+    console.log("hello = " + line[0] + ", world = " + line[1]);
+  }
+});
+
+window.addEventListener("load", function(){
+  let btn = document.querySelector("button#Button");
+
+  btn.addEventListener("click", function(){
+    console.log("Hello world");
+  });
+
+  let btn2 = document.querySelector("button#Button2");
+  let changeText = document.querySelector("p");
+
+  btn2.addEventListener("click", function(){
+    changeText.innerHTML = "変更されました";
+  });
+
+  let btn3 = document.querySelector("#Button3");
+
+  btn3.addEventListener("click", function(){
+    changeText.classList.add("red");
+  });
+
+  let btn4 = document.querySelector("#Button4");
+  let obj = document.querySelector("div");
+  
+  btn4.addEventListener("click", function(){
+    obj.classList.remove("blue");
+  });
+});

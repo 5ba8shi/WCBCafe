@@ -139,3 +139,26 @@ display:inline-bloc;
   transform-origin: 100% 0%;
   background: #FFF;
 }
+
+
+/*チャット画面のスクロール設定*/
+#field{
+  /*横向きのスクロール禁止*/
+  overflow-x: hidden;
+  /*縦向きのスクロール許可*/
+  overflow-y: scroll;
+  /*スマホでは指でスクロール*/
+  -webkit-overflow-scrolling: touch;
+}
+
+/*自分の吹き出し*/
+.chat-right{
+  margin-left: auto;
+  margin-right: 25px;
+  background: #A4E496;
+}
+/*相手の吹き出し*/
+.chat-left{
+  margin-left: 25px;
+  background: #FFF;
+}

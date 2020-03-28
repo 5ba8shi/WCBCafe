@@ -1420,3 +1420,21 @@ render(){
     </div>
   );
 }
+
+render(){
+  return(
+    <div>
+      <h1>こんにちは、にんじゃわんこさん!</h1>
+      <button>ひつじ千人</button>
+      <button>にんじゃわんこ</button>
+    </div>
+  )
+}
+
+<button jump = {() => {}}></button>
+
+
+<div>
+  <h1>こんにちは、にんじゃわんこさん！</h1>
+  
+</div>

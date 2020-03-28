@@ -1366,3 +1366,9 @@ document.getElementById('prev').onclick = function() {
 document.getElementById('next').onclick = function() {
   changeImage(1);
 }
+
+if(window.confirm('ゲームスタート!準備はいい？')){
+  console.log('ゲーを開始します。');
+} else {
+  console.log('ゲームを終了します。');
+}

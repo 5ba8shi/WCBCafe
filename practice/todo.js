@@ -1398,3 +1398,25 @@ class App extends React.Component {
     );
   }
 }
+
+render(){
+  const text ='Hello World';
+  return (
+    <div>{ text }</div>
+  );
+}
+
+render() {
+  const imgUrl = 'https://.png';
+  return(
+    <img src={ imgUrl } />
+  );
+}
+
+render(){
+  return(
+    <div>
+      {/* この部分はコメントです */}
+    </div>
+  );
+}

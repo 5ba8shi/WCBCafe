@@ -1436,5 +1436,109 @@ render(){
 
 <div>
   <h1>こんにちは、にんじゃわんこさん！</h1>
-  
+  <button onClick={() =>{処理}}>ひつじ仙人</button>
+  <button onClick={() =>{処理}}>にんじゃわんこ</button>
 </div>
+
+
+<div>
+  <h1>こんにちは、にんじゃわんこさん！</h1>
+  <button onClick={()=> {console.log('ひつじ仙人')}}>
+    ひつじ仙人
+  </button>
+  <button onClick={()=>{console.log('にんじゃわんこ')}}></button>
+</div>
+
+'const user = { name: "にんじゃわんこ", age: 14};
+'
+console.log(user.age);
+
+class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {name:'にんじゃわんこ'};
+  }
+}
+
+
+class App extends React.Component{
+  constructor(props){
+    super(prop);
+    this.state = {name:'にんじゃわんこ'};
+  }
+  render(){
+    console.log(this.state);
+    return()
+  }
+}
+
+class App extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {name: 'にんじゃわんこ'};
+  }
+  render(){
+    return(
+      <h1>こんにちは、{ this.state.name}さん！</h1>
+    );
+  }
+}
+
+this.setState({name : 'にんじゃわんこ'});
+
+<h1>こんにちは、{this.state.name}さん！</h1>
+<button onClick={()=>{this.setState({name:'ひつじ仙人'})}}>
+  ひつじ仙人
+</button>
+<button onClick={()=>{this.setState({name:'にんじゃわんこ'})}}>
+  にんじゃわんこ
+</button>
+
+class クラス名 {
+  constructor(){
+
+  }
+
+  メソッド名(){
+
+  }
+}
+
+class App extends React.Component{
+  handleClick(){
+
+  }
+}
+
+class App extends React.Component {
+  handleClick() {
+
+  }
+
+  render() {
+    return (
+      <button onClick={()=>{this.handleClick()}}>
+        ひつじ仙人
+      </button>
+    );
+  }
+}
+
+class App extends React.Component {
+
+  handleClick(name){
+    this.setState({name: name});
+  }
+
+  render(){
+    return(
+      <button onClick ={()=>{this.handleClick('ひつじ仙人')}}>
+        ひつじ仙人
+      </button>
+      <button onClick = {()=>{this.handleClick('にんじゃわんこ')}}>
+        にんじゃわんこ
+      </button> 
+        
+    )
+  }
+}

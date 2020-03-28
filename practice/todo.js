@@ -1372,3 +1372,29 @@ if(window.confirm('ゲームスタート!準備はいい？')){
 } else {
   console.log('ゲームを終了します。');
 }
+
+import React from 'react';
+class App extends React.Component {
+  render(){
+
+  }
+}
+
+export default App;
+
+class App extends React.Component {
+  render(){
+    return (
+
+    );
+  }
+}
+
+class App extends React.Component {
+  render() {
+    const text ='Hello World';
+    return(
+
+    );
+  }
+}

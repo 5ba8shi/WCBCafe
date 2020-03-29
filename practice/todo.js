@@ -1611,7 +1611,25 @@ class App extends React.Component {
 
   render(){
     return(
-      <button onClick={()}
+      <button onClick={()=>{this.handleClick()}}>
+        +
+      </button>
     );
   }
 }
+
+class App extends React.Component{
+  render() {
+    return(
+      <div>
+        <h1>Hello World!</h1>
+      </div>
+    );
+  }
+}
+export default App;
+
+importAppfrom'./components/App';
+ReactDOM.render(<App/>,document.getElementById('root'));
+
+class

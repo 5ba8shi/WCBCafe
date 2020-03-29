@@ -1567,3 +1567,35 @@ document.getElementsById('prev').textContent = function(){
 document.getElementById('next').textContent = function(){
   changeImage(1);
 }
+
+
+const agree = Cookies.get('cookie-agree');
+const panel = document.getElementById('privacy-panel');
+if(agree === 'yes') {
+  document.body.removeChild(panel);
+} else {
+  document.getElementById('agreebtn').onclick = function(){
+    Cookies.set('cookie-agree', 'yes', {expires: 7});
+    document.body.removeChild(panel);
+  }
+
+  document.getElementById('testbtn').onclick = function(){
+    Cookies.remove('cookie-agree');
+  };
+}
+
+constructor(props) {
+  super(props);
+  this.state = {count: 0};
+}
+
+render(){
+  return (
+    <div>
+      <h1>
+        {this.state.count}
+      </h1>
+      <button>+</button>
+    </div>
+  );
+}

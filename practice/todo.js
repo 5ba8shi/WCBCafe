@@ -1632,4 +1632,116 @@ export default App;
 importAppfrom'./components/App';
 ReactDOM.render(<App/>,document.getElementById('root'));
 
-class
+class App extends React.Component {
+  render(){
+    return(
+      <div>
+        <h1>Hello World!</h1>
+      </div>
+    );
+  }
+}
+
+importAppfrom'./components/App';
+ReactDOM.render(<App/>,document.getElementById('root'));
+
+<body>
+  <div id="root"></div>
+</body>
+
+
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+<head>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <div id="root">
+
+  </div>
+</body>
+
+render(){
+  return(
+    <div>
+      <h1>Hello World</h1>
+      <p>Hello React</p>
+    </div>
+  );
+}
+
+h1 {
+  color:red;
+}
+
+p {
+  color: blue;
+}
+
+
+render(){
+  return(
+    <div>
+      <h1 className='title'>Hello World</h1>
+      <p className='text'>Hello React</p>
+    </div>
+  );
+}
+
+.title{
+  color:red;
+}
+
+.text {
+  color: blue;
+}
+
+.title {
+  color: #e6855e;
+  background-color: #f3f372;
+}
+
+class App extends React.Component{
+  render() {
+    return(
+      <h1>Hello World</h1>
+    );
+  }
+}
+
+class App extends React.Component{
+  render(){
+    return(
+      <div>
+        <h1>h1です</h1>
+        <h2>h2です</h2>
+        <h3>h3です</h3>
+        // {この部分は}
+      </div>
+    )
+  }
+}
+
+class App extends React.Component{
+  render(){
+    return(
+      <img src='http' />
+    )
+  }
+}
+
+import React from 'react';
+class App extends React.Component{
+  render(){
+    return(
+
+    );
+  }
+}
+
+export default App;
+
+
+
+const agree =

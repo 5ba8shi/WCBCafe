@@ -1599,3 +1599,19 @@ render(){
     </div>
   );
 }
+
+handleClick() {
+  this.setState({count: this.state.count + 1});
+}
+
+class App extends React.Component {
+  handleClick(){
+    this.setState({count: this.state.count + 1});
+  }
+
+  render(){
+    return(
+      <button onClick={()}
+    );
+  }
+}

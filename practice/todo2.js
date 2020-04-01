@@ -115,3 +115,7 @@ window.addEventListener("load", function(){
     value.addEventListener("click", tabSwitch);
   });
 });
+
+window.addEventListener("load", function(){
+  let tabs = document.getElementsByClassName("menu_item");
+});

@@ -444,3 +444,197 @@ window.addEventListener("load", function(){
     value.addEventListener('click', tabSwitch);
   });
 });
+
+$(function(){
+  let tabs = $(".menu_item");
+
+  function tabSwitch(){
+    $('active').removeClass('active');
+
+    $(this).addClass('active');
+ 
+    const index = tabs.index(this);
+
+    $(".content").removeClass("show").eq(index).addClass("show");
+
+  }
+  tabs.click(tabSwitch);
+});
+
+
+$(function(){
+  let tabs = $(".menu_item");
+
+  function tabSwitch(){
+    $('.active').removeClass('active');
+
+    $(this).addClass('active');
+
+    const index = tabs.index(this);
+
+    $(".content").removeClass("show").eq(index).addClass("show");
+  }
+  tabs.click(tabSwitch);
+});
+
+
+$(function(){
+  let tabs = $(".menu_item");
+
+  function tabSwitch(){
+    $('.active').removeClass('active');
+
+    $(this).addClass('active');
+
+    const index = tabs.index(this);
+
+    $(".content").removeClass("show").eq(index).addClass("show");
+  }
+
+  tabs.click(tabSwitch);
+});
+
+window.addEventListener("load", function(){
+  let tabs = document.getElementsByClassName("menu_item");
+
+  let tabsAry = Array.prototype.slice.call(tabs);
+
+  function tabSwitch(){
+    document.getElementsByClassName("active")[0].classList.remove("active");
+
+    this.classList.add("active");
+
+    document.getElementsByClassName("show")[0].classList.remove("show");
+
+    const index = tabsAry.indexOf(this);
+
+    document.getElementsByClassName("content")[index].classList.add("show"):
+  }
+
+  tabsAry.forEach(function(value){
+    value.addEventListener("click", tabSwitch);
+  });
+});
+
+
+$(function(){
+  $('form').on('submit', function(e){
+    let output = '';
+    let checkboxes = $(this).find('input[type="checkbox"]');
+    checkboxes.each(function(i, checkbox){
+      checkbox = $(checkboxes[i]);
+      if (checkbox.prop('checked')){
+        output += checkbox.attr('value') + '\n';
+      }
+    });
+    e.preventDefault();
+    alert('あなたが選んだ果物:\n' + output);
+  });
+});
+
+
+
+window.addEventListener("load", function(){
+  let tabs = document.getElementsByClassName("menu_item");
+
+  tabsAry = Array.prototype.slice.call(tabs);
+
+  function tabSwitch() {
+    document.getElementsByClassName("active")[0].classList.remove("active");
+
+    this.classList.add("active");
+
+    document.getElementsByClassName("show")[0].classList.remove("show");
+
+    const index = tabsAry.indexOf(this);
+
+    document.getElementsByClassName("content")[index].classList.add("show");
+  }
+
+  tabsAry.forEach(function(value){
+    value.addEventListener("click", tabSwitch);
+  });
+});
+
+window.addEventListener("load", function(){
+  let tabs = document.getElementsByClass("menu_item");
+
+  tabsAry = Array.prototype.slice.call(tabs);
+
+  function tabSwitch(){
+    document.getElementsByClassName("active")[0].classList.remove("active");
+
+    this.classList.add("active");
+
+    document.getElementsByClassName("show")[0].classList.remove("show");
+
+    const index = tabsAry.indexOf(this);
+
+    document.getElementsByClassName("content")[index].classList.add("show");
+  }
+  tabsAry.forEach(function(value){
+    value.addEventListener("click", tabSwitch);
+  });
+});
+
+
+window.addEventListener("load", function(){
+  let tabs = document.getElementsByClassName("menu_item");
+
+  tabsAry = Array.prototype.slice.call(tabs);
+
+  function tabSwitch(){
+    document.getElementsByClassName("active")[0].classList.remove("active");
+
+    this.classList.add("active");
+
+    document.getElementsByClassName("show")[0].classList.remove("show");
+
+    const index = tabsAry.indexOf(this);
+
+    document.getElementsByClassName("content")[index].classList.add("show");
+  }
+
+  tabsAry.forEach(function(value){
+    value.addEventListener("click", tabSwitch);
+  });
+});
+
+
+
+$(function(){
+
+  $('form').on('submit', function(e){
+    let output ='';
+    let checkboxes = $(this).find('input=[type="checkbox"]');
+
+    checkboxes.each(function(i, checkbox){
+      if(checkbox.prop('checked')){
+        output += checkbox.attr('value') + '\n';
+      }
+    });
+
+    e.preventDefault();
+    alert('あなたが選んだ果物: \n' + output);
+  });
+
+});
+
+$(function(){
+  $('form').on('submit', function(e){
+    let output = '';
+    let checkboxes = $(this).find('input[type="checkbox"]');
+
+    checkboxes.each(function(i, checkbox){
+      checkbox =$(checkboxes[i]);
+      if(checkbox.prop('checked')){
+        output += checkbox.attr('value') + '\n';
+      }
+    });
+
+    e.preventDefault();
+    alert('あなたが選んだ果物: \n' + output);
+  });
+});
+
+

@@ -773,3 +773,32 @@ Route::get('blade', function(){
 @while (true)
   <p>無限ループ</p>
 @endwhile
+<html>
+  <head>
+    <title>アプリ名 - @yield('title')</title>
+  </head>
+  <body>
+    @section('sidebar')
+      ここがメインのサイドバー
+    @show
+
+    <div class="container">
+      @yield('content')
+    </div>
+  </body>
+</html>
+
+
+@extends('layouts.app')
+
+@section('title', 'Page Title')
+
+@section('sidebar')
+  @@parent
+
+  <p>ここはメインのサイドバーに追加される</p>
+@endsection
+
+@section('content')
+  <p>ここが本文のコンテンツ</p>
+@endsection

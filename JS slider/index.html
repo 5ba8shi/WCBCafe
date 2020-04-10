@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/media.css">
+  <title>Portfolio</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <script type="text/javascript" src="js/scroll.js"></script>
+</head>
+<body>
+  <div class="nav-bar">
+    <ul>
+      <li><a href="#home" class="link">Home</a></li>
+      <li><a href="#about" class="link">About</a></li>
+      <li><a href="#works" class="link">Works</a></li>
+      <li><a href="#contact" class="link">Contact</a></li>
+    </ul>
+  </div>
+  <div class="home" id="home">
+    <div class="home-body">
+      portfolio
+    </div>
+    <div class="footer">
+      <a href="#about" class="button" id="sec1">About</a>
+    </div>
+  </div>
+  <div class="about" id="about">
+    <div class="about-head">About Me</div>
+    <div class="about-main">
+      <div class="about-me">
+        <ul class="detail">
+          <li>名前: なすたくみ</li>
+          <li>出身: 大阪府</li>
+          <li>年齢: 21歳</li>
+          <li>趣味: 旅行</li>
+        </ul>
+        <p>大学3年の時にプログラミングに出会い大学を休学。<br>
+          2019年10月からプログラミングスクールに通い12月末に卒業。<br>
+          これからいろいろな技術を身につけ多方面で活躍できるようなエンジニアになるため日々勉強中。
+        </p>
+      </div>
+      <div class="about-skill">
+        <div class="skill-head">スキル</div>
+        <canvas id="myChart" width="400" height="300"></canvas>
+      </div>
+    </div>
+    <div class="footer">
+      <a href="#works" class="button" id="sec3">works</a>
+    </div>
+  </div>
+  <div class="works" id="works">
+    <div class="works-head">works</div>
+    <div class="works-contents">
+      <div class="content-image">
+        <a href="https://www.pilgrimage-app.xyz/" target="_blank" rel="noopener noreferrer" class="link">
+          <div class="image-wrap">
+            <img src="images/pilgrimage.png" class="scale-img" alt="聖地巡礼" width="100%">
+          </div>
+        </a>
+      </div>
+      <div class="content">
+        <div class="title">個人アプリ : Pilgrimage</div>
+        <ul class="skills">
+          <li>言語: <br> haml, scss, ruby, javascript</li>
+          <li>フレームワーク、ライブラリ: <br> ruby on rails, jquery</li>
+          <li >DB: <br> Mysql</li>
+          <li>本番環境: <br> AWS</li>
+        </ul>
+        <div class="topic">企画背景...乃木坂46が好きで趣味が旅行なので旅行の旅先に乃木坂メンバーが訪れた店などを行くこともあるのですが情報がまとめられているサイトがなく自分で作ってみようと思ったのがきっかけです。
+        </div>
+        <div class="review">1からCRUDアプリを全て自分で作ることでMVCの理解などこれまでパズルのピースとして散らばっていたものが繋がりました。</div>
+      </div>
+    </div>
+    <div class="works-contents">
+      <div class="content-image">
+        <a href="http://3.114.158.6/" target="_blank" rel="noopener noreferrer" class="link">
+          <div class="image-wrap">
+            <img src="images/fmarket.png" class="scale-img" alt="fmarket" width="100%">
+          </div>
+        </a>
+      </div>
+      <div class="content">
+        <div class="title">個人アプリ : Fmarket</div>
+        <ul class="skills">
+          <li>言語: <br> haml, scss, ruby, javascript</li>
+          <li>フレームワーク、ライブラリ: <br> ruby on rails, jquery</li>
+          <li>共同開発ツール: Git, GitHub trello</li>
+          <li >DB: <br> Mysql</li>
+          <li>本番環境: <br> AWS</li>
+          <li>担当箇所: <br> DB設計、自動デプロイ、商品の出品、商品の編集、payjpを用いたクレジットカードの登録</li>
+        </ul>
+        <div class="review">プログラミングスクールの最終課題のチーム開発で某フリマサイトのクローンサイトを作りました。初めてのチーム開発なのでお互いの進捗を管理できるように朝と夕方にミーティングを設けたり周りに相談しやすい環境を作ることでスムーズに開発を進めることを意識しました。
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <a href="#contact" class="button" id="sec4">contact</a>
+    </div>
+  </div>
+  <div class="contact" id="contact">
+    <div class="contact-head">Contact</div>
+    <div class="contact-logo">
+      <ul class="icon">
+        <a href="https://twitter.com/RwRw7rL4ACF3uCL" target="_blank" rel="noopener noreferrer">
+          <li><i class="fab fa-twitter-square fa-5x"></i></li>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100024468572451" target="_blank" rel="noopener noreferrer">
+          <li><i class="fab fa-facebook-square fa-5x"></i></li>
+        </a>
+        <a href="https://github.com/takuminassun" target="_blank" rel="noopener noreferrer">
+          <li><i class="fab fa-github-square fa-5x"></i></li>
+        </a>
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/rader.js"></script>
+</body>
+</html>

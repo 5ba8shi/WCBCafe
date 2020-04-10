@@ -137,3 +137,13 @@ $(function(){
     let position = target.offset().top + adjust;
   });
 });
+
+
+$(function(){
+  $('a[href^="#"]').click(function(){
+    let adjust = 0;
+    let speed = 800;
+    let href = $(this).attr("href");
+    
+  });
+});

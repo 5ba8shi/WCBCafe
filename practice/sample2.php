@@ -802,3 +802,15 @@ Route::get('blade', function(){
 @section('content')
   <p>ここが本文のコンテンツ</p>
 @endsection
+
+@component('alert', ['foo' => 'bar'])
+
+@endcomponent
+
+use Illuminate\Support\\\\
+
+Blade::component('components.alert', 'alert');
+
+@alert(['type' => 'danger'])
+  You are not allowed to access this resource!
+@endalert

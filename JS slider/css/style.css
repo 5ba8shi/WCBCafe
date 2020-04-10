@@ -1,0 +1,300 @@
+:root{
+  --first-color: #b6bfe1;
+  --second-color: #787cba;
+  --third-color: #4f55a3;
+}
+
+body {
+  font-family: 'Arial',YuGothic,'Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ＭＳ ゴシック',sans-serif;
+}
+
+.nav-bar{
+  height: 50px;
+  width: 100vw;
+  position: fixed;
+  background-color: #fff;
+  z-index: 1;
+  border-bottom: 2px solid #eee;
+}
+
+.nav-bar ul{
+  margin: 0;
+  text-align: right;
+  padding: 0;
+  line-height: 50px;
+}
+
+.nav-bar li{
+  padding: 0 30px;
+  margin: 0;
+  font-size: 20px;
+  display: inline;
+}
+
+.link{
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-bar li:hover{
+  border-bottom: 1px solid #000;
+}
+
+.home{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/portfolio.jpg");
+  letter-spacing: 0.1em;
+  position: relative;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.home-body{
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.about{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+.about-head{
+  font-weight: bold;
+  padding-top: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.about-main{
+  padding: 50px;
+  height: calc(100vh - 350px);
+  font-size: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-me{
+  width: 50%;
+}
+
+.about-skill{
+  margin-top: 30px;
+  width: 50%;
+}
+
+
+
+.detail {
+  width: 60%;
+  margin: 0 auto;
+}
+
+li{
+  list-style: none;
+  margin: 30px 0;
+}
+
+p{
+  width: 80%;
+  margin: 50px auto;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+
+
+.works{
+  width: 100vw;
+  height: 250vh;
+  position: relative;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+.works-head{
+  font-weight: bold;
+  padding-top: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.works-contents{
+  width: 80%;
+  height: 100vh;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-image{
+  width: 45%;
+  margin-top: 50px;
+  position: relative;
+}
+
+.content-image .caption{
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  padding-top: 50px;
+}
+
+.content-image .mask{
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.image-wrap{
+  overflow: hidden;
+  background: #000;
+  border: 1px solid #000;
+}
+
+.scale-img{
+  transition-duration: 0.6s;
+}
+
+.scale-img:hover{
+  transform: scale(1.1);
+  opacity: 0.6;
+}
+
+
+.content{
+  font-size: 20px;
+  width: 45%;
+  margin-top: 50px;
+}
+
+ul.skills{
+  padding: 0;
+  line-height: 1.5;
+}
+
+.topic{
+  margin-bottom: 30px;
+}
+
+.footer{
+  position: absolute;
+  top: 50vh;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  font-size: 20px;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+#sec1{
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: var(--first-color);
+  border: 2px solid var(--first-color);
+  border-radius: 3px;
+}
+
+#sec1:hover{
+  background-color: var(--first-color);
+  color: white;
+}
+
+#sec2{
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: var(--first-color);
+  border: 2px solid var(--first-color);
+  border-radius: 3px;
+}
+
+#sec2:hover{
+  background-color: var(--first-color);
+  color: white;
+}
+
+#sec3{
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: var(--first-color);
+  border: 2px solid var(--first-color);
+  border-radius: 3px;
+}
+
+#sec3:hover{
+  background-color: var(--first-color);
+  color: white;
+}
+
+#sec4{
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: var(--first-color);
+  border: 2px solid var(--first-color);
+  border-radius: 3px;
+}
+
+#sec4:hover{
+  background-color: var(--first-color);
+  color: white;
+}
+
+.contact{
+  height: 200px;
+  width: 100vw;
+}
+
+.contact-head{
+  font-weight: bold;
+  padding-top: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.contact-logo{
+  height: 150px;
+  width: 30%;
+  margin: 20px auto;
+}
+
+.icon{
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-twitter-square{
+  color: #00acee
+}
+.fa-facebook-square{
+  color: #3b5998;
+}
+
+.fa-github-square{
+  color: #171515;
+}
+
+.fa-twitter-square:hover{
+  opacity: 0.5;
+}
+
+.fa-facebook-square:hover{
+  opacity: 0.5;
+}
+
+.fa-github-square:hover{
+  opacity: 0.5;
+}

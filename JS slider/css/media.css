@@ -1,0 +1,73 @@
+@media screen and (max-width: 480px) {
+
+  .nav-bar ul{
+    text-align: center;
+  }
+
+  .nav-bar li{
+    padding: 0 10px;
+  }
+  
+  .home{
+    background-image: url("../images/media.jpg");
+  }
+
+  .home-body{
+    padding: 0;
+    line-height: 100vh;
+  }
+
+  .footer{
+    display: none;
+  }
+
+  .about{
+    height: 190vh;
+  }
+
+  .about-main{
+    display: block;
+  }
+
+  .about-me{
+    width: 100%;
+  }
+
+  .about-skill{
+    width: 100%;
+  }
+
+  .detail{
+    width: 100%;
+  }
+
+  .about-me p{
+    margin: 0;
+    width: 100%;
+  }
+
+  .works{
+    height: 400vh;
+  }
+
+  .works-contents{
+    display: block;
+    height: 150vh;
+  }
+
+  .content-image{
+    width: 100%;
+  }
+
+  .content{
+    width: 100%;
+  }
+
+  .contact-logo{
+    width: 100%;
+  }
+
+  .icon{
+    padding: 0 30px;
+  }
+}

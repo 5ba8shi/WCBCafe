@@ -144,6 +144,31 @@ $(function(){
     let adjust = 0;
     let speed = 800;
     let href = $(this).attr("href");
-    
+    let target = $(href == "#" || href == "" ? 'html' : href);
+    let position = target.offset().top+adjust;
+
+    $('body, html').animate({scrollTop:position}, speed, 'swing');
+    return false;
   });
 });
+
+
+
+
+
+const chat = [
+  'Hello! Welcome to AI chat !',
+  'What is your name?',
+  'How are you today?',
+  [['Alright!'],['Oh really'],['Ok!']]
+];
+
+let chatCount = 0;
+
+function output(val, person){
+}
+
+const chatBtn = document.getElementById('chat-button');
+const inputText = document.getElementById('chat-input');
+
+fu

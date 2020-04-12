@@ -805,3 +805,25 @@ Hello, {!! $name !!}.
   let app = @json($array);
   let app = @json($array, JSON_PRETTY_PRINT);
 </script>
+
+$num = 3;
+echo $num;
+
+$num = 5;
+echo $num;
+
+$x = 1;
+$x += 10;
+
+echo $x;
+
+$x++;
+
+$x--;
+
+$x = 3;
+$y = 3;
+
+echo ++$x;
+
+echo $y++;

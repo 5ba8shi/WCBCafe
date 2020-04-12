@@ -900,4 +900,8 @@ if($coin == 0){
   echo'エラー';
 }
 
+swich($coin){
+  case 0:
+}
+
 ?>

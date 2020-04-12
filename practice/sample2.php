@@ -814,3 +814,66 @@ Blade::component('components.alert', 'alert');
 @alert(['type' => 'danger'])
   You are not allowed to access this resource!
 @endalert
+?>
+
+
+
+<?php
+$lesson = 'PHP';
+echo $lesson.'入門';
+
+$level = '入門';
+echo $lesson.$level;
+
+$name = 'にんじゃ';
+$name .= 'わんこ';
+
+echo $name;
+
+$name = 'にんじゃわんこ';
+echo "こんにちは、{$name}さん";
+
+$x = 20;
+if($x > 10){
+  echo '$xは１０より大きい';
+}
+
+$x = 20;
+if($x > 30){
+  echo '$xは30より大きい';
+}
+?>
+
+<?php
+if(true){
+  echo '条件はtrueです';
+}
+
+$x = 20;
+if($x > 30){
+  echo '$xは30より大きい';
+}
+if($x > 10){
+  echo '$xは10より大きい';
+}
+
+?>
+
+<?php
+$x = 20;
+if($x == 30){
+  echo '$xは30です';
+} else {
+  echo '$xは30ではありません';
+}
+
+$x = 20;
+if($x > 30){
+  echo '$xは30より大きい';
+}elseif($x >= 20){
+  echo '$xは30以下20以上':
+}else{
+  echo'$xは20より小さい';
+}
+
+?>

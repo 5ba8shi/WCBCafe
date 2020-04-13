@@ -277,3 +277,23 @@ setTimeout( ()=> {
 
 
 
+const chat = [
+  'Hello ! Welcome to AI chat !',
+  'What is your name ?',
+  'How are you today ?',
+  [['Alright !'], ['Oh really!'], ['Ok!']]//ランダムな返答
+];
+
+let chatCount = 0;
+
+function output(val, person){
+}
+
+const chatBtn = document.getElementById('chat-button');
+const inputText = document.getElementById('chat-input');
+
+
+output(chat[0], 'other');
+setTimeout( ()=>{
+  output(chat[1], 'other');
+}, 2000);

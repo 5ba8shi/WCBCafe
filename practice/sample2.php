@@ -900,8 +900,51 @@ if($coin == 0){
   echo'エラー';
 }
 
-swich($coin){
+switch($coin){
   case 0:
+    echo'表';
+  break;
+  
+  case 1:
+    echo'裏';
+  break;
+
+  default:
+    echo'エラー';
+  break;
 }
+
+
+switch($coin){
+  case 0:
+    echo'表';
+  break;
+
+  case 1:
+    echo'裏';
+  break;
+
+  default:
+    echo'エラー';
+  break;
+}
+
+
+$names = array('john','Kate','Bob');
+
+echo $names[0];
+
+echo $names[1];
+
+$names = array('John', 'Kate', 'Bob');
+
+$names[] = 'Mary';
+
+echo $names[3];
+
+$names[1] = 'Jane';
+
+echo $names[1];
+
 
 ?>

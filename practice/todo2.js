@@ -255,7 +255,15 @@ function btnFunc() {
 
   switch(chatCount){
     case 2:
-      output('Hi, ')
+      output('Hi, ' + inputText.value + ' !', 'other');
+      setTimeout( ()=>{
+        output(chat[2], 'other');
+      }, 2000);
+      break;
+    
+    case 4:
+      output(chat[3][Math.floor(Math.random() * chat[3].length)], 'other');
+      break;
   }
 }
 
@@ -263,3 +271,9 @@ output(chat[0], 'other');
 setTimeout( ()=> {
   output(chat[1], 'other');
 }, 2000);
+
+
+
+
+
+

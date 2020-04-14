@@ -1017,3 +1017,95 @@ while($i <= 100){
   echo $i;
   $i ++;
 }
+?>
+
+
+<?php
+$i = 2;
+while($i <= 100){
+  if($i % 2 == 0){
+    echo $i;
+    echo '<br>';
+  }
+  $i++;
+}
+?>
+
+<?php
+for($i = 1; $i <= 10; $i++){
+  if($i > 5){
+  break;
+  }
+  echo $i;
+}
+?>
+<?php
+for($i = 1; $i <= 10; $i++){
+  if($i > 5){
+  break;
+  }
+  echo $i;
+}
+?>
+
+<?php
+for($i = 1; $i <=10; $i++){
+  if($i % 3 == 0){
+    continue;
+  }
+  echo $i;
+}
+?>
+
+
+<?php
+$data = array('東京','大阪','京都');
+
+foreach ($data as $value){
+  echo $value;
+}
+?>
+
+
+<?php
+$colors = array(
+  'Apple'=>'Red',
+  'Banana'=>'Yellow',
+  'Grape'=>'Purple'
+);
+foreach($colors as $key => $value){
+  echo $key.':'.$value;
+}
+?>
+
+<?php
+$colors = array (
+  'Apple' => 'Red',
+  'Banana' => 'Yellow',
+  'Grape' => 'Purple'
+);
+foreach($colors as $key => $value){
+  echo $key.':'.$value;
+}
+?>
+
+
+<?php
+echo strlen('Progate');
+?>
+
+<?php
+$language = 'PHP';
+echo strlen($language);
+?>
+
+<?php
+$data = array(
+  '東京'=> '70',
+  '大阪'=> '89',
+  '京都'=> '88'
+);
+echo count($data);
+?>
+
+

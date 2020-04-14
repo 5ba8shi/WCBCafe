@@ -948,3 +948,72 @@ echo $names[1];
 
 
 ?>
+
+<?php
+$user = array(
+  'name' => 'わんこ',
+  'age'  => 14,
+  'gender' => 'male'
+)
+?>
+
+<?php
+$user = array(
+  'name' => 'わんこ',
+  'age' => 14
+);
+
+echo $user['name'];
+
+$user['level'] = 'beginner';
+
+echo $user['level'];
+
+$scores = array(
+  '数学' => 80,
+  '英語' => 98,
+  '国語' => 80 
+);
+
+$scores['国語'] += 6;
+
+echo $scores['英語'];
+
+
+?>
+
+<?php
+for($i = 1; $i <= 100; $i++){
+  echo $i;
+}
+?>
+
+<?php 
+for($i = 1; $i <= 100; $i++){
+  echo $i;
+}
+?>
+
+<?php
+for($i = 51; $i <= 100; $i++){
+  echo $i;
+  echo '<br>';
+};
+?>
+
+
+<?php
+$i = 1;
+while($i <= 100){
+  echo $i;
+  $i ++;
+}
+?>
+
+
+<?php
+$i = 1;
+while($i <= 100){
+  echo $i;
+  $i ++;
+}

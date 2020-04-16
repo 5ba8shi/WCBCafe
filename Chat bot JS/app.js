@@ -66,9 +66,11 @@ function btnFunc() {
       //もし相手のトーク数が2個の時に送信ボタンが押されたら、
       //名前のやまびこと、chat配列の2（3個目）が返信
       case 2:
-          output('Hi, ' + inputText.value + ' !', 'other');
+          output('Hi, ' + inputText.value + ' !', 'other'); 
+          //↑にてchatCountは3になる
           setTimeout( ()=> {
               output(chat[2], 'other');
+              //↑にてさらにchatCountは4になる
           }, 2000);
           break;
       
@@ -86,3 +88,6 @@ output(chat[0], 'other');
 setTimeout( ()=> {
   output(chat[1], 'other');
 }, 2000);
+
+
+

@@ -308,3 +308,11 @@ window.addEventListener("load", function(){
     obj.classList.remove("blue");
   })
 });
+
+
+
+
+
+const chat = [
+  
+]

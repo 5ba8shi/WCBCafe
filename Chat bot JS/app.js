@@ -85,9 +85,10 @@ function btnFunc() {
 
 //最初に相手から話しかけられる
 output(chat[0], 'other');
+
 setTimeout( ()=> {
   output(chat[1], 'other');
-}, 2000);
+  }, 2000);
 
 
 

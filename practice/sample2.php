@@ -113,3 +113,68 @@ echo $sum;
   @endif
 
 
+echo $_POST['name'];
+echo $_POST['email'];
+
+array(
+  'name' => 'にんじゃわんこ',
+  'email' => 'wanko@prog-8.com'
+)
+
+@foreach ($users as $user)
+  @if ($loop->first)
+    これは最初の繰り返し
+  @endif
+
+  @if ($loop->last)
+    これは最後の繰り返し
+  @endif
+
+  <p>これは{{ $user->id}} ユーザーです。</p>
+@endforeach
+
+@foreach ($users as $user)
+  @foreach($user->posts as $post)
+    @if ($loop->parent->first)
+      これは親のループの最初の繰り返しだ
+    @endif
+  @endforeach
+@endforeach
+
+
+@php
+  //
+@endphp
+?>
+
+<?php
+
+<html>
+  <head>
+    <title>アプリ名 - @yield('title')</title>
+  </head>
+  <body>
+    @section('sidebar')
+      ここがメインのサイドバー
+    @show
+
+    <div class="container">
+      @yield('content')
+    </div>
+  </body>
+</html>
+
+@extends('layouts.app')
+
+@section('title','Page Title')
+
+@section('sidebar')
+  @@parent
+
+  <p>ここはメインのサイドバーに追加される</p>
+@endsection
+
+
+@section('content')
+  <p>ここが本文のコンテンツ</p>
+@endsection

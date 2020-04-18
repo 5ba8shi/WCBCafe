@@ -178,3 +178,12 @@ array(
 @section('content')
   <p>ここが本文のコンテンツ</p>
 @endsection
+
+@component('alert',['foo' => 'bar'])
+
+use Illuminate\Support\Facades\Blade;
+
+Blade::component('')
+
+
+let fr

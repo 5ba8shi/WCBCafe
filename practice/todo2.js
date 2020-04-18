@@ -154,6 +154,9 @@ function ajaxRequest(lat, long){
       const dateTime = newDate(utcToJSTime(forecast.dt));
       const month = dateTime.getMonth() + 1;
       const date = dateTime.getDate();
+      const hours = dateTime.getHours();
+      const min = String(dateTime.getMinutes()).padStart(2, '0');
     }
   })
 }
+

@@ -69,6 +69,7 @@ function btnFunc(){
 }
 
 output(chat[0], 'other');
+
 setTimeout( ()=> {
   output(chat[1],'other');
 }, 2000);

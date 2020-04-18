@@ -1,160 +1,71 @@
-import React, { Component } from 'react';
-import './App.css';
+const chat = [
+  'Hello ! Welcome to AI chat !',
+  'What is your name ?',
+  'How are you today ?',
+  [['Alright !'], ['Oh really!'], ['Ok!']],
+  'Where are you from?',
+  [['Perfect !!'], ['Great!!'], ['I want live there!'], ['I think crazy place!!'], ['I have been there. When I was kids.'],['Fuck You!!']]
+];
 
-import Nav from './Components/Nav';
-import Title from './Components/Title';
-import About from './Components/AboutMe';
-import Works from './Components/Works';
-import Contact from './Components/Contact';
+let chatCount = 0;
 
-class App extends Component {
-  render () {
-    return (
-      <div className="app">
-        <Nav />
-        <Title />
-        <About />
-        <Works />
-        <Contact />
-      </div>
-    );
+function output(val, person){
+  const ul = document.getElementById('chat-ul');
+  const li = document.getElementById('li');
+
+  const div = document.createElement('div');
+  div.textContent = val;
+
+  if(person === 'me') {
+    li.classList.add('chat-right');
+    ul.appendChild(li);
+    li.appendChild(div);
+  }else if (person === 'other'){
+    chatBtn.disabled = true;
+    setTimeout( () =>{
+      chatBtn.disabled = false;
+      li.classList.add('chat-left');
+      ul.appendChild(li);
+      li.appendChild(div);
+
+      chatCont++;
+    }, 2000);
   }
 }
 
-export default App;
+const chatBtn = document.getElementById('chat-button');
+const inputText = document.getElementById('chat-input');
 
-import React, { Component } from 'react';
-import { Layout, Header, Navigation, Drawer } from 'react-mdl';
-import { Link } from 'react-scroll';
-import { element } from 'prop-types';
+function btnFunc(){
+  if (!inputText.value) return false;
+  output(inputText.value,'me');
 
-class Nav extends Component {
-  render() {
-    return (
-      <div className="demo-big-content">
-        <Layout>
-          <Header className="header" style={{ fontWeight: 'bold', fontSize: '45px'}} title=" " scroll>
-            <Navigation className="navigation">
-              <Link
-                activeClass="active"
-                to="title"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={800}
-                >Top</Link>
-              
-              <Link
-                activeClass="active"
-                to="about"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={800}
-                >About</Link>
-              
-              <Link
-                activeClass="active"
-                to="works"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={800}
-                >Works</Link>
-              
-              <Link
-                activeClass="active"
-                to="contact"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={800}
-                >Contact</Link>
-              
-            </Navigation>
-          </Header>
-          <Drawer title=" ">
-            <Navigation>
-              <Link
-                activeClass="active"
-                to="title"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={800}
-                >Top@</Link>
-            </Navigation>
-          </Drwaer>
-        </Layout>
-      </div>
-    )
+  setTimeout( ()=> {
+    inputText.value = '';
+  }, 1);
+
+  switch(chatCount){
+    case 2:
+      output('Hi, ' + inputText.value + ' !', 'other');    
+      setTimeout( ()=>{
+        output(chat[2], 'other');
+      }, 2000);
+
+    case 4:
+      output(chat[3][Math.floor(Math.floor(Math.random() * chat[3].length))], 'other');
+      setTimeout( ()=> {
+        output(chat[4], 'other');
+      }, 2000);
+      break;
+
+    case 6:
+      output(chat[5][Mathj.floor(Math.floor(Math.random()* chat[5].length))], 'other');
+      break;
   }
 }
 
-let fruits = ['apple', 'apricot', 'avocado', 'blueberry', 'cherry', 'coconut', 'cranberry', 'dragonfruit', 'durian', 'grape', 'grapefruit', 'guava', 'kiwi fruit', 'lemon', 'lime', 'lychee', 'mango', 'melon', 'watermelon', 'miracle fruit', 'orange', 'bloodorange','clementine','mandarine','tangerine','papaya','passionfruit','peach','pear','persimmon','physalis','plum/prune','pineapple','pomegranate','raspberry','rambutan','star fruit','strawberry'];
+output(chat[0], 'other');
 
-$(function(){
-  let list = $("#list");
-
-  function appendList(word){
-    let result = "^" + element;
-    return result;
-  }
-
-  function editElement(element){
-    let result = "^" + element;
-    return result;
-  }
-
-  $('#submit').on("click", function(){
-    let input = $("#keyword").val();
-    let inputs = input.split(" ");
-    let newInput = inputs.map(editElement);
-    let reg = RegExp(newInput.join("|"));
-
-    $.each(fruits, function(i, fruit){
-      if(fruit.match(reg)){
-        appendList(fruit);
-      }
-    });
-
-    if ($(".list").length === 0){
-      appendList("一致する果物は有りませんでした。")
-    }
-  });
-});
-
-
-let fruits = ['apple', 'apricot', 'avocado', 'blueberry', 'cherry', 'coconut', 'cranberry', 'dragonfruit', 'durian', 'grape', 'grapefruit', 'guava', 'kiwi fruit', 'lemon', 'lime', 'lychee', 'mango', 'melon', 'watermelon', 'miracle fruit', 'orange', 'bloodorange','clementine','mandarine','tangerine','papaya','passionfruit','peach','pear','persimmon','physalis','plum/prune','pineapple','pomegranate','raspberry','rambutan','star fruit','strawberry'];
-
-$(function(){
-  let list = $("#list");
-
-  function appendList(word){
-    let item = $('<li class="list">').append(word);
-    list.append(item);
-  }
-
-  function editElement(element){
-    let result = "^" + element;
-    return result;
-  }
-  
-  $('#submit').on("click", function(){
-    let input = $("#keyword").val();
-    let inputs = input.split(" ");
-    let newInput = inputs.map(editElement);
-    let reg = RegExp(newInput.join("|"));
-
-    $.each(fruits, function(i, fruit){
-      if (fruit.match(reg)){
-        appendList(fruit);
-      }
-    });
-
-    if ($(".list").length === 0){
-      appendList("一致する果物がありませんでした。")
-    }
-  });
-});
-
+setTimeout( ()=> {
+  output(chat[1], 'other');
+}, 2000);

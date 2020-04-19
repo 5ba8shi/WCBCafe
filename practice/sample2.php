@@ -187,3 +187,4 @@ Blade::component('')
 
 
 let fr
+

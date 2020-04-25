@@ -132,3 +132,37 @@ window.addEventListener("load", function(){
     value.addEventListener("click", tabSwitch);
   })
 });
+
+window.addEventListener("load", function(){
+  let tabs = document.getElementsByClassName("menu_item");
+
+  tabsAry = Array.prototype.slice.call(tabs);
+
+  function tabSwitch(){
+    document.getElementsByClassName("active")[0].classList.remove("active");
+
+    this.classList.add("active");
+
+    document.getElementsByClassName("")
+  }
+
+  tabsAry.forEach(function(value){
+    value.addEventListener("click", tabSwitch);
+  });
+});
+
+let todo = ['デザインカンプ作成', 'データ整理', '勉強会申し込み', '牛乳買う'];
+todo.push('歯医者に行く');
+for(let item of todo) {
+  const li = `<li>${item}</li>`;
+  document.getElementById('list').insertAdjacentHTML('beforeend', li);
+}
+
+
+let todo = ['デザインカンプ作成', 'データ整理', '勉強会申し込み', '牛乳買う'];
+todo.push('歯医者に行く');
+for(let item of todo) {
+  const li = `<li>${item}</li>`;
+  document.getElementById('list').insertAdjacentHTML('beforeend', li);
+}
+

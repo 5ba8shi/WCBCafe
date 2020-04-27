@@ -222,3 +222,34 @@ window.addEventListener("load", function(){
     obj.classList.remove("blue");
   });
 });
+
+
+function success(pos){
+  console.log(pos);
+}
+
+function fail(error){
+  alert('位置情報の取得に失敗しました。エラーコード:' + error.code);
+}
+
+navigator.geolocation.getCurrentPosition(success, fail);
+
+navigator.geolocation.getCurrentPosition(success, fail);
+
+function success(pos){
+  console.log(pos);
+}
+
+{
+  coords: {
+    latitude: 緯度,
+    longitude: 軽度,
+    accuracy: 精度
+  }
+}
+
+function success(pos){
+  const lat = pos.coords.latitude;
+  const lng = pos.coords.
+}
+

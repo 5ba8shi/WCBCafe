@@ -264,8 +264,21 @@ let chatCount = 0;
 
 function output(val, person) {
   const ul = document.getElementById('chat-ul');
-  const li = document.getElementById('li');
+  const li = document.createElement('li');
 
   const div = document.createElement('div');
   div.textContent = val;
 }
+
+const chatBtn = document.getElementById('chat-button');
+const inputText = document.getElementById('chat-input');
+
+
+function btnFunc(){
+}
+
+output(chat[0], 'other');
+
+setTimeout( ()=>{
+  output(chat[1], 'other')
+})

@@ -253,3 +253,19 @@ function success(pos){
   const lng = pos.coords.
 }
 
+const chat = [
+  'Hello ! Welcome to AI chat !',
+  'What is your name ?',
+  'How are you today ?',
+  [['Alright !'], ['Oh really!'], ['Ok!']]//ランダムな返答
+];
+
+let chatCount = 0;
+
+function output(val, person) {
+  const ul = document.getElementById('chat-ul');
+  const li = document.getElementById('li');
+
+  const div = document.createElement('div');
+  div.textContent = val;
+}

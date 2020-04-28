@@ -268,6 +268,18 @@ function output(val, person) {
 
   const div = document.createElement('div');
   div.textContent = val;
+
+  if(person === 'me'){
+  } else if (person === 'other') {
+    chatBtn.disabled = true;
+    setTimeout( ()=> {
+      chatBtn.disabled = false;
+      li.classList.add('chat-left');
+      ul.appendChild(li);
+      li.appendChild(div);
+      chatCount++;
+    }, 2000);
+  }
 }
 
 const chatBtn = document.getElementById('chat-button');
@@ -275,10 +287,29 @@ const inputText = document.getElementById('chat-input');
 
 
 function btnFunc(){
+  if (!inputText.value) return false;
+  output(inputText.value, 'me');
+
+  setTimeout( ()=>{
+    inputText.value = '';
+  }, 1);
+
+  switch(chatCount) {
+    case 2:
+      output('Hi, ' + inputText.value + ' !', 'other');
+      setTimeout( ()=>{
+        output(chat[2], 'other');
+      }, 2000);
+      break;
+    
+    case 4:
+      output(chat[3][Math.floor(Math.random() * chat[3].length)], 'other');
+      break;
+  }
 }
 
 output(chat[0], 'other');
 
 setTimeout( ()=>{
-  output(chat[1], 'other')
-})
+  output(chat[1], 'other');
+}, 2000);

@@ -352,3 +352,66 @@ window.addEventListener("load", function(){
     value.addEventListener("click", tabSwitch);
   });
 });
+
+
+$(function(){
+  $('.js-form').on('submit', function(e){
+    e.preventDefault();
+    let todo = $('.js-form__text-field').val();
+    $.ajax({
+      type: 'POST',
+      url: '/todos.json',
+      data: {
+        todo: {
+          content: todo
+        }
+      },
+      dataType: 'json'
+    })
+    .done(function(data){
+      let html = $('<li class="todo">').append(data.content);
+      $('.todos').append(html);
+      $('js-form__text-field').val('');
+    })
+    .fail(function(){
+      alert('error');
+    })
+  });
+});
+
+
+window.addEventListener("load", function(){
+  let tabs = document.getElementsByClassName("menu_item");
+
+  tabsAry = Array.prototype.slice.call(tabs);
+
+  function tabSwitch() {
+    document.getElementsByClassName("active")[0]
+  }
+
+  tabsAry.forEach(function(value){
+    value.addEventListener("click", tabSwitch);
+  });
+});
+
+window.addEventListener("load", function(){
+  let tabs = document.getElementsByClassName("menu_item");
+
+  tabsAry = Array.prototype.slice.call(tabs);
+
+  function tabSwitch(){
+    document.getElementsByClassName("active")[0].classList.remove("active");
+
+    this.classList.add("active");
+
+    document.getElementsByClassName("show")[0].classList.remove("show");
+
+    const index = tabsAry.indexOf(this);
+
+    document.getElementsByClassName("content")[index].classList.add("show");
+  }
+
+  tabsAry.forEach(function(value){
+    value.addEventListener("click", tabSwitch);
+  })
+});

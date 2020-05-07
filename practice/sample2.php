@@ -1,3 +1,4 @@
+
 <?php echo'<h2>初級</h2>'; ?>
 
 
@@ -123,3 +124,44 @@ if($x > 30){
   echo 'いずれも当てはまらない';
 }
 ?>
+
+<?php
+$x = 20;
+if ($x == 30){
+  echo '$xは30です';
+} else {
+  echo'$xは30ではありません';
+}
+?>
+
+
+
+<?php
+$x = 20;
+if($x > 30){
+  echo '$xは30より大きい';
+} elseif($x >= 20){
+  echo '$xは30以下20以上';
+} else{
+  echo'$xは20より小さい';
+}
+?>
+
+
+
+
+2 5
+
+
+
+<?php
+$input_line = trim(fgets(STDIN));
+
+  $s = trim(fgets(STDIN));
+  $s = str_replace(array("\r\n","\r","\n"), '', $s);
+  $s = explode(" ", $s);
+  echo "hello = ".$s[0]." , world = ".$s[1]."\n";
+
+?>
+
+hello = 2 , world = 5

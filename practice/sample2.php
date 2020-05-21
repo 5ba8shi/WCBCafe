@@ -176,3 +176,16 @@ for ($i = 0; $i < $input_line; $i++) {
   echo "hello = ".$s[0]." , world = ".$s[1]."\n";
 }
 ?>
+
+<?php
+
+@section('sidebr')
+
+@show
+
+  <div class="container">
+    @yield
+  </div>
+</body>
+?>
+

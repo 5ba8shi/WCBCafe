@@ -189,3 +189,10 @@ for ($i = 0; $i < $input_line; $i++) {
 </body>
 ?>
 
+
+  @extends('layouts.app')
+
+  @section('title', 'Page Title')
+
+  
+

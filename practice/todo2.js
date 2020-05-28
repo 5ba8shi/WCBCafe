@@ -1,14 +1,10 @@
+if (String.fromCharCode(e.keyCode) === currentWord[currentLocation].toUpperCase()) {
+  currentLocation++;
 
-{
-  class User{
-    constructor(tag,type){
-      this.tag=tag;
-      this.type=type;
-      this._img=document.createElement("img");
+  score++;
+  scoreLabel.innerHTML = score;
+} else {
 
-      this._img.addEventListener("click",()=>{
-        this.click();
-      });
-    }
-  }
+  miss++;
+  missLabel.innerHTML = miss;
 }

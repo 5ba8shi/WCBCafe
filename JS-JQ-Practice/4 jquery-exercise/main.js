@@ -6,7 +6,7 @@ $(function(){
   function appendList(word){
     let item = $('<li class="list">').append(word);
     list.append(item);
-  }
+  };
 
   function editElement(element){
     let result = "^" + element;

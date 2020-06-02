@@ -18,4 +18,34 @@ aiInfo = "";
 
 draw();
 
-function 
+function getCard() {
+  suit = Math.floor(Math.random()*4);
+  mark = Math.floor(Math.random()*13);
+  suitarr = ['c', 's', 'h', 'd'];
+  facearr = ['a','k'];
+
+  if (drawnCards.length == 52) {
+    return 'acd';
+  }
+  else{
+    var flag = false;
+    while(!flag) {
+      flag = true;
+      for(i = 0; i < drawnCards.length; i++) {
+        if(drawnCards[i] == facearr[mark] + suitarr[suit]) {
+          flag = false;
+          break;
+        }
+      }
+      if(!flag) {
+        suit = Math.floor(Math.random()*4);
+        mark = Math.floor(Math.random()*13);
+      }
+    }
+  }
+  drawnCards.push(markarr[mark] + suitarr[suit]);
+  return markarr[mark]+suitarr[suit];
+  };
+
+
+  

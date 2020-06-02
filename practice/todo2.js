@@ -30,3 +30,36 @@ for(i = 0; i < yourHand.length; i++) {
   you.appendChild(img);
 }
 
+para = document.createElement("P");
+if(getHandValue(yourHand) <=21) {
+  t = document.createTextNode("あなたの合計: "+getHandValue(yourHand));
+  para.appendChild(t);
+  you.appendChild(para); 
+} else {
+  t = document.createTextNode("あなたの合計: アウト!! ");
+  para.appendChild(t);
+  you.appendChild(para);
+}
+
+if(gameLose) {
+  para2 = document.createElement("P");
+  result = document.createTextNode("あなたの勝ち！");
+  para2.appendChild(result);
+  you.appendChild(para2);
+}
+
+
+if(push) {
+
+}
+
+function oneDraw(){
+  if(!gameOver && !dealerTurn) {
+    yourHand.push(getCard());
+    if(getHandValue(yourHand) > 21){
+      gameOver = true;
+      gameLose = true;
+    }
+  }
+  draw();
+}

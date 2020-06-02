@@ -1,51 +1,32 @@
-drawnCards =[];
-yourHand = [];
-opponentsHand = [];
-faceValue = new Map();
-faceValue.set('a', 1);
 
-drawnCards=[];
-yourHand = [getCard(), getCard()];
-opponentsHand = [getCard(), getCard()];
+function draw(){
+  o = document.getElementsByClassName("opponent")[0];
+  y = document.getElementsByClassName("you")[0];
+  o.innerHTML = "<p>ディーラーのカード</p>";
+  y.innerHTML = "<p>あなたのカード</p>";
 
-gameOver = false;
-dealerTurn = false;
-gameWin = false;
-gameLose = false;
-push = false;
-showDealerCard = false;
-aiInfo = "";
-
-draw();
-
-function getCard() {
-  suit = Math.floor(Math.random()*4);
-  mark = Math.floor(Math.random()*13);
-  suitarr = ['c', 's', 'h', 'd'];
-  facearr = ['a','k'];
-
-  if (drawnCards.length == 52) {
-    return 'acd';
-  }
-  else{
-    var flag = false;
-    while(!flag) {
-      flag = true;
-      for(i = 0; i < drawnCards.length; i++) {
-        if(drawnCards[i] == facearr[mark] + suitarr[suit]) {
-          flag = false;
-          break;
-        }
-      }
-      if(!flag) {
-        suit = Math.floor(Math.random()*4);
-        mark = Math.floor(Math.random()*13);
-      }
+  for(i = 0; i < opponentsHand.length; i++) {
+    img = new Image();
+    if(!showDealerCard && i != 0) {
+      img.src = '../images/back.png';
     }
+    else {
+      img.src = '../images/'+ opponentsHand[i]+'.png';
+    }
+    opponent.appendChild(img);
   }
-  drawnCards.push(markarr[mark] + suitarr[suit]);
-  return markarr[mark]+suitarr[suit];
-  };
+  parao = document.createElement("P");
 
+  if(showDealerCard) {
+    t = documengt.createTextNode("ディーラーのカード: " + getHandValue(opponentsHand) + aiInfo);
+    parao.appendChild(t);
+    opponent.appendChild(parao);
+  }
+};
 
-  
+for(i = 0; i < yourHand.length; i++) {
+  img = new Image();
+  img.src = '../images/' + yourHand[i]+'.png';
+  you.appendChild(img);
+}
+

@@ -1,4 +1,6 @@
 window.addEventListener("load", function() {
+
+
   //相手の返答内容
   const chat = [
     'Hello ! Welcome to AI chat !',
@@ -101,6 +103,7 @@ window.addEventListener("load", function() {
     output(chat[1], 'other');
     }, 2000);
 
+    
 }); 
 
 

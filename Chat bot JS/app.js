@@ -103,7 +103,5 @@ window.addEventListener("load", function() {
     output(chat[1], 'other');
     }, 2000);
 
-    
+
 }); 
-
-

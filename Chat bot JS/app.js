@@ -31,7 +31,7 @@ window.addEventListener("load", function() {
         li.classList.add('chat-right');
         ul.appendChild(li);
         li.appendChild(div);
-    }else if (person === 'other') { //相手
+    } else if (person === 'other') { //相手
         //相手が2個連続で返信してくる時、その間は返信不可にする
         //なぜなら、自分の返信を複数受け取ったことになり、その全てに返信してきてしまうから
         //例："Hi!〇〇!"を複数など

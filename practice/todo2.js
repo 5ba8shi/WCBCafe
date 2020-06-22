@@ -1,10 +1,13 @@
-let faceValue = new Map();
-  faceValue.set("a", 1);
+const lang = document.querySelector('html').lang;
 
-  let getHandValue = (hand) => {
-    let cards = [];
+if(lang === 'ja'){
+  document.querySelector('option[value="index.html"]').selected = true;
+} else if(lang === 'en') {
 
-    for(i = 0; i < hand.length; i++) {
-      cards[i] = faceValue.get(hand[i].slice(0, hand[i].length - 1));
-    }
-  }
+} else if(lang === 'zh') {
+
+}
+
+document.getElementById('form').select.onchange = function() {
+  location.href = document.getElementById('form').select.value;
+}

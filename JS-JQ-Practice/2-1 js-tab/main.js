@@ -23,7 +23,7 @@ window.addEventListener("load", function() {
     document.getElementsByClassName("content")[index].classList.add("show");
   }
 
-  // タブメニューの中でクリックイベントが発生した場所を探し、下で定義したtabSwitch関数を呼び出す
+  // タブメニューの中でクリックイベントが発生した場所を探し、上で定義したtabSwitch関数を呼び出す
   tabsAry.forEach(function(value) {
     value.addEventListener("click", tabSwitch);
   });

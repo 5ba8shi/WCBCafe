@@ -1,21 +1,29 @@
-window.addEventListener("load", function() {
-  let tabs = document.getElementsByClassName("menu_item");
+function countdown(due) {
+  const now = new Date();
 
-  tabsAry = Array.prototype.slice.call(tabs);
+  const rest = due.getTime() - now.getTime();
+  const sec = Math.floor(rest / 1000) % 60;
+  const min = Math.floor(rest / 1000 / 60) % 60;
+  const hours = Math.floor(rest / 1000 / 60 / 60) % 24;
+  const days = Math.floor(rest / 1000 / 60 / 60 / 24);
+  const count = [days, hours, min, sec];
 
-  function tabSwitch(){
-    document.getElementsByClassName("active")[0].classList.remove("active");
+  return count;
+}
 
-    this.classList.add("active");
+const goal = new Date(2025, 4, 3);
 
-    document.getElementsByClassName("show")[0].classList.remove("show");
+function recalc() {
+  const counter = countdown(goal);
+  document.getElementById('day').textContent = container[0];
+  document.getElementById('hour').textContent = container[1];
+  document.getElementById('min').textContent = String(counter[2]).padStart(2, '0');
+  document.getElementById('sec').textContent = String(container[3]).padStart(2, '0');
+  refresh();
+}
 
-    const index = tabsAry.indexOf(this);
+function refresh(){
+  setTimeout(recalc, 1000);
+}
 
-    document.getElementsByClassName("content")[index].classList.add("show");
-  }
-
-  tabsAry.forEach(function(value) {
-    value.addEventListener("click", tabSwitch);
-  });
-});
+recalc();

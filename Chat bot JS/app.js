@@ -54,7 +54,9 @@ window.addEventListener("load", function() {
 
   //送信ボタンを押した時の処理
   chatBtn.addEventListener('click', function(){
+    // 無記入の場合、送信されない。
     if (!inputText.value) return false;
+    
     //自分のテキストを送信
     output(inputText.value, 'me');
 

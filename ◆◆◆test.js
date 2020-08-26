@@ -49,7 +49,9 @@ window.addEventListener("load", function(){
     div.textContent = val;
 
     if(person === 'me') {
-
+      li.classList.add('chat-right');
+      ul.appendChild(li);
+      li.appendChild(div);
     }else if(person === 'other') {
       chatBtn.disabled = true;
       setTimeout( () => {
@@ -67,6 +69,34 @@ window.addEventListener("load", function(){
   const inputText = document.getElementById('chat-input');
 
   chatBtn.addEventListener('click', function(){
+    if(!inputText.value) return false;
+
+    output(inputText.value, 'me');
+
+    setTimeout( ()=> {
+      inputText.value = '';
+    }, 1);
+
+    switch(chatCount) {
+      case 2:
+        output('Hi, ' + inputText.value + ' !', 'other');
+
+        setTimeout( () => {
+          output(chat[2], 'other');
+        }, 2000);
+        break;
+      
+      case 4:
+        output(chat[3][Math.floor(Math.random() * chat[3].length)], 'other');
+        setTimeout( () => {
+          output(chat[4], 'other');
+        }, 2000);
+        break;
+      
+      case 6:
+        output(chat[5][Math.floor(Math.floor(Math.random() * chat[5].length))], 'other');
+        break;
+    }
   });
 
   output(chat[0], 'other');

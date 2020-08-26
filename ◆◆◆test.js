@@ -38,4 +38,39 @@ window.addEventListener("load", function(){
     'Where are you from?',
     [['Perfect !!'], ['Great!!'], ['I want live there!'], ['I think crazy place!!'], ['I have been there. When I was kids.'],['Fuck You!!']]
   ]
-})
+  
+  let chatCount = 0;
+  
+  function output(val, person) {
+    const ul = document.getElementById('chat-ul');
+    const li = document.createElement('li');
+    
+    const div = document.createElement('div');
+    div.textContent = val;
+
+    if(person === 'me') {
+
+    }else if(person === 'other') {
+      chatBtn.disabled = true;
+      setTimeout( () => {
+        chatBtn.disabled = false;
+        li.classList.add('chat-left');
+        ul.appendChild(li);
+        li.appendChild(div);
+
+        chatCount++;
+      }, 2000);
+    }
+  }
+
+  const chatBtn = document.getElementById('chat-button');
+  const inputText = document.getElementById('chat-input');
+
+  chatBtn.addEventListener('click', function(){
+  });
+
+  output(chat[0], 'other');
+  setTimeout( ()=> {
+    output(chat[1], 'other');
+  })
+});

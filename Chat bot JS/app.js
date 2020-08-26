@@ -101,7 +101,7 @@ window.addEventListener("load", function() {
 
   setTimeout( ()=> {
     output(chat[1], 'other');
-    }, 2000);
+  }, 2000);
 
 
 }); 

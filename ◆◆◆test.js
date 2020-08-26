@@ -27,3 +27,15 @@ function refresh(){
 }
 
 recalc();
+
+window.addEventListener("load", function(){
+
+  const chat = [
+    'Hello ! Welcome to AI chat !',
+    'What is your name ?',
+    'How are you today ?',
+    [['Alright !'], ['Oh really!'], ['Ok!']],
+    'Where are you from?',
+    [['Perfect !!'], ['Great!!'], ['I want live there!'], ['I think crazy place!!'], ['I have been there. When I was kids.'],['Fuck You!!']]
+  ]
+})

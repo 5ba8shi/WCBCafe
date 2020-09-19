@@ -1,4 +1,4 @@
-
+t
 window.addEventListener("load", function() {
   // タブのDOMを取得し、変数で定義
   let tabs = document.getElementsByClassName("menu_item");

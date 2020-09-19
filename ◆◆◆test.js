@@ -1,106 +1,21 @@
-function countdown(due) {
-  const now = new Date();
+window.addEventListener("load", function() {
+  let tabs = document.getElementsByClassName("menu_item");
 
-  const rest = due.getTime() - now.getTime();
-  const sec = Math.floor(rest / 1000) % 60;
-  const min = Math.floor(rest / 1000 / 60) % 60;
-  const hours = Math.floor(rest / 1000 / 60 / 60) % 24;
-  const days = Math.floor(rest / 1000 / 60 / 60 / 24);
-  const count = [days, hours, min, sec];
+  tabsAry = Array.prototype.slice.call(tabs);
 
-  return count;
-}
+  function tabSwitch(){
+    document.getElementsByClassName("active")[0].classList.remove("active");
 
-const goal = new Date(2025, 4, 3);
+    this.classList.add("active");
 
-function recalc() {
-  const counter = countdown(goal);
-  document.getElementById('day').textContent = container[0];
-  document.getElementById('hour').textContent = container[1];
-  document.getElementById('min').textContent = String(counter[2]).padStart(2, '0');
-  document.getElementById('sec').textContent = String(container[3]).padStart(2, '0');
-  refresh();
-}
+    document.getElementsByClassName("show")[0].classList.remove("show");
 
-function refresh(){
-  setTimeout(recalc, 1000);
-}
+    const index = tabsAry.indexOf(this);
 
-recalc();
-
-window.addEventListener("load", function(){
-
-  const chat = [
-    'Hello ! Welcome to AI chat !',
-    'What is your name ?',
-    'How are you today ?',
-    [['Alright !'], ['Oh really!'], ['Ok!']],
-    'Where are you from?',
-    [['Perfect !!'], ['Great!!'], ['I want live there!'], ['I think crazy place!!'], ['I have been there. When I was kids.'],['Fuck You!!']]
-  ]
-  
-  let chatCount = 0;
-  
-  function output(val, person) {
-    const ul = document.getElementById('chat-ul');
-    const li = document.createElement('li');
-    
-    const div = document.createElement('div');
-    div.textContent = val;
-
-    if(person === 'me') {
-      li.classList.add('chat-right');
-      ul.appendChild(li);
-      li.appendChild(div);
-    }else if(person === 'other') {
-      chatBtn.disabled = true;
-      setTimeout( () => {
-        chatBtn.disabled = false;
-        li.classList.add('chat-left');
-        ul.appendChild(li);
-        li.appendChild(div);
-
-        chatCount++;
-      }, 2000);
-    }
+    document.getElementsByClassName("content")[index].classList.add("show");
   }
 
-  const chatBtn = document.getElementById('chat-button');
-  const inputText = document.getElementById('chat-input');
-
-  chatBtn.addEventListener('click', function(){
-    if(!inputText.value) return false;
-
-    output(inputText.value, 'me');
-
-    setTimeout( ()=> {
-      inputText.value = '';
-    }, 1);
-
-    switch(chatCount) {
-      case 2:
-        output('Hi, ' + inputText.value + ' !', 'other');
-
-        setTimeout( () => {
-          output(chat[2], 'other');
-        }, 2000);
-        break;
-      
-      case 4:
-        output(chat[3][Math.floor(Math.random() * chat[3].length)], 'other');
-        setTimeout( () => {
-          output(chat[4], 'other');
-        }, 2000);
-        break;
-      
-      case 6:
-        output(chat[5][Math.floor(Math.floor(Math.random() * chat[5].length))], 'other');
-        break;
-    }
-  });
-
-  output(chat[0], 'other');
-  setTimeout( ()=> {
-    output(chat[1], 'other');
+  tabsAry.forEach(function(value) {
+    value.addEventListener("click", tabSwitch);
   })
-});
+})

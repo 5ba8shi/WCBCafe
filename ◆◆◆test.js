@@ -1,34 +1,25 @@
-window.addEventListener("load", function() {
-  let tabs = document.getElementsByClassName("menu_item");
-
-  tabsAry = Array.prototype.slice.call(tabs);
-
-  function tabSwitch(){
-    document.getElementsByClassName("active")[0].classList.remove("active");
-
-    this.classList.add("active");
-
-    document.getElementsByClassName("show")[0].classList.remove("show");
-
-    const index = tabsAry.indexOf(this);
-
-    document.getElementsByClassName("content")[index].classList.add("show");
-  }
-
-  tabsAry.forEach(function(value) {
-    value.addEventListener("click", tabSwitch);
-  })
-})
-
-
-let enemy = 100;
-let count = 0;
-
-window.alert('戦闘スタート!');
-while(enemy > 0) {
-  const attack = Math.floor(Math.random() * 30) + 1;
-  console.log('モンスターに' + attack + 'のダメージ!');
-  enemy -= attack;
-  count += 1;
+function total(price) {
+  const tax = 0.1;
+  return price + price * tax;
 }
-console.log(count + '回でモンスターを倒した!');
+
+console.log('コーヒーメーカーの値段は' + total(8000) + '円(税込みです。');
+document.getElementById('output').textContent = 'コーヒーメーカーの値段は' + total(8000) + '円(税込み)です。';
+
+function fizzbuzz(num) {
+  if(num % 3 === 0 && num % 5 === 0) {
+    return 'fizzbuzz';
+  }else if(num % 3 === 0) {
+    return 'fizz';
+  } else if(num % 5 === 0) {
+    return 'buzz';
+  } else {
+    return num;
+  }
+}
+
+let i = 1;
+while(i <= 30) {
+  console.log(fizzbuzz(i));
+  i += 1;
+}

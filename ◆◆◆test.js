@@ -1,29 +1,43 @@
 window.addEventListener("load", function() {
-  let btn = document.querySelector("button#Button");
+  let tabs = document.getElementsByClassName("menu_item");
 
-  btn.addEventListener("click", function() {
-    console.log("Hello World");
+  tabsAry = Array.prototype.slice.call(tabs);
+
+  function tabSwitch(){
+    document.getElementsByClassName("active")[0].classList.remove("active");
+
+    this.classList.add("active");
+
+    document.getElementsByClassName("show")[0].classList.remove("show");
+
+    const index = tabsAry.indexOf(this);
+
+    document.getElementsByClassName("content")[index].classList.add("show");
+  }
+
+  tabsAry.forEach(function(value) {
+    value.addEventListener("click", tabSwitch);
   });
+});
 
-  let btn2 = document.querySelector("button#Button2");
-  let changeText = document.querySelector("p");
+window.addEventListener("load", function() {
+  let tabs = document.getElementsByClassName("menu_item");
 
-  btn2.addEventListener("click", function() {
-    changeText.innerHTML = '変更されました。';
-  });
+  tabsAry = Array.prototype.slice.call(tabs);
 
+  function tabSwitch() {
+    document.getElementsByClassName("active")[0].classList.remove("active");
 
-  let btn3 = document.querySelector("#Button3");
+    this.classList.add("active");
 
-  btn3.addEventListener("click", function() {
-    changeText.classList.add("red");
-  });
+    document.getElementsByClassName("show")[0].classList.remove("show");
 
-  let btn4 = document.querySelector("#Button4");
+    const index = tabsAry.indexOf(this);
 
-  let obj = document.querySelector("div");
+    document.getElementsByClassName("content")[index].classList.add("show");
+  }
 
-  btn4.addEventListener("click", function() {
-    obj.classList.remove("blue");
+  tabsAry.forEach(function(value) {
+    value.addEventListener("click", tabSwitch);
   });
 });

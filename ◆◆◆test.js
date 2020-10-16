@@ -91,4 +91,20 @@ function output(val, person){
 
   const div = document.createElement('div');
   div.textContent = val;
+
+  if(person === 'me') {
+    li.classList.add('chat-right');
+    ul.appendChild(li);
+    li.appendChild(div);
+  } else if(person === 'other'){
+    chatBtn.disabled = true;
+    setTimeout( ()=> {
+      chatBtn.disabled = false;
+      li.classList.add('chat-left');
+      ul.appendChild(li);
+      li.appendChild(div);
+      chatCount++;
+    }, 2000);
+
+  }
 }

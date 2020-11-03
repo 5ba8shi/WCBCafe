@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>JSの学習</title>
+		<link rel="stylesheet" href="../css/test.css">
+		<script src="../js/test.js"></script>
+	</head>
+
+	<body onload="loader()">
+		<div class = "container">
+			<div class = "row1">
+				<div class = "opponent">
+				</div>
+				<div class = "you">
+				</div>
+			</div>
+
+			<div class = "row2">
+				<button onclick="stay()">カードを引かない</button>
+				<button onclick="hit()">カードを引く</button>
+				<button onclick="newGame(10)">Bet 10</button>
+				<button onclick="newGame(25)">Bet 25</button>
+				<button onclick="newGame(50)">Bet 50</button>
+				<button onclick="newGame(100)">Bet 100</button>
+				<span>Bet:</span> <span id="bet"></span>
+				<span>Bank:</span> <span id="bank"></span>
+			</div>
+		</div>
+	</body>
+</html>

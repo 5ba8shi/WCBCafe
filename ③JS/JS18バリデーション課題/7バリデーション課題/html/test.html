@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScriptの学習</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <form action="" method="" id="form">
+      <table border="1">
+        <tr>
+          <td>
+            <label for="name">名前</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <input onblur="blurfunc()" id="name" name="name" type="text">
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <div id="error1"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="mail">メールアドレス</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input onblur="blurfunc1()" id="local1" name="mail" type="text">
+          </td>
+          <td>
+            @<input onblur="blurfunc2()" id="domain1" name="mail" type="text">
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <label for="mail">メールアドレス(確認用)</label>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <input onblur="blurfunc3()" id="local2" name="mail" type="text">
+          </td>
+          <td>
+            @<input onblur="blurfunc4()" id="domain2" name="mail" type="text">
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <div id="error2"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div  id="error3"></div>
+            <div colspan="2" id="error4"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2" align="right">
+            <button type="submit">送信</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <script type="text/javascript" src="../js/test.js"></script>
+  </body>
+</html>

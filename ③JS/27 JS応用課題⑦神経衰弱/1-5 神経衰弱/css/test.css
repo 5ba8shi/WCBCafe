@@ -1,0 +1,20 @@
+.card {
+  display: inline-block;
+  width: 100px;
+  border: none;
+}
+
+.card > img{
+  width: 80px;
+}
+
+#allCards{
+  margin-top: 50px;
+}
+
+#row1, #row2, #row3, #row4{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 125px;
+}

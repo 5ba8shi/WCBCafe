@@ -1,0 +1,16 @@
+button{
+  padding: 10px;
+  margin: 20px;
+}
+
+.selected {
+  background: #ff0000;
+}
+
+#message {
+  font-size: xx-large;
+}
+
+img {
+  height: 200px;
+}

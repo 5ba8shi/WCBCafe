@@ -1,0 +1,48 @@
+
+
+main{
+	width:500px;
+	margin:0 auto;
+	text-align:center;
+	font-weight:bold;
+}
+
+.dealer{
+	height:160px;
+}
+
+.dealer img{
+	width:150px;
+	height:160px;
+}
+
+.player,.container{
+	display:flex;
+}
+
+.player{
+	justify-content:space-between;
+}
+
+.player img{
+	width:100px;
+	height:110px;
+	cursor:pointer;
+	user-select:none;
+}
+
+.container{
+	margin:70px 0;
+	height:100px;
+	line-height:100px;
+	justify-content:space-around;
+}
+
+.result{
+	font-size:48px;
+	font-family:Arial, sans-serif;
+}
+
+.hidden{
+	display:none;
+}

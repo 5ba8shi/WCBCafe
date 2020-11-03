@@ -1,0 +1,18 @@
+body {
+  padding-top: 40px;
+  font-family: 'Courier New', sans-serif;
+  text-align: center;
+}
+#target {
+  font-size: 48px;
+  letter-spacing: 3px;
+  border: thin solid black;
+}
+.info {
+  color: #ccc;
+}
+
+/* ゲーム終了時に非表示にする */
+.wipe{
+  display: none;
+}

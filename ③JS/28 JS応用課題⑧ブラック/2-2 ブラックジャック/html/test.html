@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSの学習</title>
+    <link rel="stylesheet" href="../css/test.css">
+    <script src="../js/test.js"></script>
+  </head>
+
+  <body>
+    <div class = "container">
+      <div class = "row1">
+        <div id = "opponent"></div>
+        <div id = "you"></div>
+      </div>
+
+      <div class = "row2">
+        <button id="stay_button" class="hide" onclick="stay()">カードを引かない</button>
+        <button id="drow_button" class="hide" onclick="oneDraw()">カードを引く</button>
+      </div>
+
+      <div class = "row3">
+        <button id="restart_button" class="hide" onclick="newGame()">もう一回始める</button>				
+        <button id="start_button" onclick="newGame()">ブラック ジャックを始める</button>
+      </div>
+    </div>
+  </body>
+
+</html>

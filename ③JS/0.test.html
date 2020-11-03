@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>test</title>
+</head>
+<body>
+<header>
+<div class="container">
+<h1>コンソールでテスト</h1>
+</div><!-- /.container -->
+</header>
+
+<script>
+
+const lines = [ '3000 3', '1000', '1000', '1000'];
+  //lines[0]の入金と使用回数を配列に分け,それぞれ変数へ代入   
+  const inputs = lines[0].split(' ');
+  let deposit = inputs[0];
+  const pay_count = inputs[1] ;
+  
+  //lines[0]を取り除く   
+  lines.shift() ;
+  const payment = lines;
+  
+  // ポイント初期設定
+  let YourPoint = 0;
+
+  for (let i = 0; i < pay_count; i++) {
+      
+    // 入金を変数へ代入
+    let left_money = deposit;
+    // 使用後の金額の変数を宣言
+    let result;
+
+    // ポイントの計算  料金 ÷ 10
+    let point = payment[i] / 10;
+    
+    
+    if(YourPoint >= payment[i]){ 
+      //残ポイントが料金より大きいとポイント消費
+        YourPoint -= payment[i];
+        // 残金を変更せず代入
+        result = left_money;
+
+    } else{
+        // ポイント加算 
+        YourPoint += point;
+        // 残金から使用分を引く
+        result = left_money - payment[i]; 
+    }
+
+    console.log(result + ' ' + YourPoint);
+
+    // 使用した金額をdepositに反映
+    deposit = result;
+  }
+</script>
+
+</body>
+</html>

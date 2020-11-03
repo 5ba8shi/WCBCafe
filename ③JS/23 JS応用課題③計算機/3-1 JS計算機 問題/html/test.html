@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScriptの学習</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/test.css">
+  </head>
+  <body>
+    <div id="container">
+      <!-- 計算結果 -->
+      <div id="display">
+        <input type="text" id="result">
+      </div>
+
+      <div id="input_button">
+        <!-- ボタンの数字とClear -->
+        <table border="1" cellpadding="0" cellspacing="0" id="number">
+          <tr>
+            <td colspan="2"><input type="button" value="clear" onclick="clearfunc()" class="calc_button2"></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="1" onclick="edit(this)" class="calc_button1"></td>
+            <td><input type="button" value="2" onclick="edit(this)" class="calc_button1"></td>
+            <td><input type="button" value="3" onclick="edit(this)" class="calc_button1"></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="4" onclick="edit(this)" class="calc_button1"></td>
+            <td><input type="button" value="5" onclick="edit(this)" class="calc_button1"></td>
+            <td><input type="button" value="6" onclick="edit(this)" class="calc_button1"></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="7" onclick="edit(this)" class="calc_button1"></td>
+            <td><input type="button" value="8" onclick="edit(this)" class="calc_button1"></td>
+            <td><input type="button" value="9" onclick="edit(this)" class="calc_button1"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="button" value="0" onclick="editfunc1(this)" class="calc_button2"></td>
+            <td><input type="button" value="00" onclick="editfunc2(this)" class="calc_button1"></td>
+          </tr>
+        </table>
+
+        <!-- 四則演算などのボタン -->
+        <table border="1"　cellpadding="0" cellspacing="0" id="calc">
+          <tr>
+            <td><input type="button" value="+" onclick="edit_calc(this)" class="calc_button1"></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="-" onclick="edit_calc(this)" class="calc_button1"></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="*" onclick="edit_calc(this)" class="calc_button1"></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="/" onclick="edit_calc(this)" class="calc_button1"></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="=" onclick="calc()"></td>
+          </tr>
+        </table>
+      </div><!-- input_button -->
+
+    </div><!-- container -->
+    
+    <script type="text/javascript" src="../js/test.js"></script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScriptの学習</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <form action="" method="" id="form">
+      <table>
+        <tr>
+          <td>
+            <label for="name">名前</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <input onblur="blurfunc()" id="name" name="name" type="text">
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <font color="red"><div id="error1">&nbsp;</div></font>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="mail">メールアドレス</label>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input onblur="blurfunc1()" id="local1" name="mail" type="text">
+          </td>
+          <td>
+            @<input onblur="blurfunc2()" id="domain1" name="mail" type="text">
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2" width="325">
+            <font color="red"><div id="error5">&nbsp;</div></font>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <label for="mail">メールアドレス(確認用)</label>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <input onblur="blurfunc3()" id="local2" name="mail" type="text">
+          </td>
+          <td>
+            @<input onblur="blurfunc4()" id="domain2" name="mail" type="text">
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2" width="325">
+            <font color="red"><div id="error2">&nbsp;</div></font>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <font color="red"><div id="error3">&nbsp;</div></font>
+          </td>
+        </tr>
+
+        <tr>
+          <td>性別：</td>
+        </tr>
+        <tr id="choice">
+          <td>
+            男  <input type="radio" name="gender" value="male">
+          </td>
+          <td>
+            女  <input type="radio" name="gender" value="female">
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <font color="red"><div id="error4">&nbsp;</div></font>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2" align="right">
+            <button type="submit">送信</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <script type="text/javascript" src="../js/test.js"></script>
+  </body>
+</html>

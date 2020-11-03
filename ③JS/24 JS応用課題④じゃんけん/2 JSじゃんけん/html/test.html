@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScriptの学習</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/test.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="../js/test.js"></script>
+  </head>
+  <body>
+    <div id="enemyPanel" align="center">
+      <p>相手の手</p>
+      <img id="enemy" src="../images/janken3.jpg" />
+    </div>
+    <div id="playerPanel" align="center">
+      <img src="../images/janken0.png" onclick="onClickPlayerIcon(this)" /><!-- チョキ -->
+      <img src="../images/janken1.png" onclick="onClickPlayerIcon(this)" /><!-- グー -->
+      <img src="../images/janken2.png" onclick="onClickPlayerIcon(this)" /><!-- パー -->
+    </div>
+
+    <div id="jankenControl">
+      <button onclick="janken()">ジャンケンポン！！</button>
+    </div>
+
+    <div id="resultPanel">
+      <h1 id="result" align="center"></h1>
+    </div>
+  </body>
+</html>

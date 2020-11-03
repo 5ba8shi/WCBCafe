@@ -1,0 +1,52 @@
+#container{
+  border: thin solid black;
+  margin: 30px 50px 50px 50px;
+  padding: 20px;
+  width: 400px;
+  height: 550px;
+}
+
+#display{
+  border: thin solid black;
+  padding: 10px;
+  height: 50px;
+  font-size: 30px;
+  text-align: right;
+}
+
+#result{
+  text-align:right;
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
+}
+
+
+#input_button{
+  display: flex;
+}
+
+#number{
+  margin: 20px 40px 0px 0px;
+  width: 500px;
+  height: 400px;
+  text-align: center;
+}
+
+#calc{
+  margin: 20px 0px 0px 0px;
+  width: 200px;
+  height: 400px;
+  text-align: center;
+}
+
+/* ボタンの大きさ調整 */
+input.calc_button1{
+  width: 60%;
+  font-size: large;
+}
+
+.calc_button2{
+  width: 70%;
+  font-size: large;
+}

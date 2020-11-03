@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScriptの学習</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/test.css">
+  </head>
+  <body>
+    <div id="playerPanel">
+      <p id="message">自分の手を選択してください</p>
+
+      <img src="janken0.png" onclick="onClickPlayerIcon(this)" />
+      <img src="janken1.png" onclick="onClickPlayerIcon(this)" />
+      <img src="janken2.png" onclick="onClickPlayerIcon(this)" />
+    </div>
+
+    <div id="jankenControl">
+      <button onclick="janken()">ジャンケンポン！！</button>
+    </div>
+
+    <div id="enemyPanel">
+      <p>相手の手</p>
+      <img id="enemy" src="janken3.png" />
+    </div>
+
+    <div id="resultPanel">
+      <p>勝敗</p>
+      <p id="result"></p>
+    </div>
+    <script type="text/javascript" src="../js/test.js"></script>
+  </body>
+</html>

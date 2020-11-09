@@ -103,4 +103,34 @@ const lang = document.querySelector('html').lang:
     location.href = document.getElementById('form').select.value;
   }
 
-  
+document.getElementById('pi').textContent = Math.PI;
+document.getElementById('floor').textContent = Math.floor(Math.PI);
+
+function point(num, digit){
+  const mover = 10 ** digit;
+  return Math.floor(num * mover) / mover;2309
+
+}
+
+document.getElementById('output').textContent = point(Math.PI, 2);
+
+let enemy = 100;
+let count = 0;
+
+window.alert('戦闘スタート');
+
+while(enemy > 0) {
+  const attack = Math.floor(Math.random() * 30) + 1;
+  console.log('モンスターに' + attack + 'のダメージ！');
+  enemy -= attack;
+  count += 1;
+}
+console.log(count + '回でモンスターを倒した！');
+
+function total(price) {
+  const tax = 0.1;
+  return price + price * tax;
+}
+
+console.log('コーヒーメーカーの値段は' + total(8000) + '円(税込み）です。');
+document.getElementById('output').textContent = 'コーヒーメーカーの値段は' + total(8000) + '円(税込)です。';

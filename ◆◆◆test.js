@@ -134,3 +134,37 @@ function total(price) {
 
 console.log('コーヒーメーカーの値段は' + total(8000) + '円(税込み）です。');
 document.getElementById('output').textContent = 'コーヒーメーカーの値段は' + total(8000) + '円(税込)です。';
+
+
+let todo = ['デザインカンプ作成', 'データ整理', '勉強会申し込み', '牛乳買う'];
+todo.push('歯医者に行く');
+for(let item of todo) {
+  const li = `<li>${item}</li>`;
+  document.getElementById('list').insertAdjacentHTML('beforeend', li);
+}
+
+
+let jsbook = {title: 'JavaScript入門', pric: 2500, stock:3};
+
+document.getElementById('title').textContent = jsbook.title;
+document.getElementById('price').textContent = jsbook.price + '円';
+document.getElementById('stock').textContent = jsbook.stock;]
+
+
+
+const agree = Cookie.get('cookie-agree');
+const panel = document.getElementById('privacy-panel');
+
+if(agree === 'yes') {
+  document.body.removeChild(panel);
+} else {
+  document.getElementById('agreebtn').onclick = function() {
+    Cookie.set('cookie-agree', 'yes', {expire: 7});
+    document.body.removeChild(panel);
+  };
+}
+
+document.getElementById('testbtn').onclick = function() {
+  Cookies.remove('cookie-agree');
+};
+

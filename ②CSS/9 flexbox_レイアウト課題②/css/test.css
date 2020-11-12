@@ -1,0 +1,29 @@
+.contents{
+  border: thin solid black;
+  padding: 10px;
+}
+
+.navigation{
+  list-style: none;
+  border: thin solid black;
+  display: flex;
+  padding: 10px 0px 10px 10px;
+  margin: 0px;
+}
+
+.navigation li{
+  border: thin solid black;
+  list-style: none;
+  padding: 10px;
+  height: 50px;
+  margin-right: 10px;
+  width: calc(100% / 6 - 32px);
+}
+
+
+.main_image{
+  border: thin solid black;
+  height: 400px;
+  margin-top: 10px;
+  padding: 10px;
+}

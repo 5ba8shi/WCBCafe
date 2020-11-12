@@ -74,3 +74,21 @@ window.addEventListener("load", function(){
     }, 2000);
 
 });
+
+
+
+function blurfunc() {
+  const message_a = [];
+  const name = document.getElementById('name').value;
+  if(name !== "") {
+    if(!name.match(regexp1) || name.length >= 20){
+      message_a.push('全角１から２０文字で入力してください');
+    }
+  }
+  
+  if(message_a.length > 0) {
+    errorElement1.innerText = message_a;
+  } else if(name.match(reqexp1) && name.length <= 20){
+    errorElement1.innerText = '';
+  }
+}

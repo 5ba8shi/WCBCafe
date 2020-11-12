@@ -1,0 +1,61 @@
+.contents{
+  border: thin solid black;
+  padding: 10px;
+}
+
+/* ヘッダー　ーーーーーーーーー */
+.header_top{
+  border: thin solid black;
+  padding: 10px;
+}
+
+.header_info{
+  list-style: none;
+  border: thin solid black;
+  overflow: hidden;
+  padding: 10px 0px 10px 10px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  width: auto;
+}
+
+.header_info li{
+  float: left;
+  list-style: none;
+  border: thin solid black;
+  padding: 10px 10px 40px 10px;
+  width: calc(50% - 32px);
+  margin-right: 10px;
+}
+
+.header_tell{
+  text-align: right;
+}
+
+/* コンテンツーーーーーーーーーーーー */
+.navigation{
+  list-style: none;
+  border: thin solid black;
+  overflow: hidden;
+  padding: 10px 0px 10px 10px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.navigation li{
+  border: thin solid black;
+  float: left;
+  list-style: none;
+  padding: 10px 10px 40px 10px;
+  margin-right: 10px;
+  width: calc(100% / 6 - 32px);
+}
+
+
+.main_image{
+  border: thin solid black;
+  height: 400px;
+  margin-top: 10px;
+  padding: 10px;
+}

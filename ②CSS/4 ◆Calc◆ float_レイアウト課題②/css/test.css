@@ -1,0 +1,36 @@
+.contents{
+  border: thin solid black;
+  padding: 10px;
+}
+
+.navigation{
+  list-style: none;
+  border: thin solid black;
+  overflow: hidden;
+  padding: 10px 0px 10px 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.navigation li{
+  border: thin solid black;
+  float: left;
+  list-style: none;
+  padding: 10px 10px 40px 10px;
+  margin-right: 10px;
+  width: calc(100% / 6 - 32px);
+/*子要素1個あたりの取り除く間隔
+Googleのデベロッパーツールで子要素を見ながら行うとラク。
+傍線１px　+　padding10p　+　padding10p +　 傍線1px  +  margin-right 10px(子要素間の隙間)  
+合計32px
+※一番左は親要素の padding-left 10px のためカウントしない。　
+width  calc(100%　÷　子要素６個　- 32px) とするとキレイに分割できる。*/
+}
+
+
+.main_image{
+  border: thin solid black;
+  height: 400px;
+  margin-top: 10px;
+  padding: 10px;
+}

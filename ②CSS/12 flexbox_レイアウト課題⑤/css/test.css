@@ -1,0 +1,132 @@
+.contents{
+  border: thin solid black;
+  padding: 10px;
+}
+
+/* ヘッダー　ーーーーーーーーー */
+.header_main{
+  border: thin solid black;
+  padding: 10px;
+}
+
+.header_top{
+  border: thin solid black;
+  padding: 10px;
+}
+
+.header_info{
+  list-style: none;
+  border: thin solid black;
+  display: flex;
+  padding: 10px 0px 10px 10px;
+  margin: 10px 0px 0px 0px;
+}
+
+.header_info li{
+  list-style: none;
+  border: thin solid black;
+  padding: 10px;
+  height: 50px;
+  width: calc(50% - 32px);
+  margin-right: 10px;
+}
+
+.header_tell{
+  text-align: right;
+}
+
+/* コンテンツ①ーーーーーーーーーーーー */
+.navigation{
+  list-style: none;
+  border: thin solid black;
+  display: flex;
+  padding: 10px 0px 10px 10px;
+  margin: 10px 0px 0px 0px;
+}
+
+.navigation li{
+  border: thin solid black;
+  list-style: none;
+  padding: 10px;
+  height: 50px;
+  margin-right: 10px;
+  width: calc(100% / 6 - 32px);
+}
+
+
+.main_image{
+  border: thin solid black;
+  height: 400px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+
+
+/* コンテンツ②ーーーーーーーーーーーー */
+.header_top2{
+  border: thin solid black;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.middle_info{
+  list-style: none;
+  border: thin solid black;
+  display: flex;
+  padding: 10px 0px 10px 10px;
+  margin: 10px 0px 0px 0px;
+}
+
+.middle_info li{
+  border: thin solid black;
+  list-style: none;
+  padding: 10px;
+  height: 150px;
+  margin-right: 10px;
+}
+
+.letter_left{
+  width: calc(70% - 32px);
+}
+
+.image_right{
+  width: calc(30% - 32px);
+}
+
+.article_images{
+  list-style: none;
+  border: thin solid black;
+  display: flex;
+  padding: 10px 0px 10px 10px;
+  margin: 10px 0px 0px 0px;
+}
+
+.article_images li{
+  border: thin solid black;
+  list-style: none;
+  padding: 10px 10px 0px 10px;
+  width: calc(100% / 3 - 32px);
+  margin-right: 10px;
+}
+.article_image{
+  border: thin solid black;
+  padding: 10px;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+.article_letter{
+  border: thin solid black;
+  padding: 10px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+/* フッター */
+footer{
+  border: thin solid black;
+  padding: 10px;
+  height: 100px;
+  margin-top: 10px;
+}

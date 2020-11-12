@@ -1,0 +1,30 @@
+.header_main{
+  border: thin solid black;
+  padding: 10px;
+}
+
+.header_top{
+  border: thin solid black;
+  padding: 10px;
+}
+
+.header_info{
+  list-style: none;
+  border: thin solid black;
+  padding: 10px 0px 10px 10px;
+  margin: 10px 0px 0px 0px;
+  display: flex;
+}
+
+.header_info li{
+  list-style: none;
+  border: thin solid black;
+  padding: 10px;
+  height: 50px;
+  width: calc(50% - 32px);
+  margin-right: 10px;
+}
+
+.header_tell{
+  text-align: right;
+}

@@ -1,0 +1,198 @@
+/* 文字サイズを調整 */
+.first{
+  font-size: 30px;
+}
+
+
+/* 文字の色と背景色を指定 */
+.second{
+  color: orange;
+  background-color: blue;
+}
+
+
+/* 枠線を追加 */
+.third1{
+  border : solid 1px crimson ;
+}
+.third2{
+  border-top : solid 1px crimson ;
+}
+.third3{
+  border-bottom : solid 1px crimson ;
+}
+.third4{
+  border-left : solid 1px crimson ;
+}
+.third5{
+  border-right : solid 1px crimson ;
+}
+
+
+/* 空白を追加 padding　*/
+.fourth1{
+  padding: 20px;
+  border : solid 1px crimson ;
+  text-align: center;
+}
+.fourth2{
+  padding-top: 20px;
+  border : solid 1px crimson ;
+  text-align: center;
+}
+.fourth3{
+  padding-bottom: 20px;
+  border : solid 1px crimson ;
+  text-align: center;
+}
+.fourth4{
+  padding-left: 60px;
+  border : solid 1px crimson ;
+  text-align: center;
+}
+.fourth5{
+  padding-right: 60px;
+  border : solid 1px crimson ;
+  text-align: center;
+}
+
+/* 空白を追加 margin */
+.frame{
+  border: solid 4px blue ;
+}
+.fourth6{
+  margin: 50px;
+  text-align: center;
+  border : solid 1px crimson ;
+}
+.fourth7{
+  margin-top: 50px;
+  text-align: center;
+  border : solid 1px crimson ;
+}
+.fourth8{
+  margin-bottom: 50px;
+  text-align: center;
+  border : solid 1px crimson ;
+}
+.fourth9{
+  margin-left: 50px;
+  text-align: center;
+  border : solid 1px crimson ;
+}
+.fourth10{
+  margin-right: 50px;
+  text-align: center;
+  border : solid 1px crimson ;
+}
+
+
+/* リストを調整 */
+.fifth1{
+  list-style-type: upper-roman;
+}
+
+.fifth2{
+  list-style-image: url('../images/torunedo2.jpg');
+}
+
+.fifth3{
+  list-style-position: inside;
+}
+
+.fifth4{
+  list-style: hebrew inside url('../images/torunedo2.jpg');
+}
+
+
+/* サイズ指定 */
+.sample{
+  text-align: center;
+  padding: 30px;
+  background-color: cyan;
+}
+.sixth1{
+  width:150px;
+  text-align: center;
+  padding: 30px;
+  background-color: cyan;
+}
+
+.sixth2{
+  height:150px;
+  text-align: center;
+  padding: 30px;
+  background-color: cyan;
+}
+
+/* 位置、透明度 */
+.board{
+  position: relative;
+  height: 500px;
+  width: 500px;
+  background-color: yellow;
+  color: white;
+}
+
+.seventh1{
+  position: absolute;
+  height: 50px;
+  width: 80px;
+  background-color:red;
+  z-index: 1;
+}
+.seventh2{
+  top: 100px;
+  position: absolute;
+  height: 50px;
+  width: 80px;
+  background-color:blue;
+}
+.seventh3{
+  bottom: 100px;
+  position: absolute;
+  height: 50px;
+  width: 80px;
+  background-color:green;
+}
+.seventh4{
+  left: 100px;
+  position: absolute;
+  height: 50px;
+  width: 80px;
+  background-color:black;
+}
+.seventh5{
+  right: 100px;
+  position: absolute;
+  height: 50px;
+  width: 80px;
+  background-color:orange;
+}
+
+/* z-index と rgba() */
+.red{
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background-color:rgba(255, 0, 0, 0.967);
+  z-index: 1;
+
+}
+.blue{
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background-color:rgba(0, 72, 255, 0.803);
+  margin-left: 20px;
+  margin-top: 20px;
+  z-index: 2;
+}
+.green{
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background-color:rgba(13, 255, 0, 0.961);
+  margin-top: 40px;
+  margin-left: 40px;
+}

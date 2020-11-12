@@ -1,0 +1,36 @@
+.header_main{
+  border: thin solid black;
+  padding: 10px;
+}
+
+.header_top{
+  border: thin solid black;
+  padding: 10px;
+}
+
+.header_info{
+  list-style: none;
+  border: thin solid black;
+  overflow: hidden;
+  padding: 10px 0px 10px 10px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  width: auto;
+}
+
+.header_info li{
+  float: left;
+  list-style: none;
+  border: thin solid black;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  width: calc(50% - 32px);
+  margin-right: 10px;
+}
+
+.header_tell{
+  text-align: right;
+}

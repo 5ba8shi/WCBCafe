@@ -85,9 +85,15 @@ window.addEventListener('load', function () {
     // 年
     year_box.addEventListener('blur', function(){
       var year = document.getElementById("year").value;
-      if(year !== ''){
+
+      //空欄の場合のバリデーション
+      if(year !== ''){ 
+
+        // 数字以外の数値が入力されていたら弾く
         if(!year.match(regexp1) || year.match(regexp) || year.length > 4){
           errorElement1.innerText = "値が不正です。";
+
+        // 入力値が正しい場合はエラー表記を消す。 
         }else if(year.match(regexp1) && !year.match(regexp)){
           errorElement1.innerText = "";
         };

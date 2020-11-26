@@ -117,3 +117,9 @@ addCardBtn.addEventListener('click', () => {
     setCardsData(cardsData);
   }
 })
+
+clearBtn.addEventListener('click', () => {
+  localStorage.clear();
+  cardsContainer.innerHTML = '';
+  window.location.reload();
+});

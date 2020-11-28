@@ -148,3 +148,15 @@ document.getElementById('prev').onclick = function() {
 document.getElementById('next').onclick = function() {
   changeImage(1);
 };
+
+function pageNum() {
+  document.getElementById('page').textContent = `${current + 1}/${images.length}`;
+}
+
+function changeImage(num) {
+  if(current + num >= 0 && current + num < images.length){
+    current += num;
+    document.getElementById('main_image').src = images[current];
+    pageNum();
+  }
+};

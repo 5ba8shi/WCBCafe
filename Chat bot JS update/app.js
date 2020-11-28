@@ -3,16 +3,14 @@
 // 
 window.addEventListener("load", function() {
 
-  // 　　　更新時のオートスクロール
+  // 更新時のオートスクロール
   function AutoScroll(){
-    // document.getElementById('body').delay(100).animate({
-    //   scrollTop: document.getElementById(document).height()
-    // }, 100);
-    console.log('ok');
-    var element = document.documentElement;
-    var bottom = element.clientHeight - element.scrollHeight;
-    console.log(bottom);
-    window.scroll(0, bottom);
+    // html上のチャットのエレメントを取ってくる
+    let filed = document.getElementById('field');
+    // 
+    let bottom = filed.scrollHeight - filed.clientHeight;
+    // 
+    filed.scroll(0, bottom);
   }
 
 
@@ -47,11 +45,9 @@ window.addEventListener("load", function() {
         ul.appendChild(li);
         li.appendChild(div);
 
-        // 4つ目のチャットメッセージでスクロールが現れる
-        // そのタイミングでAutoScrollを呼び出す。
-        if(3 <= chatCount ){
-          AutoScroll();
-        }
+        // AutoScrollにて常に最下部へスクロール
+        AutoScroll();
+
     } else if (person === 'other') { //相手
         //相手が2個連続で返信してくる時、その間は返信不可にする
         //なぜなら、自分の返信を複数受け取ったことになり、その全てに返信してきてしまうから
@@ -63,11 +59,9 @@ window.addEventListener("load", function() {
             li.classList.add('chat-left');
             ul.appendChild(li);
             li.appendChild(div);
-            // 4つ目のチャットメッセージでスクロールが現れる
-            // そのタイミングでAutoScrollを呼び出す。
-            if(3 <= chatCount ){
-              AutoScroll();
-            }
+
+            // AutoScrollにて常に最下部へスクロール
+            AutoScroll();
             //相手のトークの合計数に1足す
             chatCount++;
         }, 2000);

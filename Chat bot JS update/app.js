@@ -5,9 +5,14 @@ window.addEventListener("load", function() {
 
   // 　　　更新時のオートスクロール
   function AutoScroll(){
-    document.getElementById('body').delay(100).animate({
-      scrollTop: document.getElementById(document).height()
-    }, 100);
+    // document.getElementById('body').delay(100).animate({
+    //   scrollTop: document.getElementById(document).height()
+    // }, 100);
+    console.log('ok');
+    var element = document.documentElement;
+    var bottom = element.clientHeight - element.scrollHeight;
+    console.log(bottom);
+    window.scroll(0, bottom);
   }
 
 
@@ -41,6 +46,12 @@ window.addEventListener("load", function() {
         li.classList.add('chat-right');
         ul.appendChild(li);
         li.appendChild(div);
+
+        // 4つ目のチャットメッセージでスクロールが現れる
+        // そのタイミングでAutoScrollを呼び出す。
+        if(3 <= chatCount ){
+          AutoScroll();
+        }
     } else if (person === 'other') { //相手
         //相手が2個連続で返信してくる時、その間は返信不可にする
         //なぜなら、自分の返信を複数受け取ったことになり、その全てに返信してきてしまうから
@@ -52,9 +63,14 @@ window.addEventListener("load", function() {
             li.classList.add('chat-left');
             ul.appendChild(li);
             li.appendChild(div);
+            // 4つ目のチャットメッセージでスクロールが現れる
+            // そのタイミングでAutoScrollを呼び出す。
+            if(3 <= chatCount ){
+              AutoScroll();
+            }
             //相手のトークの合計数に1足す
             chatCount++;
-        }, 2000); 
+        }, 2000);
     }
   }
 
@@ -75,6 +91,7 @@ window.addEventListener("load", function() {
         //一瞬の間でvalueを取得し、相手の"Hi!〇〇!"の返信に利用
         //送信ボタンを押した瞬間にvalueを消したら、やまびこに失敗した
         inputText.value = '';
+
     }, 1);
 
     //相手の送信の合計回数に応じて次の返信を指定

@@ -95,7 +95,9 @@ createCards();
 // Event listeners
 
 // Next button
+// 同じ階層時のif分岐が必要
 nextBtn.addEventListener('click', () => {
+
   cardsEl[currentActiveCard].className = 'card left';
 
   // currentActiveCard = currentActiveCard + 1;
@@ -105,7 +107,8 @@ nextBtn.addEventListener('click', () => {
     currentActiveCard = cardsEl.length - 1;
   }
 
-  cardsEl[currentActiveCard].className = 'card active';
+    // 下の変数の値が間違っている、、、
+    // cardsEl[currentActiveCard].className = 'card active';
 
   updateCurrentText();
 });
@@ -126,11 +129,14 @@ prevBtn.addEventListener('click', () => {
   updateCurrentText();
 });
 
+
+// カードを追加する際に登場するモーダル
 // Show add container
 showBtn.addEventListener('click', () => addContainer.classList.add('show'));
 // Hide add container
 hideBtn.addEventListener('click', () => addContainer.classList.remove('show'));
 
+// カード追加時の機能
 // Add new card
 addCardBtn.addEventListener('click', () => {
   const question = questionEl.value;

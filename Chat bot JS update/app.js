@@ -1,4 +1,3 @@
-// 課題1　強制スクロールの方法を調べる
 // 課題2　無記入でSend後、ボタンが戻る方法
 // 
 window.addEventListener("load", function() {
@@ -7,9 +6,12 @@ window.addEventListener("load", function() {
   function AutoScroll(){
     // html上のチャットのエレメントを取ってくる
     let filed = document.getElementById('field');
-    // 
+    // scrollHeight：ページの高さ  clientHeight：ブラウザの高さ
     let bottom = filed.scrollHeight - filed.clientHeight;
-    // 
+    // 上の計算によりbottomには31などの値が入る。
+    console.log(bottom);
+    // scroll( 数値(水平) , 数値(垂直) ) ;
+    // 31下がり、最下部へスクロールされる。
     filed.scroll(0, bottom);
   }
 

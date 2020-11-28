@@ -1,5 +1,18 @@
 window.addEventListener("load", function() {
 
+  // 更新時のオートスクロール
+  function AutoScroll(){
+    // html上のチャットのエレメントを取ってくる
+    let filed = document.getElementById('field');
+    // scrollHeight：ページの高さ  clientHeight：ブラウザの高さ
+    let bottom = filed.scrollHeight - filed.clientHeight;
+    // 上の計算によりbottomには31などの値が入る。
+    console.log(bottom);
+    // scroll( 数値(水平) , 数値(垂直) ) ;
+    // 31下がり、最下部へスクロールされる。
+    filed.scroll(0, bottom);
+  }
+
 
   //相手の返答内容
   const chat = [
@@ -31,6 +44,10 @@ window.addEventListener("load", function() {
         li.classList.add('chat-right');
         ul.appendChild(li);
         li.appendChild(div);
+
+        // AutoScrollにて常に最下部へスクロール
+        AutoScroll();
+
     } else if (person === 'other') { //相手
         //相手が2個連続で返信してくる時、その間は返信不可にする
         //なぜなら、自分の返信を複数受け取ったことになり、その全てに返信してきてしまうから
@@ -42,9 +59,12 @@ window.addEventListener("load", function() {
             li.classList.add('chat-left');
             ul.appendChild(li);
             li.appendChild(div);
+
+            // AutoScrollにて常に最下部へスクロール
+            AutoScroll();
             //相手のトークの合計数に1足す
             chatCount++;
-        }, 2000); 
+        }, 2000);
     }
   }
 
@@ -65,6 +85,7 @@ window.addEventListener("load", function() {
         //一瞬の間でvalueを取得し、相手の"Hi!〇〇!"の返信に利用
         //送信ボタンを押した瞬間にvalueを消したら、やまびこに失敗した
         inputText.value = '';
+
     }, 1);
 
     //相手の送信の合計回数に応じて次の返信を指定

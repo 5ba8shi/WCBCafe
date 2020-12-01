@@ -187,3 +187,51 @@ document.getElementById('next').onclick = function() {
 document.getElementById('prev').onclick = function() {
   changeImage(-1);
 };
+
+const thumbs = document.querySelectorAll('.thumb');
+thumbs.forEach(function(item, index) {
+  item.onclick = function() {
+    document.getElementById('bigimg').src = this.dataset.image;
+  }
+});
+
+
+const songs = ['hey', 'summer', 'ukulele'];
+
+let songIndex = 2;
+
+loadSong(songs[songIndex]);
+
+function loadSong(song) {
+  title.innerText = song;
+  audio.src = `music/${song}.mp3`;
+  cover.src = `image/${song}.jpg`;
+}
+
+function playSong() {
+  musicContainer.classList.add('play');
+  playBtn.querySelector('i.fas').classList.remove('fa-play');
+  playBtn.querySelector('i.fas').classList.add('fa-pause');
+
+  audio.play();
+}
+
+function pauseSong() {
+  musicContainer.classList.remove('play');
+  playBtn.querySelector('i.fas').classList.add('fa-play');
+  playBtn.querySelector('i.fas').classList.remove('fa-pause');
+
+  audio.pause();
+}
+
+function prevSong() {
+  songIndex--;
+
+  if(songIndex < 0) {
+    songIndex = songs.length - 1;
+  }
+
+  loadSong(songs[songIndex]);
+
+  playSong();
+}

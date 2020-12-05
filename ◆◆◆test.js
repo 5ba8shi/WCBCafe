@@ -235,3 +235,82 @@ function prevSong() {
 
   playSong();
 }
+
+function updateProgress(e) {
+  const { duration, currentTime } = e.srcElement;
+  const progressPercent = (currentTime / duration) * 100;
+  progress.style.width = `${progressPercent}%`;
+}
+
+function setProgress(e) {
+  const width = this.clientWidth;
+  const clickX = e.offsetX;
+  const duration = audio.duration;
+
+  audio.currentTime = (clickX / width) * duration;
+}
+
+
+playBtn.addEventListener('click', () => {
+  const isPlaying = musicContainer.classList.contains('play');
+
+  if (isPlaying) {
+    pauseSong();
+  } else {
+    playSong();
+  }
+});
+
+function createBox(item) {
+  const box = document.createElement('div');
+
+  const { image, text } = item;
+
+  box.classList.add('box');
+
+  box.innerHTML = `
+    <img src="${image}" alt="${text}" />
+    <p class="info">${text}</p>
+  `;
+
+  box.addEventListener('click', () => {
+    setTextMessage(text);
+    speakText();
+
+    box.classList.add('active');
+    setTimeout(() => box.classList.remove('active'), 800)
+  });
+
+  main.appendChild(box);
+
+  c
+}
+
+
+const localStorageTransaction = JSON.parse(
+  localStorage.getItem('transactions')
+);
+
+let transactions = 
+  localStorage.getItem('transactions') !== null ? localStorageTransactions : [];
+
+
+  function updateValues() {
+    const amounts = transactions.map(transaction => transaction.amount);
+
+    const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
+
+    const income = amounts
+      .filter(item => item > 0)
+      .reduce((acc, item) =>(acc += item), 0)
+      .toFixed(2);
+
+    const expense = (
+      amounts.filter(item => item < 0).reduce((acc, item) => (acc += item), 0) *
+      -1
+    ).toFixed(2);
+
+    balance.innerText = `$${total}`;
+    money_plus.innerText = `$${income}`;
+    money_minus.innerText = `$${expense}`;
+  }

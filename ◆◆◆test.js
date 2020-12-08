@@ -40,3 +40,13 @@ async function callApi(){
 };
 
 callApi();
+
+for(var i = cards.length - 1; i > 0; i--){
+  var r = Math.floor(Math.random() * (i + 1));
+
+  var tmp = cards[i];
+
+  cards[i] = cards[r];
+
+  cards[r] = tmp;
+}

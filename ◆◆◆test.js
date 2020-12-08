@@ -11,5 +11,32 @@ async function callApi(){
   Filter1.sort(function(a, b){
     a = a.jobName.toString().toLowerCase();
     b = b.jobName.toString().toLowerCase();
-  })
-}
+    if(a < b){
+      return -1;
+    } else if(a > b) {
+      return 1;
+    }
+    return 0;
+  });
+
+  const Filter2 = jobs.filter(job => {
+    return job.grpId === 1;
+  });
+
+  Filter2.sort(function(a, b){
+    a = a.jobName.toString().toLowerCase();
+    b = b.jobName.toString().toLowerCase();
+    if(a < b){
+      return -1;
+    }else if(a > b){
+      return 1;
+    }
+    return 0;
+  });
+
+  const result = Filter1.concat(Filter2);
+
+  console.log(result);
+};
+
+callApi();

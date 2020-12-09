@@ -50,3 +50,67 @@ for(var i = cards.length - 1; i > 0; i--){
 
   cards[r] = tmp;
 }
+
+for(let i = 1; i <= 4; i++){
+  let div = document.createElement("div");
+  div.id = 'row' + i;
+  document.getElementById('allCards').appendChild(div);
+
+  let a = 1;
+
+  let b = 1;
+
+  for(let i = 1; i <= 52; i++){
+    let div = document.createElement("div");
+    div.id = i;
+    div.className = "cards";
+
+    let img = document.createElement('img');
+    img.src = '../img/card_back.png';
+
+    div.appendChild(img);
+
+    document.getElementById('row' + a).appendChild(div);
+
+    if(b === 13){
+      a++;
+      let b = 0;
+    };
+
+    b++;
+  }
+}
+
+let cardNodes = document.querySelectorAll('.card');
+
+let pickedSingle;
+
+let pickedArray = [];
+
+let currentCard;
+
+let prevCard;
+
+
+cardNodes.forEach((card) => {
+  
+  card.addEventListener('click', () => {
+    if(pickedArray.length === 2){
+      currentCard.firstChild.src = '../img/card_back.png';
+      prevCard.firstChild.src = '../img/card_back.png';
+
+      pickedArray.length = 0;
+    }
+
+    if(pickedArray.length < 2){
+      currentCard = card;
+
+      pickedSingle = cards[card.id.substr(0) - 1];
+
+      card.firstChild.src = '../img/' + pickedSingle + '.jpg';
+
+      if(pickedArray[0] !== pickedSingle){
+        pickedArray.push(pickedSingle);
+      };
+  })
+})

@@ -114,3 +114,44 @@ cardNodes.forEach((card) => {
       };
   })
 })
+
+const getCard = () => {
+  const markarr = ['a','2','3','4','5','6','7','8','9','10','j','q','k'];
+  const suitarr = ['c','s','h','d'];
+  
+  let mark = Math.floor(Math.random() * 13);
+  let suit = Math.floor(Math.random() * 4);
+
+  let flag = false;
+
+  while(!flag){
+    flag = true;
+
+    for(i = 0; i < drawnCards.length; i++) {
+      if(drawnCards[i] === markarr[mark] + suitarr[suit]) {
+        flag = false;
+        break;
+      };
+    };
+
+    if(!flag) {
+      mark = Math.floor(Math.random() * 13);
+      suit = Math.floor(Math.random() * 4);
+    };
+
+
+
+    const oneDraw = () => {
+      const yourTotalCard = getHandValue(yourHand);
+
+      if(!gameOver && !dealerTurn){
+        yourHand.push(getCard());
+
+        if(yourTotalCard > 21) {
+          gameOver = true;
+          gameLose = true;
+        }
+      }    
+      draw();
+  }
+}

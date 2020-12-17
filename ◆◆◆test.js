@@ -155,3 +155,115 @@ const getCard = () => {
       draw();
   }
 }
+
+const stay = () => {
+  document.getElementById("stay_button").classList.add("hide");
+  document.getElementById("drow_button").classList.add("hide");
+
+  if(!gameOver && !dealerTurn) {
+    dealerTurn = true;
+    showDealerCard = true;
+    setTimeout(dealerAI, 1000);
+    draw();
+  };
+};
+
+
+const dealerAI = () => {
+  const opponentsTotalCard = getHandValuee(opponentsHand);
+  const yourTotalCard = getHandValue(yourHand);
+
+  if(opponentsTotalCard > 21) {
+    gameWin = true;
+  } else if(opponentsTotalCard >= 16){
+    aiInfo = "";
+
+    if(opponentsTotalCard > yourTotalCard) {
+      gameLose = true;
+    } else if(opponentsTotalCard === your)
+  }
+
+  if(opponetsTotalCard <= 16) {
+    opponentsHand.push(getCard());
+    aiInfo = "カードを引く";
+    setTimeout(dealerAI, 1000);
+  };
+}
+
+if(gameWin || gameLose|| push ) {
+  document.getElementById("restart_button").classList.remove("hide");
+
+  para2 = document.createElement("P");
+
+  if(gameWin) {
+    result = document.createTextNode("あなたの価値")
+  }
+} 
+
+
+$(document).ready(function(){
+  // ファイルの読み込み
+  $.ajax({url: 'data.json', dataType: 'json'})
+  .done(function(data){
+    data.forEach(function(item, index){
+      if(item.crowded === 'yes'){
+        const idName = '#' + item.id;
+        $(idName).find('.check').addClass('crowded');
+      }
+    });
+  })
+  .fail(function(){
+    window.alert('読み込みエラー');
+  });
+
+  $('.check').on('click', function(){
+    if($(this).hasClass('crowded')){
+      $(this).text('残席わずか').addClass('res')
+    }
+  })
+})
+
+const lang = document.querySelector('html').lang;
+
+if(lang === 'ja'){
+  document.querySelector('option[value="index.html"]').selected = true;
+} else if(lang === 'en') {
+  document.querySelector('option[value="index-en.html"]').selected = true;
+} else if(lang === 'zh') {
+  document.querySelector('option[value="index-zh.html"]').selected = true;
+}
+
+document.getElementById('form').selected.onchange = function(){
+  location.href = document.getElementById('form').select.value;
+}
+
+
+window.addEventListener("load", function(){
+  let btn = document.querySelector("button#Button");
+
+  btn.addEventListener("click", function(){
+    console.log("Hello World");
+  });
+
+  const bt2 = document.querySelector("button#Button2");
+  const changeText = document.querySelector("p");
+
+  btn2.addEventListener("click", function(){
+    changeText.innerHTML = '変更されました';
+  });
+
+  const btn3 = document.querySelector("#Button3");
+
+  btn3.addEventListener("click", function() {
+    changeText.classList.add("red");
+  });
+
+  const btn4 = document.querySelector("#Button4");
+
+  const obj = document.querySelector("div");
+
+  btn4.addEventListener("click", function() {
+    obj.classList.remove("blue");
+  });
+
+});

@@ -1,5 +1,11 @@
-const jsbook = {title:'Javascript入門', price:2500, stock:3};
 
-document.getElementById('title').textContent = jsbook.title;
-document.getElementById('price').textContent = jsbook.price;
-document.getElementById('stock').textContent = jsbook.stock;
+document.getElementById('pi').textContent = Math.PI;
+document.getElementById('floor').textContent = Math.floor(Math.PI);
+
+function point(num, digit) {
+  const mover = 10 ** digit;
+  return Math.floor(num * mover) / mover;
+}
+
+
+document.getElementById('output').textContent = point(Math.PI, 2);

@@ -24,8 +24,10 @@ function updatePlayIcon() {
 
 // Update progress & timestamp
 function updateProgress() {
+  // プログラム内部の時間の設定
   progress.value = (video.currentTime / video.duration) * 100;
 
+  // 人間が理解できるようにディスプレイに表示する時間の設定
   // Get minutes
   let mins = Math.floor(video.currentTime / 60);
   if (mins < 10) {

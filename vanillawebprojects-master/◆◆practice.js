@@ -1,92 +1,42 @@
-const draggable_list = document.getElementById('draggable-list');
-const check = document.getElementById('check');
+async function callApi() {
 
-const richestPeople = [
-  'Jeff Bezos',
-  'Bill Gates',
-  'Warren Buffett',
-  'Bernard Arnault',
-  'Carlos Slim Helu',
-  'Amancio Ortega',
-  'Larry Ellison',
-  'Mark Zuckerberg',
-  'Michael Bloomberg',
-  'Larry Page'
-];
+  const res = await fetch("https://jsondata.okiba.me/v1/json/0hxL6200611030517");
 
-const listItems = [];
+  const jobs = await res.json();
 
-let dragStartIndex;
-
-createList();
-
-check.addEventListener('click', checkOrder);
-
-
-
-function createList() {
-  [...richestPeople]
-    .map(a => ({ value: a, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(a => a.value)
-    .forEach((person, index) => {
-      const listItem = document.createElement('li');
-
-      listItem.setAttribute('data-index', index);
-
-      listItem.innerHTML = `
-        <span class="number">${index + 1}</span>
-        <div class="draggable" draggable="true">
-          <p class="person-name">${person}</p>
-          <i class="fas fa-grip-lines"></i>
-        </div>
-      `;
-
-      listItems.push(listItem);
-
-      draggable_list.appendChild(listItem);
-    });
-
-    addEventListener();
-}
-
-function dragStart() {
-  dragStartIndex = +this.closest('li').getAttribute('data-index');
-}
-
-function dragEnter() {
-  this.classList.add('over');
-}
-
-function dragDrop() {
-  const dragEndIndex = +this.getAttribute('data-index');
-  swapItems(dragStartIndex, dragEndIndex);
-
-  this.classList.remove('over');
-}
-
-function dragEnter() {
-  this.classList.add('over');
-}
-
-function dragLeave() {
-  this.classList.remove('over');
-}
-
-function addEventListener() {
-  const draggable = document.querySelector('.draggable');
-  const draggable = document.querySelector('.draggable-list li');
-
-  draggables.forEach(draggable => {
-    draggable.addEventListener('dragstart', dragStart);
+  const Filter1 = jobs.filter(job1 => {
+    return job1.grpId === 2;
   });
 
-  dragListItems.forEach(item => {
-    item.addEventListener('dragover', dragOver);
-    item.addEventListener('drop', dragDrop);
-    item.addEventListener('dragenter', dragEnter);
-    item.addEventListener('dragleave', dragLeave);
-  });
-}
 
-check.addEventListener('click', checkOrder);
+  Filter1.sort(function(a, b){
+    a = a.jobName.toString().toLowerCase();
+    b = b.jobName.toString().toLowerCase();
+    if(a < b) {
+      return -1;
+    } else if(a > b){
+      return 1;
+    }
+    return 0;
+  });
+
+  const Filter2 = jobs.filter(job => {
+    return job.grpId === 1;
+  });
+
+  Filter2.sort(function(a, b) {
+    a = a.jobName.toString().toLowerCase();
+    b = b.jobName.toString().toLowerCase();
+    if(a < b){
+      return -1;
+    } else if(a > b){
+      return 1;
+    }
+    return 0;
+  });
+
+  const result = Filter1.concat(Filter2);
+
+  console.log(result);
+  
+}

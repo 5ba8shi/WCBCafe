@@ -1,42 +1,63 @@
-async function callApi() {
+const rulesBtn = document.getElementById('rules-btn');
+const closeBtn = document.getElementById('close-btn');
+const rules = document.getElementById('rules');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
-  const res = await fetch("https://jsondata.okiba.me/v1/json/0hxL6200611030517");
-
-  const jobs = await res.json();
-
-  const Filter1 = jobs.filter(job1 => {
-    return job1.grpId === 2;
-  });
+let score = 0;
 
 
-  Filter1.sort(function(a, b){
-    a = a.jobName.toString().toLowerCase();
-    b = b.jobName.toString().toLowerCase();
-    if(a < b) {
-      return -1;
-    } else if(a > b){
-      return 1;
+const brickRowCount = 9;
+const brickColumnCount = 5;
+const delay = 500;
+
+const ball = {
+  x: canvas.width / 2,
+  y: canvas.height / 2,
+  size: 10,
+  speed: 4,
+  dx: 4,
+  dy: -4,
+  visible: true
+};
+
+function movePaddle() {
+  paddle.x += paddle.dx;
+
+  if(paddle.x + paddle.w > canvas.width) {
+    paddle.x = canvas.width - paddle.w;
+  }
+
+  if (paddle.x < 0) {
+    paddle.x = 0;
+  }
+
+  function moveBall() {
+    ball.x += ball.dx;
+    ball.y += ball.dy;
+
+    if(ball.x + ball.size > canvas.width || ball.x - ball.size < 0) {
+      ball.dx *= -1;
     }
-    return 0;
-  });
 
-  const Filter2 = jobs.filter(job => {
-    return job.grpId === 1;
-  });
-
-  Filter2.sort(function(a, b) {
-    a = a.jobName.toString().toLowerCase();
-    b = b.jobName.toString().toLowerCase();
-    if(a < b){
-      return -1;
-    } else if(a > b){
-      return 1;
+    if(
+      ball.x - ball.size > paddle.x &&
+      ball.x + ball.size < paddle.x + paddle.w&&
+      ball.y + ball.size > paddle.y
+    ) {
+      ball.dy = -ball.speed;
     }
-    return 0;
-  });
+  }
+}
 
-  const result = Filter1.concat(Filter2);
+for(var i = 1; i <= 9; i++){
+  for (var b = 1; b <= 9; b++){
+    console.log(i + 'x' + b + '=' + i * b);
+  }
+}
 
-  console.log(result);
-  
+for(let i = 1; i <= 9; i++){
+  for(let b = 1; b <=9; b++){
+    console.log(i + 'x' + b + '=' + i * b);
+  }
 }

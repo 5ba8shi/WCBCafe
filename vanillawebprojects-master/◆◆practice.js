@@ -61,3 +61,9 @@ for(let i = 1; i <= 9; i++){
     console.log(i + 'x' + b + '=' + i * b);
   }
 }
+
+for(let i = 1; i <= 9; i++){
+  for(let b = 1; b <= 9; b++){
+    console.log(i + 'x' + b + '=' + i * b);
+  }
+}

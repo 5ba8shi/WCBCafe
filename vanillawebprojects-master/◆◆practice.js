@@ -97,3 +97,48 @@ const oneDraw = () => {
   }
   draw();
 }
+
+const stay = () => {
+  document.getElementById("stay_button").classList.add("hide");
+  document.getElementById("drow_button").classList.add("hide");
+
+  if(!gameOver && !dealerTurn) {
+    dealerTurn = true;
+    showDealerCard = true;
+    setTimeout(dealerAI, 1000);
+    draw();
+  }
+}
+
+const draw = () => {
+  const opponent = document.getElementById("opponent");
+    opponent.innerHTML = "<p>ディーラーのカード</p>";
+
+  const you = document.getElementById("you");
+    you.innerHTML = "<p>あなたのカード</p>";
+
+  const opponentsTotalCard = getHandValue(opponentsHand);
+  const yourTotalCard = getHandValue(yourHand);
+
+
+  let result;
+  let img;
+  let parao;
+  let para;
+  let para2;
+
+
+  for(i = 0; i < opponentsHand.length; i++) {
+
+    img = new Image();
+
+    if(!showDealer Card $$ i != 0) {
+      img.src = '../img/card_bach.png';
+    } else {
+      img.src = '../img/' + opponentsHand[i] + '.jpg';
+    };
+    opponents.appendChild(img);
+  };
+
+  
+}

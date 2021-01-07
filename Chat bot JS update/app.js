@@ -6,7 +6,7 @@ window.addEventListener("load", function() {
   function AutoScroll(){
     // html上のチャットのエレメントを取ってくる
     let filed = document.getElementById('field');
-    // scrollHeight：ページの高さ  clientHeight：ブラウザの高さ
+    // scrollHeight：ページの高さ  clientHeight：ブラウザの高さ 現時点のスクロール位置
     let bottom = filed.scrollHeight - filed.clientHeight;
     // 上の計算によりbottomには31などの値が入る。
     console.log(bottom);

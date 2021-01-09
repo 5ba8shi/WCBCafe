@@ -82,8 +82,8 @@ function swapItems(fromIndex, toIndex) {
   const itemTwo = listItems[toIndex].querySelector('.draggable');
 
   // exchange
-  listItems[fromIndex].appendChild(itemTwo);
   listItems[toIndex].appendChild(itemOne);
+  listItems[fromIndex].appendChild(itemTwo);
 }
 
 // Check the order of list items

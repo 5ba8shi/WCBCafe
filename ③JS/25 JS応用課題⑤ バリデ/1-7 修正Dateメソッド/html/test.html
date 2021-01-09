@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScriptの学習</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/test.css">
+    <script src="../js/test.js"></script>
+  </head>
+
+  <body>
+    <div class="now">
+      <span></span>西暦
+      <input type="text" id="year"></input>年
+      <input type="text" id="month"></input>月
+      <input type="text" id="day"></input>日
+      <span></span>から
+    </div>
+
+    <!-- エラー表示①  不正な入力-->
+    <font color="red"><div id="error1">&nbsp;</div></font>
+    <!-- エラー表示② 無入力-->
+    <font color="red"><div id="error2">&nbsp;</div></font>
+
+    <div class="later">
+      <input type="text" id="count_day"></input>日後は？
+    </div>
+
+    <!-- エラー表示③ 不正な入力-->
+    <font color="red"><div id="error3">&nbsp;</div></font>
+    <!-- エラー表示④ 無入力-->
+    <font color="red"><div id="error4">&nbsp;</div></font>
+    <!-- エラー表示⑤ 実在しない日付-->
+    <font color="red"><div id="error5">&nbsp;</div></font>
+
+
+
+    <button id="calc">計算</button>
+    <!-- 計算結果 -->
+    <div id="result"></div>
+
+  </body>
+</html>

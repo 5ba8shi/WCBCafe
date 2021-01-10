@@ -1,6 +1,5 @@
 window.addEventListener('load', function () {
 
-
   // 各要素取得---------------------------------------------------
     // 年月日のinputbox
     const year_box = document.getElementById("year")
@@ -28,13 +27,14 @@ window.addEventListener('load', function () {
     
   // 計算処理から値出力まで---------------------------------------------------
     calc.addEventListener('click', function(){
-      // 年月日をセットする
+      // 入力された年月日をセットする
       const year = document.getElementById("year").value;
       const month = document.getElementById("month").value;
       const day = document.getElementById("day").value;
       const count_day = document.getElementById("count_day").value;
       
 
+      // 空欄がなければ以下の処理を進める
       if(year !== '' && month !== '' && day !== '' && count_day !== ''){
 
         // 存在しない2月30日を弾く
@@ -52,27 +52,33 @@ window.addEventListener('load', function () {
 
         //問題なければ以下の処理を行う 
         } else {
+          // エラー文があれば空にする
           errorElement5.innerText = "";
+
+          // newDate() 指定した時刻を表す日付オブジェクトを生成する。
+          // 何も指定されなかった場合は現在の（デバイスに）設定されている時刻を取得する。
           const date_set = new Date();
-          date_set.setFullYear(year);
-          date_set.setMonth(month - 1);
-          date_set.setDate(day);
+          date_set.setFullYear(year); // 年を設定する
+          date_set.setMonth(month - 1); // 月を設定 0始まりのため−1をする
+          date_set.setDate(day); //日を設定
           
-          const input1 = date_set.getTime();
+          const input1 = date_set.getTime(); //1970年からの経過ミリ秒数を取得
           
           // 何日後の入力値
           const input2 = Math.floor(count_day * 24 * 60 * 60 * 1000);
           
           // 合計を計算し、出力
           const total = input1 + input2;
-          const answer = new Date(total);
-          // 月は０〜１１のためプラス１をする。 
-          const tuki = answer.getMonth()+1;
+          const answer = new Date(total); // newDate() 指定した時刻を表す日付オブジェクトを生成する。
+          const tuki = answer.getMonth()+1; // 月は０〜１１のためプラス１をする。 
           
-          result.innerHTML = answer.getFullYear() + '年 ' + tuki + '月 ' + answer.getDate() + '日 です。'
+          result.innerHTML = answer.getFullYear() + '年 ' + tuki + '月 ' + answer.getDate() + '日 です。';
+
+          //その他get setの詳細 http://www.htmq.com/js/date_setFullYear.shtml
         };
           
-
+      
+      // 空欄が一つでもあれば弾く
       } else if((year === '' || month === '' || day === '') && (count_day !== '')){
         // 年月日が空
         errorElement2.innerText = '値を入力してください';
@@ -109,7 +115,10 @@ window.addEventListener('load', function () {
         }else if(year.match(regexp1) && !year.match(regexp)){
           errorElement1.innerText = "";
         };
-      };
+      } else if(errorElement1.innerText !== "" && year === ""){
+        errorElement1.innerText = "";
+
+      }
     });
 
 
@@ -171,7 +180,7 @@ window.addEventListener('load', function () {
 
         };
       
-      //不正な値を取り除いてエラー文が出ていたらエラー分を取り除く
+      //不正な値を取り除いてエラー文が出ていたらエラー文を取り除く
       } else if(errorElement3.innerText !== "" && count === ""){
         errorElement3.innerText = "";
 

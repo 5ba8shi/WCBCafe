@@ -37,12 +37,20 @@ window.addEventListener('load', function () {
 
       if(year !== '' && month !== '' && day !== '' && count_day !== ''){
 
+        // 存在しない2月30日を弾く
         if(day == 30 && month == 2){
           errorElement5.innerText = "存在しない日付です。存在する月日を再度入力して計算を押してください";
+
+          // 存在しない2月,4月,6月,9月,11月の31日を弾く
         } else if(day == 31 && (month == 2 || month == 4 || month == 6 || month == 9 || month == 11)){
           errorElement5.innerText = "存在しない日付です。存在する月日を再度入力して計算を押してください";
+
+          // 閏年ではない2月29日を弾く
         } else if(day == 29 && month == 2 && year % 4 !== 0 ){
           errorElement5.innerText = "閏年が存在しない年です。存在する月日を再度入力して計算ボタンを押してください";
+
+
+        //問題なければ以下の処理を行う 
         } else {
           errorElement5.innerText = "";
           const date_set = new Date();
@@ -64,16 +72,20 @@ window.addEventListener('load', function () {
           result.innerHTML = answer.getFullYear() + '年 ' + tuki + '月 ' + answer.getDate() + '日 です。'
         };
           
+
       } else if((year === '' || month === '' || day === '') && (count_day !== '')){
         // 年月日が空
         errorElement2.innerText = '値を入力してください';
+
       } else if((count_day === '') && (year !== '' || month !== '' || day !== '')){
         // 日後が空
         errorElement4.innerText = '値を入力してください';
+
       } else{
         // 全て空
         errorElement2.innerText = '値を入力してください';
         errorElement4.innerText = '値を入力してください';
+
       };
         
     });
@@ -100,19 +112,25 @@ window.addEventListener('load', function () {
       };
     });
 
-    
+
     // 月
     month_box.addEventListener('blur', function(){
       const month = document.getElementById("month").value;
+
       if(month !== ''){
+
         if(!month.match(regexp1)){
           errorElement1.innerText = "値が不正です。";
+
         }else if(month.match(regexp)){
           errorElement1.innerText = "値が不正です。";
+
         }else if(12 < month || 0 == month){
           errorElement1.innerText = "値が不正です。";
+
         }else{
           errorElement1.innerText = "";
+
         };
       };
     });
@@ -121,15 +139,20 @@ window.addEventListener('load', function () {
     // 日
     day_box.addEventListener('blur', function(){
       const day = document.getElementById("day").value;
+
       if(day !== ''){
         if(!day.match(regexp1)){
           errorElement1.innerText = "値が不正です。";
+
         }else if(day.match(regexp)){
           errorElement1.innerText = "値が不正です。";
+
         }else if(31 < day || 0 == day){
           errorElement1.innerText = "値が不正です。";
+
         }else{
           errorElement1.innerText = "";
+
         };
       };
     });
@@ -138,14 +161,23 @@ window.addEventListener('load', function () {
     // 日後は？
     count_day.addEventListener('blur', function(){
       const count = document.getElementById("count_day").value;
-      if(count !== ''){
+
+      if(count !== ""){
         if(!count.match(regexp1) || count.match(regexp)  || count.length > 4){
-          errorElement3.innerText = "値が不正です。";
-        }else if(count.match(regexp1) && !count.match(regexp)){
+          errorElement3.innerText = "値が不正です。半角で1 〜 9999までの値を入れてください";
+
+        } else if(count.match(regexp1) && !count.match(regexp)){
           errorElement3.innerText = "";
+
         };
+      
+      //不正な値を取り除いてエラー文が出ていたらエラー分を取り除く
+      } else if(errorElement3.innerText !== "" && count === ""){
+        errorElement3.innerText = "";
+
       };
     });
+
 
 
 });

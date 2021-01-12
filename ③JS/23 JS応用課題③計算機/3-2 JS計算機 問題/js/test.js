@@ -1,4 +1,4 @@
-var result = document.getElementById("result");
+const result = document.getElementById("result");
 
 // 0と00を除く1〜9ボタンの機能
 function edit(elem) {
@@ -14,7 +14,7 @@ function editfunc1(elem) {
 
 // 00のボタンの機能
 function editfunc2(elem) {
-  var regexp2 = /[0-9]+[\\+\\-\\*\\/]/;
+  const regexp2 = /[0-9]+[\\+\\-\\*\\/]/;
   if(result.value !== ""){
     if(!result.value.match(regexp2)){
       result.value = result.value + elem.value;
@@ -25,7 +25,7 @@ function editfunc2(elem) {
 // 正規表現と一致したら弾く
 // 四則演算ボタン
 function edit_calc(elem) {
-  var regexp1 = /[\\+\\-\\*\\/]/;
+  const regexp1 = /[\\+\\-\\*\\/]/;
   if(result.value !== ''){
     if(!result.value.match(regexp1)){
       result.value = result.value + elem.value;

@@ -40,3 +40,23 @@ window.addEventListener('load', function () {
 
 
 });
+
+
+function edit(elem) {
+  result.value = result.value + elem.value;
+}
+
+function editfunc1(elem) {
+  if(result.value !== "") {
+    result.value = result.value + elem.value;
+  }
+}
+
+function editfunc2(elem) {
+  var regexp2 = /[0-9]+[\\+\\-\\*\\/]/;
+  if(result.value !== "") {
+    if(!result.value.match(regexp2)) {
+      result.value = result.value + elem.value;
+    }
+  }
+}

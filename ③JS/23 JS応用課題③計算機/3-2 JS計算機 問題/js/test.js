@@ -36,7 +36,11 @@ function edit_calc(elem) {
 // 計算結果を出力する機能
 function calc() {
   if(result.value !== ""){
+  // new Function は、一般的な関数を作るようなイメージで考えると分かりやすいです。
+  // 記述方法としては、【new Function( 処理の内容 )】のように引数へ実行したい処理を文字列で記述します。
   result.value = new Function("return " + result.value)();
+
+  // ("return " + result.value)(); の記述の謎は解けない、、
   }
 }
 

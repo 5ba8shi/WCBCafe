@@ -86,9 +86,14 @@ window.addEventListener("load", function() {
         //入力内を空欄にする
         //一瞬の間でvalueを取得し、相手の"Hi!〇〇!"の返信に利用
         //送信ボタンを押した瞬間にvalueを消したら、やまびこに失敗した
-        inputText.value = '';
+        inputText.value = ''; 
 
     }, 1);
+
+    // ◆◆◆処理の順番◆◆◆ 
+    // 下のswitch が終わってから上のsetTimeoutが起動します
+    // switchの処理が始まった時点ではまだinputText.valueには入力値
+    // が入った状態です。
 
     //相手の送信の合計回数に応じて次の返信を指定
     switch(chatCount) {

@@ -1,29 +1,7 @@
-window.addEventListener("load", function(){
-  let btn = document.querySelector("button#Button");
+function total(price) {
+  const tax = 0.1;
+  return price + price * tax;
+}
 
-  btn.addEventListener("click", function() {
-    console.log("Hello world");
-  });
-
-  let btn2 = document.querySelector("button#Button2");
-  let changeText = document.querySelector("p");
-
-  btn2.addEventListener("click", function(){
-    changeText.innerHTML = '変更されました';
-  });
-
-  let btn3 = document.querySelector("#Button3");
-
-  btn3.addEventListener("click", function() {
-    changeText.classList.add("red");
-  });
-
-  let btn4 = document.querySelector("#Button4");
-
-  let obj = document.querySelector("div");
-
-  btn4.addEventListener("click", function() {
-    obj.classList.remove("blue");
-  });
-
-});
+console.log('コーヒーメーカーの値段は' + total(8000) + '円(税込み)です。');
+document.getElementById('output').textContent = 'コーヒーメーカの値段は' + total(8000) + '円(税込)です。';

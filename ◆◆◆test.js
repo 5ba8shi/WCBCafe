@@ -1,14 +1,11 @@
-window.addEventListener("load", function(){
-  let tabs = document.getElementsByClassName("menu_item");
+let enemy = 100;
+let count = 0;
 
-  tabsAry = Array.prototype.slice.call(tabs);
-
-  function tabSwitch(){
-  }
-
-  tabsAry.forEach(function(value) {
-    value.addEventListener("click", tabSwitch)
-  })
-    
-  });
-})
+window.alert('戦闘スタート');
+while(enemy > 0) {
+  const attack = Math.floor(Math.random() * 30) + 1;
+  console.log('モンスターに' + attack + 'のダメージ！');
+  enemy -= attack;
+  count += 1;
+}
+console.log(count + '回でモンスターを倒した！');

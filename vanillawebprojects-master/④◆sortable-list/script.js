@@ -24,9 +24,12 @@ createList();
 // Insert list items into DOM
 function createList() {
   [...richestPeople]
+    //データの順番を組み替える
     .map(a => ({ value: a, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
     .map(a => a.value)
+
+    // 各データを並び替えて配列に加える
     .forEach((person, index) => {
       const listItem = document.createElement('li');
 
